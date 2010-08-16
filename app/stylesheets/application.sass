@@ -53,6 +53,7 @@ h1
   margin: 35px 0 0 0
   font-weight: normal
   letter-spacing: 2px
+//  color: #888888 
   span
     color: $client-red
 
@@ -66,7 +67,7 @@ h1
   left: 10px
   min-height: 75px
   z-index: 1000
-  font-size: 11px
+  font-size: 10px
 
   h2
     border-top: 1px solid
@@ -145,6 +146,11 @@ h1
   img
     vertical-align: middle
 
+  &.categories
+    #thumbs-wrapper
+      display: none
+    .slideLink
+      display: none 
 
   #slideshow
     position: absolute
@@ -178,9 +184,6 @@ h1
     top: 540px
     position: absolute
     width: 100%
-
-  #thumbs-wrapper.categories
-    display: none
 
   #thumbs-hidder
     display: block

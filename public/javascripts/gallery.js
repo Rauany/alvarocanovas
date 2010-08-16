@@ -122,7 +122,7 @@ var Gallery = {
         })
       },
       function(){
-        $(this).delay(2000);
+        $(this).delay(1500);
         $(this).queue(function(){
           $(this)
             .find("#thumbs-hidder")

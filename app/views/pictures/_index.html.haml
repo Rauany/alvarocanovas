@@ -4,7 +4,7 @@
 
 = render :layout => 'layouts/content' do
 
-  #gallery
+  #gallery{ :class => params[:controller] }
 
     #loading '
 
@@ -13,7 +13,7 @@
 
     #slideshow
 
-    #thumbs-wrapper{ :class => params[:controller] }
+    #thumbs-wrapper
 
       #thumbs
 
