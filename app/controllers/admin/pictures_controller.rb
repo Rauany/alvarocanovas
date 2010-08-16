@@ -43,7 +43,16 @@ class Admin::PicturesController < Admin::ApplicationController
   def new
     @picture = @category.pictures.new
   end
-  
+
+  def destroy
+    @picture = @category.pictures.find(params[:id])
+    if @picture.destroy
+      flash.now[:notice] = "La photographie a été supprimée avec succés"
+    else
+      flash.now[:alert] = "Echec de la suppression du document"
+    end
+    render :text => nil
+  end
   def reorder
     params[:ordered_ids].each_with_index do |picture_id, index| 
       Picture.find(picture_id).update_attribute(:number, index + 1)

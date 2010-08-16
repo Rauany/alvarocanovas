@@ -1,2 +1,4 @@
-$('<%="#category_#{@category.id}_pictures"%>')
-  .replaceWith('<%= render_j :partial => 'form' %>')
+$('#category_<%=@category.id%> .content')
+  .hide()
+  .html('<%= render_j :partial => 'form' %>')
+  .fadeIn()  

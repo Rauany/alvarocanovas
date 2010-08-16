@@ -1,4 +1,4 @@
-$('<%= render_j :partial => 'form', :locals => {:category => @category, :picture => @picture }%>')
+$('#category_<%=@category.id%> .content')
   .hide()
-  .insertBefore('#category_<%= @category.id%>_pictures')
-  .slideDown();
+  .html('<%= render_j :partial => 'admin/pictures/form', :locals => {:category => @category, :picture => @picture } %>')
+  .fadeIn()

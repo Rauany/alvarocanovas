@@ -1,9 +1,19 @@
 Alvarocanovas::Application.routes.draw do
 
+  devise_for :users,
+             :path => "admin",
+             :path_names => { :sign_in => 'login', :sign_out => 'logout' }
 
+#  devise_for :users do
+#    get "admin/login" => "devise/sessions#new", :as => :login
+#    get "admin/logout" => "devise/sessions#destroy", :as => :logout
+#  end
+  
+
+  #match "admin" => "admin/categores#index", :as => :user_root  
 
   namespace 'admin' do
-    devise_for :users, :module => "devise"
+    resources :users
     resources :videos
     resources :contents
     resources :clients
@@ -23,7 +33,7 @@ Alvarocanovas::Application.routes.draw do
     end
     root :to => 'categories#index'
   end
- # match "admin/users/sign_in" => "devise/sessions#sign_in", :as => :user_root  
+
   #match "admin", :to => 'admin/categories#index'
   
 

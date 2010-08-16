@@ -16,7 +16,6 @@ gem 'paperclip', :git => "git://github.com/itkin/paperclip.git"
 gem 'delayed_job', :git => 'git://github.com/collectiveidea/delayed_job.git'
 gem 'delayed_paperclip', :git => 'git://github.com/jstorimer/delayed_paperclip.git', :branch => 'rails3'
 
-
 gem 'capistrano'
 gem 'capistrano-ext'
 

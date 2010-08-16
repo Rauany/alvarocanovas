@@ -2,7 +2,6 @@
 
 $(function(){
 
-
   // Init multipart forms to send data via iframe 
   ajaxMulitipartForm.setup();
 
@@ -22,14 +21,13 @@ $(function(){
     }
   );
 
-  
   // Init the main admin tabs
   $("#tabs").tabs({
     fx: { height: 'toggle', opacity: 'toggle', duration: 400 }
   });
 
   //Properly remove a header after its deletion  
-  $("a.delete_category").click(function(evt){
+  $("a.delete_category").livequery('click', function(evt){
     evt.stopImmediatePropagation();
     evt.preventDefault();
     $(this).parents('.category').fadeOut(function(){
@@ -41,7 +39,7 @@ $(function(){
 
 
   //Close accodion when a header's content is updated via ajax, and then fire the ajax call
-  $("a.edit_category, a.cancel_edit_category").livequery('click', function(evt){
+  $("a.edit_category, a.add_picture, a.cancel_edit_category").livequery('click', function(evt){
       evt.stopImmediatePropagation();
       evt.preventDefault();
       var $elt = $(this);
@@ -64,9 +62,9 @@ $(function(){
 
   //Reopen an accordion header after that its content has been updated via Ajax
   // We don't apply on a.cancel_edit_category as the action sends back update.js
-  $("a.edit_category")
+  $("a.edit_category, a.add_picture")
     .live('ajax:complete',function(e){
-      $(this).closest(".categories").accordion('activate','#'+$(this).closest('.category').attr('id')+' .header');
+      $(this).closest(".ui-accordion").accordion('activate','#'+$(this).closest('.category').attr('id')+' .header');
     });
 
   $('.categories').livequery(
@@ -122,5 +120,68 @@ $(function(){
       }
     );
 
+
+  //properly destroy a picture
+  $("a.delete_picture").livequery('click', function(evt){
+    evt.stopImmediatePropagation();
+    evt.preventDefault();
+    $(this).parents('.picture').fadeOut(function(){
+      $(evt.target).callRemote();
+      $(this).remove();
+      $(this).closest(".pictures").sortable('refresh');
+    });
+  });
+
+
+  //user list
+  $('.users').livequery(
+    function(){
+      $(this).accordion({
+          header: ".header",
+          collapsible: true,
+          active:false,
+          autoHeight: false
+      });
+    }
+  );
+
+
+
+  $('.users form').livequery('submit',function(e){
+    e.stopImmediatePropagation();
+    e.preventDefault();
+    var $elt = $(this);
+    $elt.closest(".ui-accordion")
+      .queue(function(){
+        $(this).accordion('activate',-1);
+        $(this).dequeue();
+      })
+      .delay(200)
+      .queue(function(){
+        $elt.callRemote();
+        $(this).dequeue();
+      });
+  });
+
+  $('.users .header a, .users form a.cancel').livequery('click',function(e){
+    e.stopImmediatePropagation();
+    e.preventDefault();
+    var $elt = $(this);
+    $elt.closest(".ui-accordion")
+      .queue(function(){
+        $(this).accordion('activate',-1);
+        $(this).dequeue();
+      })
+      .delay(200)        
+      .queue(function(){
+        $elt.callRemote();
+        $(this).dequeue();
+      });
+  });
+  
+  $("a.edit_user,")
+    .live('ajax:complete',function(e){
+      $(this).closest(".users").accordion('activate','#'+$(this).closest('.user').attr('id')+' .header');
+    });
 
 });

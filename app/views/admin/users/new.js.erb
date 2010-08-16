@@ -1,0 +1,6 @@
+$('#users_wrapper')
+  .fadeOut(function(){
+    $(this).html('<%= render_j :partial => 'form' %>')
+  })
+  .fadeIn();
+

@@ -5,7 +5,7 @@
   = render :partial => 'admin/pictures/form_fields', :locals => { :form => form }
 
   - if form.object.new_record?
-    = link_to_function "Annuler", "$(this).parent('form').slideUp({},function(){$(this).remove()})"
+    = link_to "Annuler", admin_category_pictures_path(category), :remote => true 
   - else
     = link_to "Annuler", admin_category_picture_path(category,picture), :remote => true
   
