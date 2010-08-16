@@ -20,11 +20,22 @@ agence:
   zip_code: 75011
   country: France
 
-agence:
+nicolas:
   name:
   first_name: Nicolas
   last_name: Papon
   email: nicolas.papon@gmail.com
+  password: test
+  address: 7 rue nemours
+  city: paris
+  zip_code: 75011
+  country: France
+
+camille:
+  name:
+  first_name: Camille
+  last_name:
+  email: camille@gmail.com
   password: test
   address: 7 rue nemours
   city: paris

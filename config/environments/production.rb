@@ -48,5 +48,6 @@ Alvarocanovas::Application.configure do
   config.active_support.deprecation = :notify
 
   Haml::Template.options[:format] = :html5
-  
+
+  config.action_mailer.default_url_options = { :host => 'alvaro.webflows.fr' }    
 end
