@@ -23,6 +23,8 @@ gem 'capistrano-ext'
 gem 'compass'
 gem 'haml'
 
+gem 'devise', :branch => '1.1'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

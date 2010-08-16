@@ -1,0 +1,46 @@
+// Import the non-default scaffolding module to help us get started.
+//@import "blueprint/scaffolding"
+
+@import blueprint
+
+body
+  @include blueprint-typography(true)
+  @include blueprint-utilities
+  @include blueprint-debug
+
+  //@include blueprint-interaction;
+
+
+// Remove the scaffolding when you're ready to start doing visual design.
+// Or leave it in if you're happy with how blueprint looks out-of-the-box
+//@include blueprint-scaffolding("body")
+
+
+
+body
+  
+  #page
+    @include container
+
+    #header
+      @include column($blueprint-grid-columns)
+      padding-top: $blueprint-grid-width
+
+      h1
+        color: #DDDDDD
+
+      #current_user_links
+        float: right
+        padding-bottom: $blueprint-grid-width / 2
+        
+    #flash
+      @include column($blueprint-grid-columns - 2 )
+      height: 50px
+      line-height: 50px
+      +append(1)
+      +prepend(1)
+
+
+    #page_content
+      @include column($blueprint-grid-columns)
+       

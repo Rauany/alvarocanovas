@@ -53,6 +53,7 @@ GEM
     activesupport (3.0.0.rc)
     arel (0.4.0)
       activesupport (>= 3.0.0.beta)
+    bcrypt-ruby (2.1.2)
     builder (2.1.2)
     capistrano (2.5.19)
       highline
@@ -66,6 +67,9 @@ GEM
     compass (0.10.4)
       haml (>= 3.0.4)
     daemons (1.1.0)
+    devise (1.1.1)
+      bcrypt-ruby (~> 2.1.2)
+      warden (~> 0.10.7)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     haml (3.0.16)
@@ -115,6 +119,8 @@ GEM
     treetop (1.4.8)
       polyglot (>= 0.3.1)
     tzinfo (0.3.22)
+    warden (0.10.7)
+      rack (>= 1.0.0)
     will_paginate (3.0.pre2)
 
 PLATFORMS
@@ -126,6 +132,7 @@ DEPENDENCIES
   compass
   delayed_job!
   delayed_paperclip!
+  devise
   haml
   mysql (= 2.8.1)
   paperclip!

@@ -1,10 +1,10 @@
 class Admin::CategoriesController < Admin::ApplicationController
-  layout false
-
   
+  layout Proc.new{ |controller| controller.request.xhr? ? false : 'admin' }
+
   def index
     @categories = Category.where(:type => params[:type]).includes(:pictures)
-    render :action => :index, :layout => request.xhr? ? false : 'admin'
+    render :action => :index
   end
 
   def edit

@@ -1,0 +1,32 @@
+alvaro:
+  name: owner
+  first_name: alvaro
+  last_name: canovas
+  email: photography@alvarocanovas.com
+  password: test
+  address: 7 rue nemours
+  city: paris
+  zip_code: 75011
+  country: France
+
+agence:
+  name: agency
+  first_name:
+  last_name: Agence Photo
+  email: photography@mail.com
+  password: test
+  address: 8 rue nemours
+  city: paris
+  zip_code: 75011
+  country: France
+
+agence:
+  name:
+  first_name: Nicolas
+  last_name: Papon
+  email: nicolas.papon@gmail.com
+  password: test
+  address: 7 rue nemours
+  city: paris
+  zip_code: 75011
+  country: France

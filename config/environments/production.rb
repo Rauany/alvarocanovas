@@ -48,6 +48,5 @@ Alvarocanovas::Application.configure do
   config.active_support.deprecation = :notify
 
   Haml::Template.options[:format] = :html5
-  Haml::Template.options[:ugly] = false
   
 end

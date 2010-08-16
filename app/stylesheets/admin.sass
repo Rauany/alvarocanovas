@@ -1,0 +1,97 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import "blueprint/reset"
+
+// To configure blueprint, edit the partials/base.sass file.
+//@import "partials/base"
+
+// Import all the default blueprint modules so that we can access their mixins.
+//@import "blueprint"
+
+// Combine the partials into a single screen stylesheet.
+@import "partials/page"
+//@import "partials/form"
+//@import "partials/two_col"
+
+
+.category,
+.category div.header,
+.sortable.pictures
+  -moz-border-radius: 4px 4px 4px 4px
+  list-style: none
+  line-height: 50px
+
+
+
+.loader
+  height: 100%
+  background: white
+  position: absolute
+
+.loader div
+  height: 100%
+  background: url(../images/loader.gif) center center no-repeat
+
+
+.category img.head_image
+  position: relative
+  top: 10px
+  margin: 0 10px
+  margin-left: 35px
+
+
+.pictures.sortable .ui-icon-arrowthick-2-n-s
+  width: 15px
+  height: 100%
+  float: left
+  left: 10px
+  position: relative
+  top: 17px
+  background-image: url("../stylesheets/ui-lightness/images/ui-icons_ef8c08_256x240.png")
+  background-position: -128px -48px
+  height: 15px
+
+.category span.actions
+  float: right
+  margin: 0 10px
+  font-size: 70%
+  position: absolute
+  right: 20px
+  top: 50%
+  margin-top: -25px
+
+.category .actions a
+  display: inline
+  padding: 0
+  padding-left: 5px
+
+.category .actions a:hover
+  text-decoration: underline
+
+
+li.picture
+  position: relative
+
+
+
+
+form
+  margin: 0 20px
+
+form h4
+  margin: 10px 0
+  text-decoration: underline
+
+form label
+  float: left
+  width: 200px
+  font-size: 80%
+
+form textarea
+  height: 100px
+
+form div.form_line input,
+form div.form_line textarea
+  font-size: 70%
+  width: 500px
+
+

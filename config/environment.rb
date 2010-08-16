@@ -8,3 +8,4 @@ end
 # Initialize the rails application
 Alvarocanovas::Application.initialize!
 
+  Haml::Template.options[:ugly] = false

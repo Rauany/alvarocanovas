@@ -1,6 +1,9 @@
 Alvarocanovas::Application.routes.draw do
 
+
+
   namespace 'admin' do
+    devise_for :users, :module => "devise"
     resources :videos
     resources :contents
     resources :clients
@@ -18,8 +21,10 @@ Alvarocanovas::Application.routes.draw do
       end
 
     end
+    root :to => 'categories#index'
   end
-  match "admin", :to => 'admin/categories#index'
+ # match "admin/users/sign_in" => "devise/sessions#sign_in", :as => :user_root  
+  #match "admin", :to => 'admin/categories#index'
   
 
   resources :videos
