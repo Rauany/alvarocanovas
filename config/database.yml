@@ -23,4 +23,3 @@ production:
   username: rails
   password: rails
   encoding: UTF8
-  socket: /tmp/mysql.sock
