@@ -1,8 +1,8 @@
 Alvarocanovas::Application.routes.draw do
 
-  devise_for :users#,
-             #:path => "admin",
-             #:path_names => { :sign_in => 'login', :sign_out => 'logout' }
+  devise_for :users,
+             :path => "admin",
+             :path_names => { :sign_in => 'login', :sign_out => 'logout' }
 
 #  devise_for :users do
 #    get "admin/login" => "devise/sessions#new", :as => :login

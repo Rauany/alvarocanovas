@@ -5,15 +5,15 @@
     %p
       Alvaro CANOVAS is represented by
     %p
-      = User::AGENCY.full_name.upcase
+      = @agency.full_name.upcase
     %p
-      = User::AGENCY.address
+      = @agency.address
     %p
-      = User::AGENCY.phone_number
+      = @agency.phone_number
     %p
-      = User::AGENCY.phone_number
+      = @agency.phone_number
     %p
-      = mail_to User::AGENCY.email, User::AGENCY.email, :target => "_blank", :class=>"email_address"
+      = mail_to @agency.email, @agency.email, :target => "_blank", :class=>"email_address"
 
     = form_tag do
       %h4 SEND A MESSAGE
@@ -32,16 +32,15 @@
 
   %div#owner
     %p
-      = User::OWNER.first_name
-      = User::OWNER.last_name.upcase
+      = @owner.first_name
+      = @owner.last_name.upcase
     %p
-      Paris
-      -#= User::OWNER.city Paris
+      = @owner.city Paris
     %p
-      = User::OWNER.country
+      = @owner.country
     %p
-      = User::OWNER.phone_number
+      = @owner.phone_number
     %p
       Commissions, print sales and general enquiries
     %p
-      = mail_to User::OWNER.email, User::OWNER.email, :target => '_blank', :class=>"email_address"
+      = mail_to @owner.email, @owner.email, :target => '_blank', :class=>"email_address"

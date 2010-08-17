@@ -211,9 +211,9 @@ $(function(){
       });
   });
 
-  $("a.edit_user,")
+  $("a.edit_user")
     .live('ajax:complete',function(e){
-      $(this).closest(".users").accordion('activate','#'+$(this).closest('.user').attr('id')+' .header');
+      $(this).closest("#users").accordion('activate','#'+$(this).closest('.user').attr('id')+' .header');
     });
 
 });
