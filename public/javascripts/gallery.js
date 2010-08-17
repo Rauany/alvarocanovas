@@ -22,9 +22,8 @@ var Gallery = {
     prevPageLinkText:          '&lsaquo; Prev',
     enableHistory:             false,
     autoStart:                 true,
-    syncTransitions:           true,
-    defaultTransitionDuration: 900,
-
+    syncTransitions:           false,
+    defaultTransitionDuration: 4000,
     onSlideChange: function(prevIndex, nextIndex) {
       // 'this' refers to the gallery, which is an extension of $('#thumbs')
       this.find('ul.thumbs').children()
