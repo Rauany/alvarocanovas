@@ -1,11 +1,6 @@
 Alvarocanovas::Application.configure do
 
-  config.middleware.use ExceptionNotifier,
-    :email_prefix => "[Alvaro] ",
-    :sender_address => %{"Rails" <notifier@w3bflows.com>},
-    :exception_recipients => %w{nicolas@w3bflows.com}
-
-
+  
   # Settings specified here will take precedence over those in config/environment.rb
 
   # The production environment is meant for finished, "live" apps.
@@ -57,6 +52,7 @@ Alvarocanovas::Application.configure do
   Haml::Template.options[:format] = :html5
 
   config.action_mailer.default_url_options = { :host => 'alvaro.webflows.fr' }    
+
 
   
 end

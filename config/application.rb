@@ -49,6 +49,10 @@ module Alvarocanovas
       'jquery.opacityrollover'
     ].collect{|f| "lib/#{f}"}
 
+    
+
   end
 
+
+  
 end

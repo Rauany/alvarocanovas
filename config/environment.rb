@@ -8,4 +8,15 @@ end
 # Initialize the rails application
 Alvarocanovas::Application.initialize!
 
-  Haml::Template.options[:ugly] = false
+require 'exception_notification'
+Alvarocanovas::Application.config.middleware.use ExceptionNotification,
+  :email_prefix => "[Alvaro] ",
+  :sender_address => %{"Rails" <notifier@w3bflows.com>},
+  :exception_recipients => %w{nicolas@w3bflows.com}
+
+
+
+
+Haml::Template.options[:ugly] = false
+
+
