@@ -15,7 +15,7 @@
     #page
       %h1
         Alvaro Canovas
-        %span= yield(:title).blank? ? "Photography" : yield(:title) 
+        = link_to (yield(:title).blank? ? "Photography" : yield(:title)), root_url, :remote => true, :class=>'link_to_root' 
 
       #menu
         %h2

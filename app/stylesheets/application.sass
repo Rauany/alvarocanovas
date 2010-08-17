@@ -54,8 +54,11 @@ h1
   font-weight: normal
   letter-spacing: 2px
 
-  span
+  a.link_to_root, a.link_to_root:visited
     color: $client-red
+
+    &:hover
+      color: $general_color
 
 
 /*Menu principal*/
@@ -88,6 +91,9 @@ h1
       top: 1px
       padding: 0 10px
 
+      &:hover > a
+        color: $client-red
+        
       .sub_items
         padding-bottom: 5px 
         text-transform: none
