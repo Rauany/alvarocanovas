@@ -414,43 +414,44 @@ h1 a.link_to_root:hover, h1 a.link_to_root:visited:hover {
   text-align: right;
 }
 /* line 281, ../../../app/stylesheets/application.sass */
-#main_content #agency {
+#main_content #contact #agency {
   float: right;
   width: 290px;
 }
 /* line 285, ../../../app/stylesheets/application.sass */
-#main_content #agency .email_address {
+#main_content #contact a.email_address {
+  letter-spacing: 2px;
   color: black;
 }
-/* line 289, ../../../app/stylesheets/application.sass */
-#main_content #agency form {
+/* line 291, ../../../app/stylesheets/application.sass */
+#main_content #contact form {
   margin-top: 40px;
 }
-/* line 292, ../../../app/stylesheets/application.sass */
-#main_content #agency form label {
+/* line 294, ../../../app/stylesheets/application.sass */
+#main_content #contact form label {
   display: block;
 }
-/* line 295, ../../../app/stylesheets/application.sass */
-#main_content #agency form input, #main_content #agency form textarea {
+/* line 297, ../../../app/stylesheets/application.sass */
+#main_content #contact form input, #main_content #contact form textarea {
   width: 210px;
   border: none;
   background: #e5e1e1;
 }
-/* line 299, ../../../app/stylesheets/application.sass */
-#main_content #agency form input:focus, #main_content #agency form textarea:focus {
+/* line 301, ../../../app/stylesheets/application.sass */
+#main_content #contact form input:focus, #main_content #contact form textarea:focus {
   background: #bdbbbb;
 }
-/* line 302, ../../../app/stylesheets/application.sass */
-#main_content #agency form #message {
+/* line 304, ../../../app/stylesheets/application.sass */
+#main_content #contact form #message {
   height: 130px;
 }
-/* line 305, ../../../app/stylesheets/application.sass */
+/* line 307, ../../../app/stylesheets/application.sass */
 #main_content #owner {
   padding-right: 30px;
   border-right: 1px solid #999999;
   float: right;
 }
-/* line 309, ../../../app/stylesheets/application.sass */
+/* line 311, ../../../app/stylesheets/application.sass */
 #main_content #owner .email_address {
   color: black;
 }

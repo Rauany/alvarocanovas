@@ -21,6 +21,7 @@ gem 'capistrano-ext'
 
 gem 'compass'
 gem 'haml'
+gem  "exception_notification"
 
 gem 'devise', :branch => '1.1'
 
