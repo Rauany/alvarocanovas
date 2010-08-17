@@ -395,3 +395,48 @@ h1 {
   float: right;
   text-align: justify;
 }
+/* line 270, ../../../app/stylesheets/application.sass */
+#main_content #contact {
+  text-align: right;
+}
+/* line 273, ../../../app/stylesheets/application.sass */
+#main_content #agency {
+  float: right;
+  width: 290px;
+}
+/* line 277, ../../../app/stylesheets/application.sass */
+#main_content #agency .email_address {
+  color: black;
+}
+/* line 281, ../../../app/stylesheets/application.sass */
+#main_content #agency form {
+  margin-top: 40px;
+}
+/* line 284, ../../../app/stylesheets/application.sass */
+#main_content #agency form label {
+  display: block;
+}
+/* line 287, ../../../app/stylesheets/application.sass */
+#main_content #agency form input, #main_content #agency form textarea {
+  width: 210px;
+  border: none;
+  background: #e5e1e1;
+}
+/* line 291, ../../../app/stylesheets/application.sass */
+#main_content #agency form input:focus, #main_content #agency form textarea:focus {
+  background: #bdbbbb;
+}
+/* line 294, ../../../app/stylesheets/application.sass */
+#main_content #agency form #message {
+  height: 130px;
+}
+/* line 297, ../../../app/stylesheets/application.sass */
+#main_content #owner {
+  padding-right: 30px;
+  border-right: 1px solid #999999;
+  float: right;
+}
+/* line 301, ../../../app/stylesheets/application.sass */
+#main_content #owner .email_address {
+  color: black;
+}

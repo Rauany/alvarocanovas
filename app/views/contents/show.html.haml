@@ -1,3 +1,4 @@
 = content_for :title, @content.label 
 
-= render :partial => 'content'
+= render :layout => 'layouts/content' do
+  = render :partial => 'content'

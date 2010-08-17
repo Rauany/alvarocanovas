@@ -16,7 +16,7 @@ Alvarocanovas::Application.routes.draw do
     resources :users
     resources :videos
     resources :contents
-    resources :clients
+    resources :publications
     resources :categories do
       collection do
         get :reorder, :list
@@ -37,7 +37,7 @@ Alvarocanovas::Application.routes.draw do
   #match "admin", :to => 'admin/categories#index'
   
 
-  resources :videos
+
 
   resources :categories do
     resources :pictures
@@ -45,9 +45,12 @@ Alvarocanovas::Application.routes.draw do
   resources :clients do
     resources :pictures
   end
-  
-  resources :clients
+  resources :videos
+  resources :publications, :only => :index
   resources :contents, :only => :show
+  match 'contact' => 'users#index', :as => "contact"
+  
+
   
   
 

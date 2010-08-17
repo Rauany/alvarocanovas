@@ -184,14 +184,26 @@ img29:
   top: false
   image_file_name: couv_match2.jpg
 
-img30:
-  category: match_publication
-  number: 2
-  top: false
-  image_file_name: 27.jpg
-
 img31:
   category: zadig
   number: 1
   top: true
   image_file_name: zadig_voltaire.jpg
+
+img32:
+  number: 1
+  type: Publication
+  top: false
+  image_file_name: publication_1.jpeg
+
+img33:
+  number: 2
+  type: Publication
+  top: false
+  image_file_name: publication_2.jpeg
+
+img34:
+  number: 2
+  type: Publication
+  top: false
+  image_file_name: publication_3.jpeg

@@ -1,0 +1,8 @@
+= labelled_form_for new_admin_category_path(@category), :html => { :multipart => true, :class => 'edit_category' }, :remote => true do |form|
+
+  %h4 Nouvelle séquence
+
+  = render :partial => 'admin/categories/form', :object => form
+
+  = link_to "Annuler", admin_categories_path(:type=>params[:type]), :class => 'cancel_new_category', :remote => true
+     

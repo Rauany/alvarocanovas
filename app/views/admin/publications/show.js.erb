@@ -1,0 +1,4 @@
+$('<%="#publication_#{@publication.id}"%>')
+  .replaceWith("<%= render_j :partial => @publication %>");
+
+$('<%= "#publications" %>').sortable('refresh');

@@ -1,0 +1,8 @@
+#publications_wrapper
+
+  = link_to "Ajouter", new_admin_publication_path, :remote => true
+
+  %ul#publications.sortable
+    = render :partial => @publications
+
+

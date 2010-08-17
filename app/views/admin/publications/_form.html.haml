@@ -1,0 +1,20 @@
+= labelled_form_for [:admin, @publication], :html => {:multipart => true}, :remote => true do |form|
+
+  %h4= form.object.new_record? ? "Ajouter une publication" : "Modifier la publication"
+
+  = form.text_field :title
+
+  - if form.object.image?
+    .form_line
+      %label Image actuelle
+      = image_tag form.object.image.url(:small)
+
+  = form.file_field :image
+
+  - if form.object.new_record?
+    = link_to "Annuler", admin_publications_path, :remote => true 
+  - else
+    = link_to "Annuler", admin_publication_path(@publication), :remote => true
+  
+  = form.submit
+

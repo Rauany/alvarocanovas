@@ -1,0 +1,21 @@
+#gallery{ :class => params[:controller] }
+
+  #loading '
+
+  %a{ :class => 'slideLink next',  :href=>"#", :title=>"Next Page" }
+  %a{ :class => "slideLink prev",  :href=>"#", :title=>"Previous Page"}
+
+  #slideshow
+
+  #thumbs-wrapper
+
+    #thumbs
+
+      %a{ :class => 'pageLink next',  :href=>"#", :title=>"Next Page" }
+      %a{ :class => "pageLink prev",  :href=>"#", :title=>"Previous Page"}
+
+      %ul.thumbs
+        = yield
+
+    #thumbs-hidder
+      %span Thumbs

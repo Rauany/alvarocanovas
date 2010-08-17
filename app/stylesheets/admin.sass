@@ -13,97 +13,107 @@
 //@import "partials/two_col"
 
 
-.category,
-.category div.header,
-.sortable.pictures
-  -moz-border-radius: 4px 4px 4px 4px
+
+body ul
+  list-style-type: 0
+  margin: 0
+  padding: 0
+
+@mixin imageThumbs
+  img.head_image
+    position: relative
+    top: 10px
+    margin: 0 10px
+    margin-left: 35px
+
+@mixin actionLinks
+  .actions
+    float: right
+    margin: 0 10px
+    font-size: 70%
+    position: absolute
+    right: 20px
+    top: 50%
+    margin-top: -25px
+
+    a
+      display: inline
+      padding: 0
+      padding-left: 5px
+
+      &:hover
+        text-decoration: underline
+
+@mixin accordion
+
+  .header
+    -moz-border-radius: 4px 4px 4px 4px
+    line-height: 50px
+    background: url("images/ui-bg_glass_100_f6f6f6_1x400.png") repeat-x scroll 50% 50% #F6F6F6
+    border: 1px solid #CCCCCC
+    color: #1C94C4
+    font-weight: bold
+
+  +actionLinks
+  +imageThumbs
+
+
+
+@mixin sortableList
+  +actionLinks
+  +imageThumbs
+  
   list-style: none
   line-height: 50px
 
 
+  .sortable_item
+    position: relative
+    -moz-border-radius: 4px 4px 4px 4px
 
-.loader
-  height: 100%
-  background: white
-  position: absolute
-
-.loader div
-  height: 100%
-  background: url(../images/loader.gif) center center no-repeat
-
-
-.category img.head_image
-  position: relative
-  top: 10px
-  margin: 0 10px
-  margin-left: 35px
-
-
-.pictures.sortable .ui-icon-arrowthick-2-n-s
-  width: 15px
-  height: 100%
-  float: left
-  left: 10px
-  position: relative
-  top: 17px
-  background-image: url("../stylesheets/ui-lightness/images/ui-icons_ef8c08_256x240.png")
-  background-position: -128px -48px
-  height: 15px
-
-.category span.actions
-  float: right
-  margin: 0 10px
-  font-size: 70%
-  position: absolute
-  right: 20px
-  top: 50%
-  margin-top: -25px
-
-.category .actions a
-  display: inline
-  padding: 0
-  padding-left: 5px
-
-.category .actions a:hover
-  text-decoration: underline
-
-
-li.picture
-  position: relative
+    .ui-icon-arrowthick-2-n-s
+      width: 15px
+      height: 100%
+      float: left
+      left: 10px
+      position: relative
+      top: 17px
+      background-image: url("../stylesheets/ui-lightness/images/ui-icons_ef8c08_256x240.png")
+      background-position: -128px -48px
+      height: 15px
 
 
 
+
+
+.sortable
+  +sortableList
+
+.accordion
+  +accordion
+
+#users
+  .name
+    margin-left: 30px
 
 form
   margin: 0 20px
 
-form h4
-  margin: 10px 0
-  text-decoration: underline
+  h4
+    margin: 10px 0
+    text-decoration: underline
 
-form label
-  float: left
-  width: 200px
-  font-size: 80%
+  label
+    float: left
+    width: 200px
+    font-size: 80%
 
-form textarea
-  height: 100px
+  textarea
+    height: 100px
 
-form div.form_line input,
-form div.form_line textarea
-  font-size: 70%
-  width: 500px
+  .form_line input,
+  .form_line textarea
+    font-size: 70%
+    width: 500px
 
-
-.users
-  .header
-    line-height: 30px
-    .name
-      display: block
-      padding: 0.5em 0.5em 0.5em 0.7em
-      padding-left: 30px
-    .links
-      float: right
-      a
-        display: inline
 

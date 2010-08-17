@@ -1,12 +1,12 @@
 #users_wrapper
   = link_to 'Nouvel utilisateur', new_admin_user_path, :remote => true
-  .users
+  #users.accordion
     - @users.each do |user|
-      %div[user]
+      %div.accordion_tab[user]
         .header
-          %span.links
-            = link_to 'Edit', edit_admin_user_path(user), :class => "edit_user", :remote => true
-            = link_to 'Destroy', [:admin,user], :confirm => 'Are you sure?', :method => :delete, :remote => true
+          %span.actions
+            = link_to 'Editer', edit_admin_user_path(user), :class => "edit_user", :remote => true
+            = link_to 'Supprimer', [:admin,user], :confirm => 'Are you sure?', :method => :delete, :remote => true, :class => "delete_user"
           %span.name= user.full_name
         .content
           = render :partial => user

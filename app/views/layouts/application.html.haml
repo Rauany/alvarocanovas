@@ -28,12 +28,12 @@
               %li
                 = link_to category.title, category_path(category), :remote => true
 
-          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to("Corporate/Advertising", :remote => true)} do
+          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to("Corporate/Advertising", categories_path, :remote => true)} do
             - Client.all.each do |client|
               %li
                 = link_to client.title, category_pictures_path(client), :remote => true
 
-          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to("Publications", categories_path, :remote => true)} do
+          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to("Publications", publications_path, :remote => true)} do
             = ''
 
           = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to("Multimedia", videos_path, :remote => true) } do
@@ -44,7 +44,7 @@
           = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to("Bio", content_path(Content::BIO), :remote => true)} do
             = ''
 
-          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to("Contact", categories_path)} do
+          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to("Contact", contact_path, :remote => true )} do
             = ''
 
       #content

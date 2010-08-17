@@ -1,2 +1,2 @@
-class Publication < Client
+class Publication < Picture
 end

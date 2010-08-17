@@ -29,8 +29,3 @@ match:
   number: 2
   image_file_name: logo_match.png
 
-match_publication:
-  title: Paris Match
-  type: Publication
-  number: 1
-  image_file_name: logo_match.png

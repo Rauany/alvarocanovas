@@ -1,0 +1,47 @@
+%div#contact
+
+  %div#agency
+
+    %p
+      Alvaro CANOVAS is represented by
+    %p
+      = User::AGENCY.full_name.upcase
+    %p
+      = User::AGENCY.address
+    %p
+      = User::AGENCY.phone_number
+    %p
+      = User::AGENCY.phone_number
+    %p
+      = mail_to User::AGENCY.email, User::AGENCY.email, :target => "_blank", :class=>"email_address"
+
+    = form_tag do
+      %h4 SEND A MESSAGE
+      .line
+        %label name
+        = text_field_tag :name
+      .line
+        %label email
+        = text_field_tag :email
+      .line
+        %label phone
+        = text_field_tag :phone
+      .line
+        %label message
+        = text_area_tag :message
+
+  %div#owner
+    %p
+      = User::OWNER.first_name
+      = User::OWNER.last_name.upcase
+    %p
+      Paris
+      -#= User::OWNER.city Paris
+    %p
+      = User::OWNER.country
+    %p
+      = User::OWNER.phone_number
+    %p
+      Commissions, print sales and general enquiries
+    %p
+      = mail_to User::OWNER.email, User::OWNER.email, :target => '_blank', :class=>"email_address"
