@@ -21,7 +21,7 @@ agence:
   country: France
 
 nicolas:
-  name:
+  name: admin1
   first_name: Nicolas
   last_name: Papon
   email: nicolas.papon@gmail.com
@@ -32,7 +32,7 @@ nicolas:
   country: France
 
 camille:
-  name:
+  name: admin2
   first_name: Camille
   last_name:
   email: camille@gmail.com

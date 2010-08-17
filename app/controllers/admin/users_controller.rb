@@ -30,7 +30,7 @@ class Admin::UsersController < Admin::ApplicationController
     if @user.save
       render :action => :index
     else
-      render :action => :index
+      render :action => :new
     end
   end
 
