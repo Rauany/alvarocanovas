@@ -1,5 +1,3 @@
-
-
 $(function(){
 
   // Init multipart forms to send data via iframe 
@@ -26,9 +24,9 @@ $(function(){
     fx: { height: 'toggle', opacity: 'toggle', duration: 400 }
   });
 
-  // categories sortable accordions
+//  categories sortable accordions
   $('.categories').livequery(
-    function(){
+    function(e){
       $(this).sortableAccordion({
         accordion:{
           header: ".header",
@@ -39,7 +37,7 @@ $(function(){
         sortable:{
           axis: "y",
           handle: ".header",
-          update: function(evt,ui){
+          update: function(evt){
             $.get('/admin/categories/reorder',
               {
                 ordered_ids: $.map($(evt.target).children(), function(sortedElt) {
@@ -86,63 +84,7 @@ $(function(){
     );
   });
 
-//  // Ferme l'accordéon avant de lancer une requete Ajax, lorsque le lien déclanchant est situé dans le header de l'accordéon
-//  $('.accordion .header a').livequery('click',function(e){
-//    e.stopImmediatePropagation();
-//    e.preventDefault();
-//    var $elt = $(this);
-//    $elt.closest(".accordion")
-//      //replie l'accordéon
-//      .queue(function(){
-//        $(this).accordion('activate',-1);
-//        $(this).dequeue();
-//      })
-//      .delay(1000)
-//      //Lance la requete AJAX
-//      .queue(function(){
-//        $elt.callRemote();
-//        // supprime l'accordeon tab si le lien est un .delete
-//        if ($elt.hasClass('delete')){
-//          $elt.closest('.accordion_tab').fadeOut(function(){
-//            $(this).remove();
-//          });
-//        }
-//        $(this).dequeue();
-//      });
-//  });
-//  $('.accordion .header a').livequery('ajax:complete', function(e){
-//    $(this).closest(".accordion").accordion('activate','#'+$(this).closest('.accordion_tab').attr('id')+' .header');
-//  })
-//
-////  $('.accordion form').live('submit',function(e){
-////      $(this).closest(".accordion").accordion('activate',-1);
-////      return true
-////  });
-//
-//
-//  $('.accordion form').livequery('submit',function(e){
-//    var $elt = $(this);
-//    e.preventDefault();
-//    e.stopImmediatePropagation();
-//    $elt.closest(".accordion")
-//      .queue(function(){
-//        $(this).accordion('activate',-1);
-//        $(this).dequeue();
-//      })
-//      .queue(function(){
-//        if($elt.attr('data-remote')){
-//          $elt.callRemote();
-//        }
-//        else{}
-//
-//        $(this).dequeue();
-//      });
-//  });
 
-
-
-//
-//
   //Properly remove a header after its deletion
   $("a.delete_category").livequery('click', function(evt){
     evt.stopImmediatePropagation();
@@ -275,3 +217,62 @@ $(function(){
     });
 
 });
+
+
+//  // Ferme l'accordéon avant de lancer une requete Ajax, lorsque le lien déclanchant est situé dans le header de l'accordéon
+//  $('.accordion .header a').livequery('click',function(e){
+//    e.stopImmediatePropagation();
+//    e.preventDefault();
+//    var $elt = $(this);
+//    $elt.closest(".accordion")
+//      //replie l'accordéon
+//      .queue(function(){
+//        $(this).accordion('activate',-1);
+//        $(this).dequeue();
+//      })
+//      .delay(1000)
+//      //Lance la requete AJAX
+//      .queue(function(){
+//        $elt.callRemote();
+//        // supprime l'accordeon tab si le lien est un .delete
+//        if ($elt.hasClass('delete')){
+//          $elt.closest('.accordion_tab').fadeOut(function(){
+//            $(this).remove();
+//          });
+//        }
+//        $(this).dequeue();
+//      });
+//  });
+//  $('.accordion .header a').livequery('ajax:complete', function(e){
+//    $(this).closest(".accordion").accordion('activate','#'+$(this).closest('.accordion_tab').attr('id')+' .header');
+//  })
+//
+////  $('.accordion form').live('submit',function(e){
+////      $(this).closest(".accordion").accordion('activate',-1);
+////      return true
+////  });
+//
+//
+//  $('.accordion form').livequery('submit',function(e){
+//    var $elt = $(this);
+//    e.preventDefault();
+//    e.stopImmediatePropagation();
+//    $elt.closest(".accordion")
+//      .queue(function(){
+//        $(this).accordion('activate',-1);
+//        $(this).dequeue();
+//      })
+//      .queue(function(){
+//        if($elt.attr('data-remote')){
+//          $elt.callRemote();
+//        }
+//        else{}
+//
+//        $(this).dequeue();
+//      });
+//  });
+
+
+
+//
+//

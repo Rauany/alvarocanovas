@@ -150,6 +150,10 @@ h1 {
   font-weight: normal;
   letter-spacing: 2px;
 }
+/* line 57, ../../../app/stylesheets/application.sass */
+h1 span {
+  color: #990000;
+}
 
 /*Menu principal */
 /* line 62, ../../../app/stylesheets/application.sass */

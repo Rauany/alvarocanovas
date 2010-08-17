@@ -52,6 +52,7 @@ module Alvarocanovas
     config.to_prepare {
       Devise::SessionsController.layout "admin"
       Devise::RegistrationsController.layout "admin"
+      #Devise::PasswordsController.layout "admin"
       Devise::UnlocksController.layout "admin"
       #Devise::ConfirmationController.layout "admin"
     }
