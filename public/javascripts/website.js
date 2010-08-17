@@ -53,7 +53,7 @@ $(function(){
   });
 
   // Initialization du sous menu des categories
-  $('.category.menu').livequery(
+  $('.category.menu, #publications.menu').livequery(
     function(){
       $(this).find('ul').css('display','none');
       $(this).hover(
