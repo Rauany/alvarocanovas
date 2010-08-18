@@ -52,7 +52,18 @@ var Gallery = {
         nextPageLink.css('visibility', 'visible');
 
       this.fadeTo('fast', 1.0);
-    }
+    },
+    onTransitionOut: function(previousSlide, previousCaption, isSync, transitionOutCallback){
+      previousSlide.fadeTo(1000, 0.0, transitionOutCallback);
+      if (previousCaption)
+        previousCaption.fadeTo(1000, 0.0);
+      
+    },
+    onTransitionIn: function(newSlide, newCaption, isSync){
+      newSlide.fadeTo(1500, 1.0);
+      if (newCaption)
+        newCaption.fadeTo(1500, 1.0);
+    }    
   }
 
 };
