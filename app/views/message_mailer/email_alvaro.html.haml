@@ -3,12 +3,13 @@
   %body
     %div
       Un visiteur vous a posté un message sur le site web :
-    %ul
+    %ul(style="color:#999999")
       %li= @message.name
-      %li= @message.email
+      %li= mail_to(@message.email,@message.email)
       %li= @message.phone
 
     %div
       = @message.content
 
-
+    %div
+      = image_tag attachments['cam.png'].url
