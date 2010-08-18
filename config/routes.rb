@@ -45,6 +45,7 @@ Alvarocanovas::Application.routes.draw do
   resources :clients do
     resources :pictures
   end
+  resources :messages, :only => [:show, :create]
   resources :videos
   resources :publications, :only => :index
   resources :contents, :only => :show

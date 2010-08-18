@@ -4,5 +4,5 @@ class UsersController < ApplicationController
     @owner = User.find_by_name('owner')
     @agency = User.find_by_name('agency')
   end
-  
+
 end

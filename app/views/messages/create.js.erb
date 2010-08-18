@@ -1,0 +1,5 @@
+$('#new_message').fadeOut(function(){
+  $(this)
+      .replaceWith('<%= render_j :partial => 'form', :locals => { :message => @message } %>')
+  $('#new_message').fadeIn('slow');
+})

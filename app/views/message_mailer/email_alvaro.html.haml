@@ -1,0 +1,14 @@
+%html
+  %head
+  %body
+    %div
+      Un visiteur vous a posté un message sur le site web :
+    %ul
+      %li= @message.name
+      %li= @message.email
+      %li= @message.phone
+
+    %div
+      = @message.content
+
+

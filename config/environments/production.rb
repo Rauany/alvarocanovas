@@ -52,6 +52,11 @@ Alvarocanovas::Application.configure do
   Haml::Template.options[:format] = :html5
 
   config.action_mailer.default_url_options = { :host => 'alvaro.webflows.fr' }    
+  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.smtp_settings = {
+    :address   => 'localhost',
+    :port      => 25
+  }
 
 
   

@@ -293,6 +293,11 @@ h1
 
       label
         display: block
+        &.error_field
+          color: $client-red
+
+      textarea
+        height: 100px
 
       input, textarea
         width: 210px
@@ -300,6 +305,8 @@ h1
         background: #e5e1e1
         &:focus
           background: #bdbbbb
+        &.error_field
+          border: 2px solid $client-red
 
       #message
         height: 130px

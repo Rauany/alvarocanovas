@@ -15,20 +15,7 @@
     %p
       = mail_to @agency.email, @agency.email, :target => "_blank", :class=>"email_address"
 
-    = form_tag do
-      %h4 SEND A MESSAGE
-      .line
-        %label name
-        = text_field_tag :name
-      .line
-        %label email
-        = text_field_tag :email
-      .line
-        %label phone
-        = text_field_tag :phone
-      .line
-        %label message
-        = text_area_tag :message
+    = render :partial => 'messages/form', :locals => { :message => Message.new }
 
   %div#owner
     %p

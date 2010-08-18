@@ -3,7 +3,6 @@ alvaro:
   first_name: Alvaro
   last_name: Canovas
   email: photography@alvarocanovas.com
-  password: test
   address: 7 rue nemours
   city: paris
   zip_code: 75011
@@ -14,7 +13,6 @@ agence:
   first_name:
   last_name: Agence Photo
   email: photography@mail.com
-  password: test
   address: 8 rue nemours
   city: paris
   zip_code: 75011
@@ -25,7 +23,6 @@ nicolas:
   first_name: Nicolas
   last_name: Papon
   email: nicolas.papon@gmail.com
-  password: test
   address: 7 rue nemours
   city: paris
   zip_code: 75011
@@ -36,7 +33,6 @@ camille:
   first_name: Camille
   last_name:
   email: camille@gmail.com
-  password: test
   address: 7 rue nemours
   city: paris
   zip_code: 75011
