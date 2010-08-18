@@ -283,7 +283,7 @@ h1
       width: 290px
   
     a.email_address
-      letter-spacing: 0.5px
+      letter-spacing: 0.05em
       color: black
 
 
@@ -296,20 +296,33 @@ h1
         &.error_field
           color: $client-red
 
-      textarea
-        height: 100px
-
       input, textarea
+        font-family: trebuchetMS, arial
+        font-size: 11px
         width: 210px
         border: none
         background: #e5e1e1
+        padding: 2px 5px
         &:focus
           background: #bdbbbb
         &.error_field
           border: 2px solid $client-red
 
-      #message
+
+      #message_content
         height: 130px
+
+      #send_message
+        cursor: pointer
+        height: 33px
+        width: 43px
+        padding: 0px
+        position: relative
+        right: -5px
+        float: right
+        background: image-url('mail.png') right center no-repeat
+        &:hover
+          background-image: image-url('mail_hover.png')
 
   #owner
     padding-right: 30px

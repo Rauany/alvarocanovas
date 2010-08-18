@@ -5,4 +5,4 @@
   = f.text_field :email, :append_to_label => message.errors.on(:email)
   = f.text_field :phone, :append_to_label => message.errors.on(:phone)
   = f.text_area :content, :append_to_label => message.errors.on(:content)
-  = f.submit 'SEND'
+  = f.submit "", :id => 'send_message'

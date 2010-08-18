@@ -420,7 +420,7 @@ h1 a.link_to_root:hover, h1 a.link_to_root:visited:hover {
 }
 /* line 285, ../../../app/stylesheets/application.sass */
 #main_content #contact a.email_address {
-  letter-spacing: 1px;
+  letter-spacing: 0.05em;
   color: black;
 }
 /* line 291, ../../../app/stylesheets/application.sass */
@@ -436,14 +436,13 @@ h1 a.link_to_root:hover, h1 a.link_to_root:visited:hover {
   color: #990000;
 }
 /* line 299, ../../../app/stylesheets/application.sass */
-#main_content #contact form textarea {
-  height: 100px;
-}
-/* line 302, ../../../app/stylesheets/application.sass */
 #main_content #contact form input, #main_content #contact form textarea {
+  font-family: trebuchetMS, arial;
+  font-size: 11px;
   width: 210px;
   border: none;
   background: #e5e1e1;
+  padding: 2px 5px;
 }
 /* line 306, ../../../app/stylesheets/application.sass */
 #main_content #contact form input:focus, #main_content #contact form textarea:focus {
@@ -453,17 +452,32 @@ h1 a.link_to_root:hover, h1 a.link_to_root:visited:hover {
 #main_content #contact form input.error_field, #main_content #contact form textarea.error_field {
   border: 2px solid #990000;
 }
-/* line 311, ../../../app/stylesheets/application.sass */
-#main_content #contact form #message {
+/* line 312, ../../../app/stylesheets/application.sass */
+#main_content #contact form #message_content {
   height: 130px;
 }
-/* line 314, ../../../app/stylesheets/application.sass */
+/* line 315, ../../../app/stylesheets/application.sass */
+#main_content #contact form #send_message {
+  cursor: pointer;
+  height: 33px;
+  width: 43px;
+  padding: 0px;
+  position: relative;
+  right: -5px;
+  float: right;
+  background: url('/images/mail.png?1282142397') right center no-repeat;
+}
+/* line 324, ../../../app/stylesheets/application.sass */
+#main_content #contact form #send_message:hover {
+  background-image: url('/images/mail_hover.png?1282142359');
+}
+/* line 327, ../../../app/stylesheets/application.sass */
 #main_content #owner {
   padding-right: 30px;
   border-right: 1px solid #999999;
   float: right;
 }
-/* line 318, ../../../app/stylesheets/application.sass */
+/* line 331, ../../../app/stylesheets/application.sass */
 #main_content #owner .email_address {
   color: black;
 }
