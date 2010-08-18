@@ -23,7 +23,7 @@ var Gallery = {
     enableHistory:             false,
     autoStart:                 true,
     syncTransitions:           false,
-    defaultTransitionDuration: 4000,
+    defaultTransitionDuration: 3000,
     onSlideChange: function(prevIndex, nextIndex) {
       // 'this' refers to the gallery, which is an extension of $('#thumbs')
       this.find('ul.thumbs').children()
