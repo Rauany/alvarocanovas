@@ -4,8 +4,7 @@ class MessageMailer < ActionMailer::Base
   def email_alvaro(message)
     @message = message
     
-    mail :to => User.find_by_name('alvaro'),
-         :subject => "Un visiteur vous adresse un email depuis le site web"
+    mail :subject => "Un visiteur vous adresse un email depuis le site web" #, :to => User.find_by_name('alvaro'),
               
   end
 end
