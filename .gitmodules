@@ -10,3 +10,6 @@
 [submodule "vendor/plugins/active_scaffold"]
 	path = vendor/plugins/active_scaffold
 	url = git://github.com/vhochstein/active_scaffold.git
+[submodule "vendor/plugins/social_bookmark"]
+	path = vendor/plugins/social_bookmark
+	url = git://github.com/itkin/social_bookmark.git
