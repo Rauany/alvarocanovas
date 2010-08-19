@@ -2,7 +2,7 @@
 db/*.sqlite3
 log/*.log
 tmp/**/*
-.idea/**/*
+.idea
 public/system/**/*
 vendor/bundle/**/*
 public/stylesheets/application_all.css
