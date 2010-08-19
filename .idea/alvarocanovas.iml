@@ -14,14 +14,18 @@
       <requirement>
         <dependency name="capistrano" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
-      <source manual="true" />
       <source from="Gemfile" />
     </requirement>
     <requirement>
       <requirement>
         <dependency name="capistrano-ext" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
-      <source manual="true" />
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="compass" version="0" bound="GREATER_OR_EQUAL" git="false" />
+      </requirement>
       <source from="Gemfile" />
     </requirement>
     <requirement>
@@ -34,44 +38,36 @@
       <requirement>
         <dependency name="delayed_paperclip" version="0" bound="GREATER_OR_EQUAL" git="true" ref="rails3" />
       </requirement>
-      <source manual="true" />
       <source from="Gemfile" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="highline" version="0" bound="GREATER_OR_EQUAL" git="false" />
+        <dependency name="devise" version="0" bound="GREATER_OR_EQUAL" git="false" ref="1.1" />
       </requirement>
-      <source manual="true" />
+      <source from="Gemfile" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="net-scp" version="0" bound="GREATER_OR_EQUAL" git="false" />
+        <dependency name="exception_notification" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
-      <source manual="true" />
+      <source from="Gemfile" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="net-sftp" version="0" bound="GREATER_OR_EQUAL" git="false" />
+        <dependency name="haml" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
-      <source manual="true" />
+      <source from="Gemfile" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="net-ssh" version="0" bound="GREATER_OR_EQUAL" git="false" />
+        <dependency name="mysql" version="2.8.1" bound="EQUAL" git="false" />
       </requirement>
-      <source manual="true" />
+      <source from="Gemfile" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="net-ssh-gateway" version="0" bound="GREATER_OR_EQUAL" git="false" />
+        <dependency name="paperclip" version="0" bound="GREATER_OR_EQUAL" git="true" />
       </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="paperclip" version="0" bound="GREATER_OR_EQUAL" git="false" />
-      </requirement>
-      <source manual="true" />
       <source from="Gemfile" />
     </requirement>
     <requirement>
@@ -102,31 +98,23 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] columnize (v0.3.1, /opt/local/lib/ruby/gems/1.8/gems/columnize-0.3.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] ruby-debug-base (v0.10.3, /opt/local/lib/ruby/gems/1.8/gems/ruby-debug-base-0.10.3)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] ruby-debug (v0.10.3, /opt/local/lib/ruby/gems/1.8/gems/ruby-debug-0.10.3)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] will_paginate (v3.0.pre2, /opt/local/lib/ruby/gems/1.8/gems/will_paginate-3.0.pre2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] paperclip (v2.3.3, /opt/local/lib/ruby/gems/1.8/gems/paperclip-2.3.3)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] actionmailer (v3.0.0.rc, /opt/local/lib/ruby/gems/1.8/gems/actionmailer-3.0.0.rc)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] actionpack (v3.0.0.rc, /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0.rc)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] activesupport (v3.0.0.rc, /opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0.rc)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] railties (v3.0.0.rc, /opt/local/lib/ruby/gems/1.8/gems/railties-3.0.0.rc)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rails (v3.0.0.rc, /opt/local/lib/ruby/gems/1.8/gems/rails-3.0.0.rc)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] bundler (v1.0.0.rc.1, /opt/local/lib/ruby/gems/1.8/gems/bundler-1.0.0.rc.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] activerecord (v3.0.0.rc, /opt/local/lib/ruby/gems/1.8/gems/activerecord-3.0.0.rc)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] activeresource (v3.0.0.rc, /opt/local/lib/ruby/gems/1.8/gems/activeresource-3.0.0.rc)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] system_timer (v1.0, /Users/nico/.gem/ruby/1.8/gems/system_timer-1.0)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] daemons (v1.0.10, /opt/local/lib/ruby/gems/1.8/gems/daemons-1.0.10)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] delayed_job (v2.0.3, /opt/local/lib/ruby/gems/1.8/gems/delayed_job-2.0.3)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] capistrano (v2.5.19, /opt/local/lib/ruby/gems/1.8/gems/capistrano-2.5.19)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] capistrano-ext (v1.2.1, /opt/local/lib/ruby/gems/1.8/gems/capistrano-ext-1.2.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] highline (v1.6.1, /opt/local/lib/ruby/gems/1.8/gems/highline-1.6.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] net-scp (v1.0.2, /opt/local/lib/ruby/gems/1.8/gems/net-scp-1.0.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] net-sftp (v2.0.4, /opt/local/lib/ruby/gems/1.8/gems/net-sftp-2.0.4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] net-ssh (v2.0.23, /opt/local/lib/ruby/gems/1.8/gems/net-ssh-2.0.23)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] net-ssh-gateway (v1.0.1, /opt/local/lib/ruby/gems/1.8/gems/net-ssh-gateway-1.0.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] sqlite3-ruby (v1.2.4, /Users/nico/.gem/ruby/1.8/gems/sqlite3-ruby-1.2.4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] mysql (v2.8.1, /opt/local/lib/ruby/gems/1.8/gems/mysql-2.8.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] haml (v3.0.16, /opt/local/lib/ruby/gems/1.8/gems/haml-3.0.16)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] compass (v0.10.4, /opt/local/lib/ruby/gems/1.8/gems/compass-0.10.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] haml (v3.0.16, /opt/local/lib/ruby/gems/1.8/gems/haml-3.0.16)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] capistrano (v2.5.19, /opt/local/lib/ruby/gems/1.8/gems/capistrano-2.5.19)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] capistrano (v2.5.19, /opt/local/lib/ruby/gems/1.8/gems/capistrano-2.5.19)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] bundler (v1.0.0.rc.5, /opt/local/lib/ruby/gems/1.8/gems/bundler-1.0.0.rc.5)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rails (v3.0.0.rc, /opt/local/lib/ruby/gems/1.8/gems/rails-3.0.0.rc)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] exception_notification (v2.3.3.0, /Users/nico/.gem/ruby/1.8/gems/exception_notification-2.3.3.0)" level="application" />
   </component>
 </module>
 
