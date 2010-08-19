@@ -142,9 +142,20 @@ img {
   top: 720px;
   left: 10px;
 }
+/* line 51, ../../../app/stylesheets/application.sass */
+#page #footer a {
+  float: left;
+  margin-right: 10px;
+}
+/* line 55, ../../../app/stylesheets/application.sass */
+#page #footer .facebook_like {
+  width: 280px;
+  height: 45px;
+  overflow: hidden;
+}
 
 /*Titre principal */
-/* line 52, ../../../app/stylesheets/application.sass */
+/* line 64, ../../../app/stylesheets/application.sass */
 h1 {
   font-size: 23px;
   line-height: 38px;
@@ -154,17 +165,17 @@ h1 {
   font-weight: normal;
   letter-spacing: 2px;
 }
-/* line 61, ../../../app/stylesheets/application.sass */
+/* line 73, ../../../app/stylesheets/application.sass */
 h1 a.link_to_root, h1 a.link_to_root:visited {
   color: #990000;
 }
-/* line 64, ../../../app/stylesheets/application.sass */
+/* line 76, ../../../app/stylesheets/application.sass */
 h1 a.link_to_root:hover, h1 a.link_to_root:visited:hover {
   color: #999999;
 }
 
 /*Menu principal */
-/* line 69, ../../../app/stylesheets/application.sass */
+/* line 81, ../../../app/stylesheets/application.sass */
 #menu {
   text-transform: uppercase;
   float: left;
@@ -175,7 +186,7 @@ h1 a.link_to_root:hover, h1 a.link_to_root:visited:hover {
   z-index: 1000;
   font-size: 10px;
 }
-/* line 79, ../../../app/stylesheets/application.sass */
+/* line 91, ../../../app/stylesheets/application.sass */
 #menu h2 {
   border-top: 1px solid;
   width: 100%;
@@ -184,49 +195,49 @@ h1 a.link_to_root:hover, h1 a.link_to_root:visited:hover {
   position: absolute;
   top: 20px;
 }
-/* line 87, ../../../app/stylesheets/application.sass */
+/* line 99, ../../../app/stylesheets/application.sass */
 #menu ul#main_menu_list {
   margin: 0 -8px;
   margin-top: 40px;
   display: "block";
 }
-/* line 92, ../../../app/stylesheets/application.sass */
+/* line 104, ../../../app/stylesheets/application.sass */
 #menu ul#main_menu_list li.first_level {
   float: left;
   position: relative;
   top: 1px;
   padding: 0 10px;
 }
-/* line 98, ../../../app/stylesheets/application.sass */
+/* line 110, ../../../app/stylesheets/application.sass */
 #menu ul#main_menu_list li.first_level:hover > a {
   color: #990000;
 }
-/* line 101, ../../../app/stylesheets/application.sass */
+/* line 113, ../../../app/stylesheets/application.sass */
 #menu ul#main_menu_list li.first_level .sub_items {
   padding-bottom: 5px;
   text-transform: none;
 }
-/* line 105, ../../../app/stylesheets/application.sass */
+/* line 117, ../../../app/stylesheets/application.sass */
 #menu ul#main_menu_list li.first_level .sub_items li {
   padding: 2px 0;
 }
-/* line 108, ../../../app/stylesheets/application.sass */
+/* line 120, ../../../app/stylesheets/application.sass */
 #menu ul#main_menu_list li.first_level .sub_items li a {
   display: block;
 }
-/* line 111, ../../../app/stylesheets/application.sass */
+/* line 123, ../../../app/stylesheets/application.sass */
 #menu ul#main_menu_list li.first_level .sub_items li a:hover {
   color: #990000;
   margin-left: 2px;
 }
 
 /*Menu coté */
-/* line 119, ../../../app/stylesheets/application.sass */
+/* line 131, ../../../app/stylesheets/application.sass */
 #side_content .line {
   height: 2px;
   border-bottom: 1px solid;
 }
-/* line 123, ../../../app/stylesheets/application.sass */
+/* line 135, ../../../app/stylesheets/application.sass */
 #side_content .menu {
   margin-top: 200px;
   margin-right: 30px;
@@ -236,7 +247,7 @@ h1 a.link_to_root:hover, h1 a.link_to_root:visited:hover {
   padding-bottom: 30px;
   position: relative;
 }
-/* line 132, ../../../app/stylesheets/application.sass */
+/* line 144, ../../../app/stylesheets/application.sass */
 #side_content .menu h3 {
   margin: 0;
   margin-bottom: 3px;
@@ -244,54 +255,54 @@ h1 a.link_to_root:hover, h1 a.link_to_root:visited:hover {
   font-size: inherit;
   font-weight: inherit;
 }
-/* line 139, ../../../app/stylesheets/application.sass */
+/* line 151, ../../../app/stylesheets/application.sass */
 #side_content .menu ul {
   padding: 10px 0;
 }
-/* line 142, ../../../app/stylesheets/application.sass */
+/* line 154, ../../../app/stylesheets/application.sass */
 #side_content .menu ul li {
   padding: 3px 0;
 }
 
 /*Galleries */
-/* line 148, ../../../app/stylesheets/application.sass */
+/* line 160, ../../../app/stylesheets/application.sass */
 #gallery {
   position: relative;
   margin-left: 200px;
   width: 800px;
 }
-/* line 153, ../../../app/stylesheets/application.sass */
+/* line 165, ../../../app/stylesheets/application.sass */
 #gallery a {
   font-size: 0;
 }
-/* line 156, ../../../app/stylesheets/application.sass */
+/* line 168, ../../../app/stylesheets/application.sass */
 #gallery img {
   vertical-align: middle;
 }
-/* line 160, ../../../app/stylesheets/application.sass */
+/* line 172, ../../../app/stylesheets/application.sass */
 #gallery.categories #thumbs-wrapper {
   display: none;
 }
-/* line 162, ../../../app/stylesheets/application.sass */
+/* line 174, ../../../app/stylesheets/application.sass */
 #gallery.categories .slideLink {
   display: none;
 }
-/* line 165, ../../../app/stylesheets/application.sass */
+/* line 177, ../../../app/stylesheets/application.sass */
 #gallery #slideshow {
   position: absolute;
   width: 100%;
 }
-/* line 169, ../../../app/stylesheets/application.sass */
+/* line 181, ../../../app/stylesheets/application.sass */
 #gallery #slideshow .image-wrapper a {
   line-height: 533px;
 }
-/* line 172, ../../../app/stylesheets/application.sass */
+/* line 184, ../../../app/stylesheets/application.sass */
 #gallery .image-wrapper {
   position: absolute;
   right: 0;
   display: block;
 }
-/* line 177, ../../../app/stylesheets/application.sass */
+/* line 189, ../../../app/stylesheets/application.sass */
 #gallery .slideLink {
   position: absolute;
   width: 200px;
@@ -300,23 +311,23 @@ h1 a.link_to_root:hover, h1 a.link_to_root:visited:hover {
   opacity: 0;
   z-index: 1000;
 }
-/* line 185, ../../../app/stylesheets/application.sass */
+/* line 197, ../../../app/stylesheets/application.sass */
 #gallery .slideLink.next {
   right: 0;
   background: url('/images/largeRightArrow.gif?1281436402') 110px center no-repeat;
 }
-/* line 189, ../../../app/stylesheets/application.sass */
+/* line 201, ../../../app/stylesheets/application.sass */
 #gallery .slideLink.prev {
   left: 0;
   background: url('/images/largeLeftArrow.gif?1281438739') 30px center no-repeat;
 }
-/* line 193, ../../../app/stylesheets/application.sass */
+/* line 205, ../../../app/stylesheets/application.sass */
 #gallery #thumbs-wrapper {
   top: 540px;
   position: absolute;
   width: 100%;
 }
-/* line 198, ../../../app/stylesheets/application.sass */
+/* line 210, ../../../app/stylesheets/application.sass */
 #gallery #thumbs-hidder {
   display: block;
   background: white;
@@ -327,7 +338,7 @@ h1 a.link_to_root:hover, h1 a.link_to_root:visited:hover {
   top: 0;
   border-bottom: 1px solid #999999;
 }
-/* line 208, ../../../app/stylesheets/application.sass */
+/* line 220, ../../../app/stylesheets/application.sass */
 #gallery #thumbs-hidder span {
   position: absolute;
   left: 50%;
@@ -336,33 +347,33 @@ h1 a.link_to_root:hover, h1 a.link_to_root:visited:hover {
   text-transform: uppercase;
   font-size: 11px;
 }
-/* line 216, ../../../app/stylesheets/application.sass */
+/* line 228, ../../../app/stylesheets/application.sass */
 #gallery #thumbs {
   margin-top: 5px;
   text-align: center;
 }
-/* line 220, ../../../app/stylesheets/application.sass */
+/* line 232, ../../../app/stylesheets/application.sass */
 #gallery #thumbs a {
   line-height: 60px;
 }
-/* line 223, ../../../app/stylesheets/application.sass */
+/* line 235, ../../../app/stylesheets/application.sass */
 #gallery #thumbs .pageLink {
   line-height: 60px;
   height: 60px;
   width: 10px;
 }
-/* line 228, ../../../app/stylesheets/application.sass */
+/* line 240, ../../../app/stylesheets/application.sass */
 #gallery #thumbs .pageLink.next {
   background: url('/images/rightArrow.jpg?1281433782') left center no-repeat;
   float: right;
 }
-/* line 232, ../../../app/stylesheets/application.sass */
+/* line 244, ../../../app/stylesheets/application.sass */
 #gallery #thumbs .pageLink.prev {
   background: url('/images/leftArrow.jpg?1281433752') center center no-repeat;
   float: left;
   margin-right: 6px;
 }
-/* line 237, ../../../app/stylesheets/application.sass */
+/* line 249, ../../../app/stylesheets/application.sass */
 #gallery #thumbs ul {
   margin: 0 auto;
   text-align: left;
@@ -370,7 +381,7 @@ h1 a.link_to_root:hover, h1 a.link_to_root:visited:hover {
   height: 60px;
   overflow: hidden;
 }
-/* line 244, ../../../app/stylesheets/application.sass */
+/* line 256, ../../../app/stylesheets/application.sass */
 #gallery #thumbs ul li {
   display: inline;
   width: 80px;
@@ -378,68 +389,68 @@ h1 a.link_to_root:hover, h1 a.link_to_root:visited:hover {
 }
 
 /*Page show Category */
-/* line 253, ../../../app/stylesheets/application.sass */
+/* line 265, ../../../app/stylesheets/application.sass */
 #main_content .category {
   position: relative;
   top: 100px;
 }
-/* line 257, ../../../app/stylesheets/application.sass */
+/* line 269, ../../../app/stylesheets/application.sass */
 #main_content .category img {
   float: right;
   margin-right: 40px;
   margin-top: 3px;
 }
-/* line 262, ../../../app/stylesheets/application.sass */
+/* line 274, ../../../app/stylesheets/application.sass */
 #main_content .category #category_description {
   text-align: justify;
   float: right;
   width: 500px;
 }
-/* line 267, ../../../app/stylesheets/application.sass */
+/* line 279, ../../../app/stylesheets/application.sass */
 #main_content .category a.category_pictures {
   display: block;
   margin-top: 10px;
   text-align: right;
 }
-/* line 272, ../../../app/stylesheets/application.sass */
+/* line 284, ../../../app/stylesheets/application.sass */
 #main_content .content {
   position: relative;
   float: right;
 }
-/* line 276, ../../../app/stylesheets/application.sass */
+/* line 288, ../../../app/stylesheets/application.sass */
 #main_content .content .content_html {
   width: 390px;
   margin-left: 30px;
   float: right;
   text-align: justify;
 }
-/* line 282, ../../../app/stylesheets/application.sass */
+/* line 294, ../../../app/stylesheets/application.sass */
 #main_content #contact {
   text-align: right;
 }
-/* line 285, ../../../app/stylesheets/application.sass */
+/* line 297, ../../../app/stylesheets/application.sass */
 #main_content #contact #agency {
   float: right;
   width: 290px;
 }
-/* line 289, ../../../app/stylesheets/application.sass */
+/* line 301, ../../../app/stylesheets/application.sass */
 #main_content #contact a.email_address {
   letter-spacing: 0.05em;
   color: black;
 }
-/* line 295, ../../../app/stylesheets/application.sass */
+/* line 307, ../../../app/stylesheets/application.sass */
 #main_content #contact form {
   margin-top: 40px;
 }
-/* line 298, ../../../app/stylesheets/application.sass */
+/* line 310, ../../../app/stylesheets/application.sass */
 #main_content #contact form label {
   display: block;
 }
-/* line 300, ../../../app/stylesheets/application.sass */
+/* line 312, ../../../app/stylesheets/application.sass */
 #main_content #contact form label.error_field {
   color: #990000;
 }
-/* line 303, ../../../app/stylesheets/application.sass */
+/* line 315, ../../../app/stylesheets/application.sass */
 #main_content #contact form input, #main_content #contact form textarea {
   font-family: trebuchetMS, arial;
   font-size: 11px;
@@ -448,19 +459,19 @@ h1 a.link_to_root:hover, h1 a.link_to_root:visited:hover {
   background: #e5e1e1;
   padding: 2px 5px;
 }
-/* line 310, ../../../app/stylesheets/application.sass */
+/* line 322, ../../../app/stylesheets/application.sass */
 #main_content #contact form input:focus, #main_content #contact form textarea:focus {
   background: #bdbbbb;
 }
-/* line 312, ../../../app/stylesheets/application.sass */
+/* line 324, ../../../app/stylesheets/application.sass */
 #main_content #contact form input.error_field, #main_content #contact form textarea.error_field {
   border: 2px solid #990000;
 }
-/* line 316, ../../../app/stylesheets/application.sass */
+/* line 328, ../../../app/stylesheets/application.sass */
 #main_content #contact form #message_content {
   height: 130px;
 }
-/* line 319, ../../../app/stylesheets/application.sass */
+/* line 331, ../../../app/stylesheets/application.sass */
 #main_content #contact form #send_message {
   cursor: pointer;
   height: 33px;
@@ -471,17 +482,17 @@ h1 a.link_to_root:hover, h1 a.link_to_root:visited:hover {
   float: right;
   background: url('/images/mail.png?1282142397') right center no-repeat;
 }
-/* line 328, ../../../app/stylesheets/application.sass */
+/* line 340, ../../../app/stylesheets/application.sass */
 #main_content #contact form #send_message:hover {
   background-image: url('/images/mail_hover.png?1282142359');
 }
-/* line 331, ../../../app/stylesheets/application.sass */
+/* line 343, ../../../app/stylesheets/application.sass */
 #main_content #owner {
   padding-right: 30px;
   border-right: 1px solid #999999;
   float: right;
 }
-/* line 335, ../../../app/stylesheets/application.sass */
+/* line 347, ../../../app/stylesheets/application.sass */
 #main_content #owner .email_address {
   color: black;
 }

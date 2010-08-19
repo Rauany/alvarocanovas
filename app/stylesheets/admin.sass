@@ -9,6 +9,7 @@
 
 // Combine the partials into a single screen stylesheet.
 @import "partials/page"
+@import "compass/css3/border-radius"
 //@import "partials/form"
 //@import "partials/two_col"
 
@@ -82,38 +83,41 @@ body ul
       background-position: -128px -48px
       height: 15px
 
+#tabs
 
+  .sortable
+    +sortableList
 
+  .accordion
+    +accordion
 
+  #users
+    .name
+      margin-left: 30px
 
-.sortable
-  +sortableList
+  form
+    margin: 0 20px
+    border: 1px solid #CCCCCC
+    padding: 10px
+    +border-radius(5px 5px)
 
-.accordion
-  +accordion
+    h4
+      margin: 0 0 30px
 
-#users
-  .name
-    margin-left: 30px
+    .form_line
+      margin: 5px 0
 
-form
-  margin: 0 20px
+      label
+        float: left
+        width: 200px
+        font-size: 90%
 
-  h4
-    margin: 10px 0
-    text-decoration: underline
+      textarea
+        height: 100px
 
-  label
-    float: left
-    width: 200px
-    font-size: 80%
-
-  textarea
-    height: 100px
-
-  .form_line input,
-  .form_line textarea
-    font-size: 70%
-    width: 500px
+      input,
+      textarea
+        font-size: 70%
+        width: 500px
 
 
