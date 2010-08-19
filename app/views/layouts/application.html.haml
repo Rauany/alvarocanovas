@@ -52,7 +52,8 @@
         = yield
 
       #footer
-        = social_icons do |icon|
+        = link_to "version francaise", "#", :class=> "version_change"
+        = social_icons(:size => 20) do |icon|
           = icon.twitter
-          = icon.facebook_like
+          = icon.facebook
         
