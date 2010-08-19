@@ -486,6 +486,7 @@ body ul {
 /* line 98, ../../../app/stylesheets/admin.sass */
 #tabs form {
   margin: 0 20px;
+  color: black;
   border: 1px solid #cccccc;
   padding: 10px;
   -moz-border-radius: 5px 5px;
@@ -495,25 +496,33 @@ body ul {
   -khtml-border-radius: 5px 5px;
   border-radius: 5px 5px;
 }
-/* line 104, ../../../app/stylesheets/admin.sass */
+/* line 105, ../../../app/stylesheets/admin.sass */
+#tabs form.edit_picture, #tabs form.edit_publication {
+  border: none;
+}
+/* line 107, ../../../app/stylesheets/admin.sass */
+#tabs form.edit_picture a, #tabs form.edit_publication a {
+  color: black;
+}
+/* line 110, ../../../app/stylesheets/admin.sass */
 #tabs form h4 {
   margin: 0 0 30px;
 }
-/* line 107, ../../../app/stylesheets/admin.sass */
+/* line 113, ../../../app/stylesheets/admin.sass */
 #tabs form .form_line {
   margin: 5px 0;
 }
-/* line 110, ../../../app/stylesheets/admin.sass */
+/* line 116, ../../../app/stylesheets/admin.sass */
 #tabs form .form_line label {
   float: left;
   width: 200px;
   font-size: 90%;
 }
-/* line 115, ../../../app/stylesheets/admin.sass */
+/* line 121, ../../../app/stylesheets/admin.sass */
 #tabs form .form_line textarea {
   height: 100px;
 }
-/* line 118, ../../../app/stylesheets/admin.sass */
+/* line 124, ../../../app/stylesheets/admin.sass */
 #tabs form .form_line input,
 #tabs form .form_line textarea {
   font-size: 70%;

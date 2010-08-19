@@ -1,7 +1,7 @@
 #tabs
   %ul
     %li= link_to "Editorial", '#tab-0'
-    %li= link_to "Advertizing", admin_categories_path(:type => 'Client')
+    %li= link_to "Advertizing", "#" #admin_categories_path(:type => 'Client')
     %li= link_to "Publications", admin_publications_path
     %li= link_to "Multimedia", "#"#admin_videos_path, :remote => true
     %li= link_to Content::BIO.label, edit_admin_content_path(Content::BIO), :id =>"content_#{Content::BIO.id}_label"
