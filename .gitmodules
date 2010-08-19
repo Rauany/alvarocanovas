@@ -8,6 +8,3 @@
 	path = vendor/plugins/constant_in_db
 	url = git://github.com/itkin/constants_in_db.git
 
-[submodule "vendor/plugins/social_icons"]
-	path = vendor/plugins/social_icons
-	url = git://github.com/itkin/social_icons.git
