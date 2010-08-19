@@ -7,3 +7,10 @@
 [submodule "vendor/plugins/constant_in_db"]
 	path = vendor/plugins/constant_in_db
 	url = git://github.com/itkin/constants_in_db.git
+[submodule "vendor/plugins/social_bookmark"]
+        path = vendor/plugins/social_bookmark
+        url = git://github.com/itkin/social_bookmark.git
+[submodule "vendor/plugins/active_scaffold"]
+        path = vendor/plugins/active_scaffold
+        url = git://github.com/itkin/active_scaffold.git
+
