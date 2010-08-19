@@ -61,9 +61,9 @@ var Gallery = {
       
     },
     onTransitionIn: function(newSlide, newCaption, isSync){
-      newSlide.fadeTo(2000, 1.0);
+      newSlide.fadeTo(3000, 1.0);
       if (newCaption)
-        newCaption.fadeTo(2000, 1.0);
+        newCaption.fadeTo(3000, 1.0);
     }    
   }
 
