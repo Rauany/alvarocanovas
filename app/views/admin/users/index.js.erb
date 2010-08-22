@@ -1,5 +1,2 @@
 $('#users_wrapper')
-  .fadeOut(function(){
-    $(this).html('<%= render_j :partial => 'index' %>')
-  })
-  .fadeIn()
+  .htmlWithFade('<%= render_j :partial => 'index' %>','slow')

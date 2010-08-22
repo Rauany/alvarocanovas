@@ -1,5 +1,6 @@
 class Admin::CategoriesController < Admin::ApplicationController
-  
+
+
   def index
     @categories = Category.where(:type => params[:type]).includes(:pictures)
     render :action => :index
@@ -35,7 +36,7 @@ class Admin::CategoriesController < Admin::ApplicationController
   end
 
   def create
-    @category = Category.new(params[:category])
+    @category = params[:type] == "Client" ? Client.new(params[:category]) : Category.new(params[:category])
     if @category.save
       @categories = Category.where(:type => params[:type]).includes(:pictures)
       flash.now[:notice] = "Reportage créé avec succés"

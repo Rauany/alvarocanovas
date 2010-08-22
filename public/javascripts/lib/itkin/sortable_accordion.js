@@ -27,7 +27,7 @@
       });
 
       this.element
-        .accordion(this.options.accordion)
+        .ajaxAccordion(this.options.accordion)
         .sortable(this.options.sortable);
 
     },

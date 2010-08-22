@@ -1,4 +1,4 @@
-= labelled_form_for [:admin,@category], :html => { :multipart => true, :class => 'edit_category' }, :remote => true do |form|
+= labelled_form_for :category, @category, :url => { :action => :create}, :html => { :multipart => true, :class => 'edit_category' }, :remote => true do |form|
 
   %h4 Nouvelle séquence
 

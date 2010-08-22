@@ -1,6 +1,48 @@
+$.fn.htmlWithFade= function(html, speed){
+  return $.each(this, function(){
+    $(this).html($(html).css('opacity','hide').fadeIn(speed))  
+  })
+}
+
 $(function(){
 
-  // Init multipart forms to send data via iframe 
+  //user list
+  $('#users').livequery(
+    function(){
+      $(this).ajaxAccordion({
+          header: ".header",
+          collapsible: true,
+          active:false,
+          autoHeight: false
+      });
+    },
+    function(){
+      $(this).ajaxAccordion('destroy')
+    }
+  );
+
+  $("#publications, #videos").livequery(function(){
+    var controller_name = $(this).attr('id')
+    $(this).sortable(
+      {
+        axis:'y',
+        forcePlaceholderSize: true,
+        update: function(evt,ui){
+          $.get('/admin/'+ controller_name +'/reorder',
+            {
+              ordered_ids: $.map($(evt.target).children(), function(li) {
+                return li.id.match(/\d+/)
+              })
+            }
+          );
+        }
+      }
+    );
+  });
+
+
+
+  // Init multipart forms to send data via iframe
   ajaxMulitipartForm.setup();
 
   // init the textarea to load with tinyMCE editor
@@ -32,7 +74,8 @@ $(function(){
           header: ".header",
           collapsible: true,
           active:false,
-          autoHeight: false
+          autoHeight: false,
+          ajaxSelectors: [['div > .header a','click']]
         },
         sortable:{
           axis: "y",
@@ -54,25 +97,20 @@ $(function(){
     }
   );
 
-  //users accordion
-  $('#users').livequery(
-    function(){
-      $(this).accordion({
-          header: ".header",
-          collapsible: true,
-          active:false,
-          autoHeight: false
-      });
-    }
-  );
+  // Close the accordion tab before to send the query to the iframe
+  $('form.edit_category').live('submit',function(e){
+      $(this).closest(".categories").accordion('activate',-1);
+      return true
+  });
 
-  $("#publications").livequery(function(){
-    $(this).sortable(
-      {
-        axis:'y',
+  //Init the sortable lists of pictures, within each category (.category)
+  $('.pictures.sortable').livequery(
+    function(){
+      $(this).sortable({
+        axis: "y",
         forcePlaceholderSize: true,
-        update: function(evt,ui){
-          $.get('/admin/publications/reorder',
+        update:function(evt,ui){
+          $.get('/admin/categories/' + evt.target.id.match(/\d+/) + '/pictures/reorder',
             {
               ordered_ids: $.map($(evt.target).children(), function(li) {
                 return li.id.match(/\d+/)
@@ -80,77 +118,12 @@ $(function(){
             }
           );
         }
-      }
-    );
-  });
-
-
-  //Properly remove a header after its deletion
-  $("a.delete_category").livequery('click', function(evt){
-    evt.stopImmediatePropagation();
-    evt.preventDefault();
-    $(this).parents('.category').fadeOut(function(){
-      $(evt.target).callRemote();
-      $(this).remove();
-      $(this).closest(".categories").sortable('refresh');
-    });
-  });
-
-
-  //Close accodion when a header's content is updated via ajax, and then fire the ajax call
-  $("a.edit_category, a.add_picture, a.cancel_edit_category").livequery('click', function(evt){
-      evt.stopImmediatePropagation();
-      evt.preventDefault();
-      var $elt = $(this);
-      var $categories = $elt.closest(".categories")
-      $categories.accordion('activate',-1);
-      var interval = setInterval(function(){
-        if($categories.data('accordion').running == 0){
-          $elt.callRemote();
-          clearInterval(interval);
-        }
-      },200)
-    });
-
-  // Same as above for the multipart's form which don't send ajax request
-  $('form.edit_category').live('submit',function(e){
-      $(this).closest(".categories").accordion('activate',-1);
-      return true
-  });
-
-
-  //Reopen an accordion header after that its content has been updated via Ajax
-  // We don't apply on a.cancel_edit_category as the action sends back update.js
-  $("a.edit_category, a.add_picture")
-    .live('ajax:complete',function(e){
-      $(this).closest(".ui-accordion").accordion('activate','#'+$(this).closest('.category').attr('id')+' .header');
-    });
-
-
-
-
-
-    //Init the sortable lists of pictures, within each category (.category)
-    $('.pictures.sortable').livequery(
-      function(){
-        $(this).sortable({
-          axis: "y",
-          forcePlaceholderSize: true,
-          update:function(evt,ui){
-            $.get('/admin/categories/' + evt.target.id.match(/\d+/) + '/pictures/reorder',
-              {
-                ordered_ids: $.map($(evt.target).children(), function(li) {
-                  return li.id.match(/\d+/)
-                })
-              }
-            );
-          }
-        })
-      },
-      function(){
-        $(this).sortable('destroy');
-      }
-    );
+      })
+    },
+    function(){
+      $(this).sortable('destroy');
+    }
+  );
 
 
   //properly destroy a picture
@@ -165,114 +138,8 @@ $(function(){
   });
 
 
-  //user list
-  $('#users').livequery(
-    function(){
-      $(this).accordion({
-          header: ".header",
-          collapsible: true,
-          active:false,
-          autoHeight: false
-      });
-    }
-  );
-
-
-
-  $('#users form').livequery('submit',function(e){
-    e.stopImmediatePropagation();
-    e.preventDefault();
-    var $elt = $(this);
-    $elt.closest(".ui-accordion")
-      .queue(function(){
-        $(this).accordion('activate',-1);
-        $(this).dequeue();
-      })
-      .delay(200)
-      .queue(function(){
-        $elt.callRemote();
-        $(this).dequeue();
-      });
-  });
-
-  $('#users .header a, .users form a.cancel').livequery('click',function(e){
-    e.stopImmediatePropagation();
-    e.preventDefault();
-    var $elt = $(this);
-    $elt.closest(".ui-accordion")
-      .queue(function(){
-        $(this).accordion('activate',-1);
-        $(this).dequeue();
-      })
-      .delay(200)
-      .queue(function(){
-        $elt.callRemote();
-        $(this).dequeue();
-      });
-  });
-
-  $("a.edit_user")
-    .live('ajax:complete',function(e){
-      $(this).closest("#users").accordion('activate','#'+$(this).closest('.user').attr('id')+' .header');
-    });
+  
 
 });
 
 
-//  // Ferme l'accordéon avant de lancer une requete Ajax, lorsque le lien déclanchant est situé dans le header de l'accordéon
-//  $('.accordion .header a').livequery('click',function(e){
-//    e.stopImmediatePropagation();
-//    e.preventDefault();
-//    var $elt = $(this);
-//    $elt.closest(".accordion")
-//      //replie l'accordéon
-//      .queue(function(){
-//        $(this).accordion('activate',-1);
-//        $(this).dequeue();
-//      })
-//      .delay(1000)
-//      //Lance la requete AJAX
-//      .queue(function(){
-//        $elt.callRemote();
-//        // supprime l'accordeon tab si le lien est un .delete
-//        if ($elt.hasClass('delete')){
-//          $elt.closest('.accordion_tab').fadeOut(function(){
-//            $(this).remove();
-//          });
-//        }
-//        $(this).dequeue();
-//      });
-//  });
-//  $('.accordion .header a').livequery('ajax:complete', function(e){
-//    $(this).closest(".accordion").accordion('activate','#'+$(this).closest('.accordion_tab').attr('id')+' .header');
-//  })
-//
-////  $('.accordion form').live('submit',function(e){
-////      $(this).closest(".accordion").accordion('activate',-1);
-////      return true
-////  });
-//
-//
-//  $('.accordion form').livequery('submit',function(e){
-//    var $elt = $(this);
-//    e.preventDefault();
-//    e.stopImmediatePropagation();
-//    $elt.closest(".accordion")
-//      .queue(function(){
-//        $(this).accordion('activate',-1);
-//        $(this).dequeue();
-//      })
-//      .queue(function(){
-//        if($elt.attr('data-remote')){
-//          $elt.callRemote();
-//        }
-//        else{}
-//
-//        $(this).dequeue();
-//      });
-//  });
-
-
-
-//
-//

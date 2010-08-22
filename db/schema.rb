@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100816223227) do
+ActiveRecord::Schema.define(:version => 20100822190458) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20100816223227) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "type"
+    t.text     "description_fr"
   end
 
   create_table "contents", :force => true do |t|
@@ -35,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20100816223227) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.text     "html_fr"
   end
 
   create_table "delayed_jobs", :force => true do |t|
@@ -101,6 +103,7 @@ ActiveRecord::Schema.define(:version => 20100816223227) do
     t.integer  "source_file_size"
     t.datetime "source_updated_at"
     t.boolean  "source_processing"
+    t.string   "title"
   end
 
 end

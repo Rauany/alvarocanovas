@@ -1,0 +1,4 @@
+$('<%="#video_#{@video.id}"%>')
+  .replaceWith("<%= render_j :partial => @video %>");
+
+$('<%= "#videos" %>').sortable('refresh');

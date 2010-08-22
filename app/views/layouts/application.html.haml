@@ -27,22 +27,22 @@
           = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to("Editorial", categories_path, :remote => true) } do
             - Category.where(:type=> nil).each do |category|
               %li
-                = link_to category.title, category_path(category), :remote => true
+                = link_to category.title, category_path(:id =>category), :remote => true
 
           = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to("Corporate/Advertising", categories_path, :remote => true)} do
             - Client.all.each do |client|
               %li
-                = link_to client.title, category_pictures_path(client), :remote => true
+                = link_to client.title, category_pictures_path(:category_id =>client), :remote => true
 
           = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to("Publications", publications_path, :remote => true)} do
             = ''
 
           = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to("Multimedia", videos_path, :remote => true) } do
             = ''
-          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to("Current Work", content_path(Content::CURRENT_WORK), :remote => true)} do
+          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to("Current Work", content_path(:id =>Content::CURRENT_WORK), :remote => true)} do
             = ''
 
-          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to("Bio", content_path(Content::BIO), :remote => true)} do
+          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to("Bio", content_path(:id =>Content::BIO), :remote => true)} do
             = ''
 
           = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to("Contact", contact_path, :remote => true )} do
@@ -52,7 +52,11 @@
         = yield
 
       #footer
-        = link_to "version francaise", "#", :class=> "version_change"
+        - if params[:locale] == 'fr'
+          = link_to "english version", root_url(:locale => 'en'), :class=> "version_change"
+        - else
+          = link_to "version francaise", root_url(:locale => 'fr'), :class=> "version_change"
+
         = social_icons(:size => 20) do |icon|
           = icon.twitter
           = icon.facebook

@@ -29,7 +29,6 @@ Alvarocanovas::Application.routes.draw do
           get :reorder
         end
       end
-
     end
     root :to => 'categories#index'
   end
@@ -38,24 +37,19 @@ Alvarocanovas::Application.routes.draw do
   
 
 
+  scope "/:locale" do
+    resources :categories, :only => [:index, :show] do
+      resources :pictures, :only => [:index, :show]
+    end
+    resources :messages, :only => [:show, :create]
+    resources :videos, :only => [:index, :show]
+    resources :publications, :only => :index
+    resources :contents, :only => :show
+    match 'contact' => 'users#index', :as => "contact"
+    root :to => 'categories#index'
+  end  
 
-  resources :categories do
-    resources :pictures
-  end
-  resources :clients do
-    resources :pictures
-  end
-  resources :messages, :only => [:show, :create]
-  resources :videos
-  resources :publications, :only => :index
-  resources :contents, :only => :show
-  match 'contact' => 'users#index', :as => "contact"
-  
 
-  
-  
-
-  root :to => 'categories#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

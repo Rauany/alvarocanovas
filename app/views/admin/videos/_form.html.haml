@@ -1,0 +1,20 @@
+= labelled_form_for [:admin, @video], :html => {:multipart => true}, :remote => true do |form|
+
+  %h4= form.object.new_record? ? "Ajouter une video" : "Modifier la video"
+
+  = form.text_field :title
+
+  -#- if form.object.source?
+  -#  .form_line
+  -#    %label Source actuelle
+  -#    = source_tag form.object.source.url(:small)
+
+  = form.file_field :source
+
+  - if form.object.new_record?
+    = link_to "Annuler", admin_videos_path, :remote => true
+  - else
+    = link_to "Annuler", admin_video_path(@video), :remote => true
+  
+  = form.submit
+

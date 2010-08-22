@@ -1,4 +1,4 @@
 $('#category_<%=@category.id%> .content')
   .hide()
-  .html('<%= render_j :partial => 'admin/pictures/form', :locals => {:category => @category, :picture => @picture } %>')
+  .html('<%= render_j :partial => 'admin/pictures/new' %>')
   .fadeIn()

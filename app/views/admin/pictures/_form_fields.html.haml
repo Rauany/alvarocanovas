@@ -1,8 +1,0 @@
-= form.select :top, [["OUI",true], ["Non",false]], :label_text => "A l'affiche"
-
-- if form.object.image?
-  .form_line
-    %label Image actuelle
-    = image_tag form.object.image.url(:small)
-
-= form.file_field :image

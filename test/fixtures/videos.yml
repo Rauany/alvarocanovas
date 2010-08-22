@@ -1,5 +1,7 @@
 one:
+  title: video 1
   source_file_name: 01.mp4
 
 two:
+  title: video 2
   source_file_name: 02.mp4

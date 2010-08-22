@@ -9,7 +9,7 @@
     %ul
       %li#slideShowCaption
       %li#slideShowControls
-      %li= link_to "Overview", category_path(@category), :remote => true        
+      %li= link_to "Overview", category_path(:id => @category), :remote => true        
       - if params[:controller] == "categories"
         %li= link_to "Full Screen", "#", :id => "fullScreen"
     .line

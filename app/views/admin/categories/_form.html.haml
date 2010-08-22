@@ -1,5 +1,5 @@
 
-= hidden_field_tag :type, :value => form.object.type
+= hidden_field_tag :type, form.object.type
 
 = form.hidden_field :type
 
@@ -7,4 +7,6 @@
 
 = form.file_field :image
 
-= form.text_area :description
+= form.text_area :description, :id => "description_#{(Time.now.to_f*100).to_i}", :label_text => "Texte (en)", :style => "width:510px;height:200px"
+
+= form.text_area :description_fr, :id => "description_fr_#{(Time.now.to_f*100).to_i}", :label_text => "Texte (fr)", :style => "width:510px;height:200px"

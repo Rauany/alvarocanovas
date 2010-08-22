@@ -28,7 +28,7 @@ module Alvarocanovas
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+     config.i18n.default_locale = :en
 
     # JavaScript files you want as :defaults (application.js is always included).
     # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
@@ -39,11 +39,18 @@ module Alvarocanovas
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 
+
+    config.generators do |g|
+      g.orm :active_record
+      g.template_engine :haml
+      g.test_framework :test_unit, :fixture => true
+    end
+
     config.action_view.javascript_expansions[:defaults] = [
       'jquery',
       'rails',
       'jquery.livequery',
-      'jquery-ui-1.8.2.custom.min',
+      'jquery-ui-1.8.2.custom',
       'jquery.galleriffic',
       'jquery.history',
       'jquery.opacityrollover'

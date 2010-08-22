@@ -1,5 +1,5 @@
 $('#category_<%=@category.id%> .info')
-  .replaceWith('<%= render_j :partial => @category %>');
+  .replaceWith('<%= render_j :partial => 'admin/categories/category', :locals => {:category => @category }%>');
 
 $('#category_<%=@category.id%> .content')
   .html('<%= render_j :partial => 'admin/pictures/index', :locals => { :category => @category, :pictures => @category.pictures } %>');

@@ -8,4 +8,13 @@ class Content < ActiveRecord::Base
                       :large => ['190x200', :jpg]
                     }
 
+  def html(locale=:en)
+    if locale.to_sym == :en
+      read_attribute(:html)
+    else locale.to_sym == :fr
+      html_fr
+    end
+  end
+
+
 end
