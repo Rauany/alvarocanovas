@@ -16,7 +16,7 @@ set :password,  'kz28h42b' #Capistrano::CLI.password_prompt("Rails user password
 set :scm, :git
 set :git_enable_submodules, true
 set :repository, "git@github.com:itkin/alvarocanovas.git"
-set :branch, "origin/vimeo"
+
 
 set :deploy_via, :remote_cache
 
