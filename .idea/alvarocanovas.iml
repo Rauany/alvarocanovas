@@ -60,7 +60,25 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="httparty" version="0" bound="GREATER_OR_EQUAL" git="false" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="httpclient" version="0" bound="GREATER_OR_EQUAL" git="false" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="mysql" version="2.8.1" bound="EQUAL" git="false" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="oauth-client" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source from="Gemfile" />
     </requirement>
