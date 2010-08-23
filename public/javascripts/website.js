@@ -81,5 +81,13 @@ $(function(){
     $(this).gallery('classic',{ autoStart: ($(this).find('img').size() > 1) ? true : false });
   });
 
+  //$('#menu a').address()
+//  $.address.change(function(event) {
+//    $.getScript(event.value);
+//  });
+// $('#menu a').click(function() {
+//   $.address.value($(this).attr('href'));
+// });
+
 });
 

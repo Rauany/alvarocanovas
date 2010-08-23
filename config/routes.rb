@@ -37,7 +37,7 @@ Alvarocanovas::Application.routes.draw do
   
 
 
-  scope "/:locale" do
+  scope "(:locale)", :locale => /fr|en/ do
     resources :categories, :only => [:index, :show] do
       resources :pictures, :only => [:index, :show]
     end

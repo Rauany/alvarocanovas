@@ -52,7 +52,6 @@ module Alvarocanovas
       'jquery.livequery',
       'jquery-ui-1.8.2.custom',
       'jquery.galleriffic',
-      'jquery.history',
       'jquery.opacityrollover'
     ].collect{|f| "lib/#{f}"}
 

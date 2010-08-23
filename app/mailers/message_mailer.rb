@@ -3,8 +3,6 @@ class MessageMailer < ActionMailer::Base
 
   def email_alvaro(message)
     @message = message
-    attachments.inline['cam.png'] = File.read(File.join(Rails.root,'public/images/cam.png'))   
     mail :subject => "Un visiteur vous adresse un email depuis le site web" #, :to => User.find_by_name('alvaro'),
-              
   end
 end
