@@ -66,6 +66,7 @@ GEM
     columnize (0.3.1)
     compass (0.10.4)
       haml (>= 3.0.4)
+    crack (0.1.8)
     daemons (1.1.0)
     devise (1.1.1)
       bcrypt-ruby (~> 2.1.2)
@@ -75,7 +76,11 @@ GEM
     exception_notification (2.3.3.0)
     haml (3.0.16)
     highline (1.6.1)
+    httparty (0.6.1)
+      crack (= 0.1.8)
+    httpclient (2.1.5.2)
     i18n (0.4.1)
+    json (1.4.6)
     linecache (0.43)
     mail (2.2.5)
       activesupport (>= 2.3.6)
@@ -90,6 +95,10 @@ GEM
     net-ssh (2.0.23)
     net-ssh-gateway (1.0.1)
       net-ssh (>= 1.99.1)
+    oauth (0.4.2)
+    oauth-client (0.1.0)
+      json (>= 1.1.2)
+      oauth (>= 0.3.1)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.9)
@@ -136,7 +145,10 @@ DEPENDENCIES
   devise
   exception_notification
   haml
+  httparty
+  httpclient
   mysql (= 2.8.1)
+  oauth-client
   paperclip!
   rails (= 3.0.0.rc)
   ruby-debug

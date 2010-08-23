@@ -1,8 +1,11 @@
 #videos_wrapper
 
-  = link_to "Ajouter", new_admin_video_path, :remote => true
+  - if @link
+    = link_to "Auth", @link
+  - else
+    = link_to "Ajouter", new_admin_video_path, :remote => true
 
-  %ul#videos.sortable
-    = render :partial => @videos
+    %ul#videos.sortable
+      = render :partial => @videos
 
 

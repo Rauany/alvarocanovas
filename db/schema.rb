@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100822190458) do
+ActiveRecord::Schema.define(:version => 20100823180019) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -104,6 +104,21 @@ ActiveRecord::Schema.define(:version => 20100822190458) do
     t.datetime "source_updated_at"
     t.boolean  "source_processing"
     t.string   "title"
+    t.text     "description"
+    t.text     "embed"
+    t.string   "video_id"
+  end
+
+  create_table "vtokens", :force => true do |t|
+    t.text     "token"
+    t.text     "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "perms"
+    t.string   "nsid"
+    t.string   "fullname"
+    t.string   "username"
+    t.string   "user_id"
   end
 
 end
