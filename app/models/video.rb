@@ -12,7 +12,7 @@ class Video < ActiveRecord::Base
     user.vimeo_upload.upload(source.path,ticket['id'], ticket['endpoint'])
     user.vimeo_upload.complete(ticket['id'])
 
-  end              vimeo.videos.upload.getTicket
+  end              
 
   def oembed
     oembed = "http://vimeo.com/api/oembed.json?url=http%3A//vimeo.com/" + video_id.to_s
