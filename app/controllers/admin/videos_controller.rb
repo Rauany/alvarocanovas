@@ -1,24 +1,34 @@
 class Admin::VideosController < Admin::ApplicationController
-  API_KEY = Alvarocanovas::Application::API_KEY
-  SECRET_KEY = Alvarocanovas::Application::SECRET_KEY
 
-  def index
-    @user = User.find_by_name('alvaro')
-    if @user.vimeo_token.blank?
-      base = Vimeo::Advanced::Base.new(@user.vimeo_api_key, @user.vimeo_api_secret)
+  def get_owner
+    @owner = User.find_by_name('owner')
+  end
+
+  def check_vimeo_access
+    unless @owner.vimeo_check_advanced_access
+      redirect_to authorize_admin_videos_path
+    end
+  end
+   
+  def authorize
+
+    #On commence par ici, en demandant un OAuth secret
+    if params[:oauth_token].blank? or params[:oauth_verifier].blank?
+      base = @owner.vimeo_advanced(nil,nil)  
       request_token = base.get_request_token
       session[:oauth_secret] = request_token.secret
       redirect_to base.authorize_url
-    elsif params[:oauth_token] and params[:oauth_verifier]
-      base = Vimeo::Advanced::Base.new(@user.vimeo_api_key, @user.vimeo_api_secret)
+    #.. puis on réinstancie Vimeo::Advanced::Base, et on demande un access_token
+    else
+      base = @owner.vimeo_advanced(nil,nil)
       access_token = base.get_access_token(params[:oauth_token], session[:oauth_secret], params[:oauth_verifier])
       # You'll want to hold on to the user's access token and secret. I'll save it to the database.
-      user.vimeo_token = access_token.token
-      user.secret = access_token.secret
-      user.save(false)
+      @owner.vimeo_token = access_token.token
+      @owner.vimeo_secret = access_token.secret
+      @owner.save(false)
+      redirect_to admin_videos_path
     end
   end
-
 
   # GET /videos/1
   # GET /videos/1.xml

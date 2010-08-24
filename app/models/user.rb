@@ -13,5 +13,19 @@ class User < ActiveRecord::Base
   end
 
 
+  def vimeo_advanced(token=nil,secret=nil)
+    @vimeo_advanced ||= Vimeo::Advanced::Base.new(vimeo_api_key, vimeo_api_secret, :token => token || vimeo_token, :secret => secret || vimeo_secret)
+  end
   
+  def vimeo_simple
+    @vimeo_advanced ||= Vimeo::Simple::Base.new(vimeo_api_key, vimeo_api_secret)
+  end
+
+  def vimeo_check_advanced_access
+    begin
+      vimeo_advanced.check_access_token
+    rescue Vimeo::Advanced::RequestFailed
+      false      
+    end
+  end
 end

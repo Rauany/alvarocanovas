@@ -14,7 +14,9 @@ Alvarocanovas::Application.routes.draw do
 
   namespace 'admin' do
     resources :users
-    resources :videos
+    resources :videos do
+      get :authorize, :on => :collection
+    end
     resources :contents
     resources :publications
     resources :categories do
