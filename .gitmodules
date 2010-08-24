@@ -11,3 +11,6 @@
 [submodule "vendor/plugins/social_icons"]
 	path = vendor/plugins/social_icons
 	url = git://github.com/itkin/social_icons.git
+[submodule "vendor/plugins/vimeo_for_everybody"]
+	path = vendor/plugins/vimeo_for_everybody
+	url = git://github.com/itkin/vimeo_for_everybody.git
