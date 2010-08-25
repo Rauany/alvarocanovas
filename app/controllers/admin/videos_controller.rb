@@ -27,6 +27,9 @@ class Admin::VideosController < Admin::ApplicationController
     end
   end
 
+
+
+
   # GET /videos/1
   # GET /videos/1.xml
   def show
