@@ -20,3 +20,15 @@ Alvarocanovas::Application.config.middleware.use ExceptionNotification,
 Haml::Template.options[:ugly] = false
 
 
+#Vimeo :
+#
+#Consumer Key: 0cd46f431a7919e7a6539e469a77dfb1
+#Consumer Secret: 9945b7731ebce6cc Please do not share this with others
+#Callback URL: http://alvaro.webflows.fr/admin/videos
+#Upload Access: Requested - pending
+#
+#Description:
+#Profesional website of Alvaro Canovas, photographer
+#
+#Purpose: (not shown to users)
+#Photographic and video galleries

@@ -5,7 +5,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, 
          :recoverable, :rememberable, :trackable
 
-  has_vimeo_account
+  #has_vimeo_account
+
+  has_many :videos
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :first_name, :last_name, :address, :city, :country, :phone_number, :email, :password, :password_confirmation, :remember_me
@@ -16,10 +18,10 @@ class User < ActiveRecord::Base
 
   def synchronize_videos_with_vimeo(force=false)
     destroy_videos_deleted_on_vimeo do
-      vimeo_instances.collect do |instance|
-        video = Video.find_or_initialize_by_vimeo_id(instance['id'])
-        video.title = instance['title']
-        video.save(force)
+      vimeo_instances_ids.collect do |vimeo_id|
+        video = Video.init_from_vimeo(vimeo_id)
+        video.user_id = id
+        video.save
         video
       end
     end
