@@ -1,32 +1,29 @@
 class Admin::VideosController < Admin::ApplicationController
 
+  before_filter :get_owner
+  before_filter :check_vimeo_access, :except => :authorize
+
+
   def get_owner
     @owner = User.find_by_name('owner')
   end
 
   def check_vimeo_access
-    unless @owner.vimeo_check_advanced_access
-      redirect_to authorize_admin_videos_path
+    unless @owner.vimeo_check_access
+      render :action => :authorize, :layout => false
     end
   end
    
   def authorize
-
-    #On commence par ici, en demandant un OAuth secret
     if params[:oauth_token].blank? or params[:oauth_verifier].blank?
-      base = @owner.vimeo_advanced(nil,nil)  
-      request_token = base.get_request_token
-      session[:oauth_secret] = request_token.secret
-      redirect_to base.authorize_url
-    #.. puis on réinstancie Vimeo::Advanced::Base, et on demande un access_token
+      session[:oauth_secret] = @owner.vimeo.get_request_token.secret
+      redirect_to @user.vimeo.authorize_url
     else
-      base = @owner.vimeo_advanced(nil,nil)
-      access_token = base.get_access_token(params[:oauth_token], session[:oauth_secret], params[:oauth_verifier])
-      # You'll want to hold on to the user's access token and secret. I'll save it to the database.
-      @owner.vimeo_token = access_token.token
-      @owner.vimeo_secret = access_token.secret
-      @owner.save(false)
-      redirect_to admin_videos_path
+      if @user.vimeo_set_access(params[:oauth_token], session[:oauth_secret], params[:oauth_verifier])
+        redirect_to videos_path
+      else
+        render :action => :authorize
+      end
     end
   end
 
