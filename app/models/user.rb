@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
   #has_vimeo_account
 
-  has_many :videos
+  has_many :videos, :hosted_on => :vimeo
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :first_name, :last_name, :address, :city, :country, :phone_number, :email, :password, :password_confirmation, :remember_me

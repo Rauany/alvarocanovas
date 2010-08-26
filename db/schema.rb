@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100823180020) do
+ActiveRecord::Schema.define(:version => 20100826145438) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(:version => 20100823180020) do
     t.text     "vimeo_api_secret"
     t.text     "vimeo_token"
     t.text     "vimeo_secret"
+    t.text     "vimeo_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
@@ -111,6 +112,7 @@ ActiveRecord::Schema.define(:version => 20100823180020) do
     t.text     "description"
     t.text     "embed"
     t.string   "video_id"
+    t.integer  "user_id"
   end
 
   create_table "vtokens", :force => true do |t|
