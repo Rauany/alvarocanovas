@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9bf0a00-4f96-4b31-9162-cc58380306aa" name="Default" comment="vimeo">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/vimeo_for_everybody/has_vimeo_account.rb" afterPath="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/vimeo_for_everybody/has_vimeo_account.rb" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/social_icons" afterPath="" />
     </list>
     <ignored path="public/stylesheets/compiled/" />
@@ -38,7 +37,7 @@
       <file leaf-file-name="has_vimeo_account.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/vimeo_for_everybody/has_vimeo_account.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="68" selection-start="2184" selection-end="2184" vertical-scroll-proportion="0.8076923">
+            <state line="45" column="79" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.5192308">
               <folding />
             </state>
           </provider>
@@ -779,7 +778,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/vimeo_for_everybody/has_vimeo_account.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="68" selection-start="2184" selection-end="2184" vertical-scroll-proportion="0.8076923">
+        <state line="45" column="79" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.5192308">
           <folding />
         </state>
       </provider>
