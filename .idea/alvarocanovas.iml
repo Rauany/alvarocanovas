@@ -139,6 +139,10 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] bundler (v1.0.0.rc.5, /opt/local/lib/ruby/gems/1.8/gems/bundler-1.0.0.rc.5)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rails (v3.0.0.rc, /opt/local/lib/ruby/gems/1.8/gems/rails-3.0.0.rc)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] exception_notification (v2.3.3.0, /Users/nico/.gem/ruby/1.8/gems/exception_notification-2.3.3.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] oauth-client (v0.1.0, /opt/local/lib/ruby/gems/1.8/gems/oauth-client-0.1.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] httpclient (v2.1.5.2, /opt/local/lib/ruby/gems/1.8/gems/httpclient-2.1.5.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] vimeo (v1.2.0, /opt/local/lib/ruby/gems/1.8/gems/vimeo-1.2.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] httparty (v0.6.1, /opt/local/lib/ruby/gems/1.8/gems/httparty-0.6.1)" level="application" />
   </component>
 </module>
 
