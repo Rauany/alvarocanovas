@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9bf0a00-4f96-4b31-9162-cc58380306aa" name="Default" comment="vimeo">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/social_icons" afterPath="" />
     </list>
     <ignored path="public/stylesheets/compiled/" />
@@ -34,19 +35,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" highlightNonProjectFiles="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="has_vimeo_account.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="has_vimeo_account.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/vimeo_for_everybody/has_vimeo_account.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="79" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.5192308">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="videos_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/admin/videos_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="4" selection-start="170" selection-end="205" vertical-scroll-proportion="0.0">
+            <state line="51" column="73" selection-start="1922" selection-end="1922" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -55,7 +47,34 @@
       <file leaf-file-name="vimeo_instance.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/vimeo_for_everybody/vimeo_instance.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="25" selection-start="3605" selection-end="3605" vertical-scroll-proportion="0.0">
+            <state line="79" column="74" selection-start="3535" selection-end="3535" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vimeo_instance_test.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/vimeo_instance_test.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="5" selection-start="332" selection-end="332" vertical-scroll-proportion="0.22605966">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/1.8/gems/activerecord-3.0.0.rc/lib/active_record/base.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="503" column="10" selection-start="26152" selection-end="26152" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vimeo_instance_generator.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/generators/vimeo_instance/vimeo_instance_generator.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,22 +117,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/vimeo_for_everybody_test.rb" />
-        <option value="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/vimeo_instance_test.rb" />
         <option value="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/test_helper.rb" />
-        <option value="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/schema.rb" />
         <option value="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/README" />
-        <option value="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/generators/vimeo_instance/templates/add_vimeo_fields_to_vimeo_instance_class.erb" />
         <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/model.rb" />
-        <option value="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/vimeo_for_everybody/vimeo_instance.rb" />
         <option value="$PROJECT_DIR$/app/models/video.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20100826145438_add_user_id_to_videos.rb" />
         <option value="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/has_vimeo_account_test.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20100826150856_rename_colum_video_id_vimeo_id.rb" />
+        <option value="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/generators/vimeo_instance/templates/add_vimeo_fields_to_vimeo_instance_class.erb" />
+        <option value="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/schema.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20100826164207_add_vimeo_info_to_videos.rb" />
         <option value="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/vimeo_for_everybody/has_vimeo_account.rb" />
+        <option value="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/vimeo_for_everybody/vimeo_instance.rb" />
+        <option value="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/vimeo_instance_test.rb" />
       </list>
     </option>
   </component>
@@ -283,18 +302,12 @@
               <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="alvaro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alvaro" />
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
+              <option name="myItemId" value="vimeo_for_everybody" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -308,11 +321,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="migrate" />
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vimeo_for_everybody" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alvaro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alvaro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vimeo_for_everybody" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alvaro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alvaro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -671,79 +732,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/1.8/bundler/gems/vimeo-3b8a66d/lib/vimeo/simple/base.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/1.8/bundler/gems/vimeo-3b8a66d/lib/vimeo/simple/video.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="289" selection-end="289" vertical-scroll-proportion="0.24489796">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/1.8/gems/activesupport-3.0.0.rc/lib/active_support/core_ext/class/inheritable_attributes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="2" selection-start="4455" selection-end="4455" vertical-scroll-proportion="0.42948717">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/model.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="98" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/video.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="18" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/vimeo_instance_test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="48" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/1.8/gems/activerecord-3.0.0.rc/lib/active_record/connection_adapters/abstract/schema_statements.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="284" column="10" selection-start="11137" selection-end="11137" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20100826145438_add_user_id_to_videos.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="42" selection-start="106" selection-end="106" vertical-scroll-proportion="0.03767661">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20100826150856_rename_colum_video_id_vimeo_id.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="84" selection-end="84" vertical-scroll-proportion="0.03767661">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="40" selection-start="309" selection-end="309" vertical-scroll-proportion="0.17307693">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/has_vimeo_account_test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="2" selection-start="393" selection-end="393" vertical-scroll-proportion="0.26373628">
           <folding />
         </state>
       </provider>
@@ -762,23 +753,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/vimeo_for_everybody/vimeo_instance.rb">
+    <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/model.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="25" selection-start="3605" selection-end="3605" vertical-scroll-proportion="0.0">
+        <state line="5" column="98" selection-start="210" selection-end="210" vertical-scroll-proportion="0.09419152">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20100826164207_add_vimeo_info_to_videos.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="42" selection-start="109" selection-end="109" vertical-scroll-proportion="0.03767661">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="338" selection-end="338" vertical-scroll-proportion="0.26373628">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/generators/vimeo_instance/templates/add_vimeo_fields_to_vimeo_instance_class.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="282" selection-end="282" vertical-scroll-proportion="0.13186814">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/1.8/gems/activerecord-3.0.0.rc/lib/active_record/associations/association_proxy.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="10" selection-start="2808" selection-end="2808" vertical-scroll-proportion="0.9102564">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admin/videos_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="4" selection-start="170" selection-end="205" vertical-scroll-proportion="0.0">
+        <state line="19" column="38" selection-start="538" selection-end="538" vertical-scroll-proportion="-0.15070644">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/1.8/gems/activemodel-3.0.0.rc/lib/active_model/serializers/xml.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="12" selection-start="3689" selection-end="3689" vertical-scroll-proportion="0.7284144">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/1.8/gems/activerecord-3.0.0.rc/lib/active_record/base.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="503" column="10" selection-start="26152" selection-end="26152" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/has_vimeo_account_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="39" selection-start="445" selection-end="482" vertical-scroll-proportion="0.28257456">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/generators/vimeo_instance/vimeo_instance_generator.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/vimeo_for_everybody/has_vimeo_account.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="79" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.5192308">
+        <state line="51" column="73" selection-start="1922" selection-end="1922" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/vimeo_for_everybody/vimeo_instance.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="74" selection-start="3535" selection-end="3535" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/vimeo_instance_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="5" selection-start="332" selection-end="332" vertical-scroll-proportion="0.22605966">
           <folding />
         </state>
       </provider>

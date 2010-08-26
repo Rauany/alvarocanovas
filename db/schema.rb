@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100826150856) do
+ActiveRecord::Schema.define(:version => 20100826164207) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -113,6 +113,7 @@ ActiveRecord::Schema.define(:version => 20100826150856) do
     t.text     "embed"
     t.string   "vimeo_id"
     t.integer  "user_id"
+    t.binary   "vimeo_info"
   end
 
   create_table "vtokens", :force => true do |t|
