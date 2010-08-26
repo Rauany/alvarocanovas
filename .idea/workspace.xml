@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9bf0a00-4f96-4b31-9162-cc58380306aa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/vimeo_for_everybody/has_vimeo_account.rb" afterPath="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/vimeo_for_everybody/has_vimeo_account.rb" />
-    </list>
+    <list default="true" id="d9bf0a00-4f96-4b31-9162-cc58380306aa" name="Default" comment="" />
     <ignored path="public/stylesheets/compiled/" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="alvarocanovas.iws" />
@@ -34,10 +32,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" highlightNonProjectFiles="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="has_vimeo_account.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="has_vimeo_account.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/vimeo_for_everybody/has_vimeo_account.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="23" selection-start="4012" selection-end="4025" vertical-scroll-proportion="0.84615386">
+            <state line="121" column="0" selection-start="3989" selection-end="3989" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -64,7 +62,16 @@
       <file leaf-file-name="videos_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/admin/videos_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
+            <state line="7" column="39" selection-start="170" selection-end="205" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20100826150856_rename_colum_video_id_vimeo_id.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20100826150856_rename_colum_video_id_vimeo_id.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="36" selection-start="108" selection-end="108" vertical-scroll-proportion="0.03767661">
               <folding />
             </state>
           </provider>
@@ -107,7 +114,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20100825134142_add_vimeo_id_to_users.rb" />
         <option value="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/vimeo_for_everybody_test.rb" />
         <option value="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/vimeo_instance_test.rb" />
         <option value="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/test_helper.rb" />
@@ -123,6 +129,7 @@
         <option value="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/test/has_vimeo_account_test.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/vimeo_for_everybody/has_vimeo_account.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20100826150856_rename_colum_video_id_vimeo_id.rb" />
       </list>
     </option>
   </component>
@@ -648,13 +655,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="1" selection-end="1" vertical-scroll-proportion="0.018838305">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/generators/vimeo_instance/templates/add_vimeo_fields_to_vimeo_instance_class.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="52" selection-start="256" selection-end="256" vertical-scroll-proportion="0.07535322">
@@ -732,13 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/videos_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="40" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
@@ -755,7 +748,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/plugins/vimeo_for_everybody/lib/vimeo_for_everybody/has_vimeo_account.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="23" selection-start="4012" selection-end="4025" vertical-scroll-proportion="0.84615386">
+        <state line="121" column="0" selection-start="3989" selection-end="3989" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/videos_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="39" selection-start="170" selection-end="205" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20100826150856_rename_colum_video_id_vimeo_id.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="36" selection-start="108" selection-end="108" vertical-scroll-proportion="0.03767661">
           <folding />
         </state>
       </provider>
