@@ -39,9 +39,13 @@ gem 'devise', :branch => '1.1'
 
 # To use debugger
 group :development do
- gem 'ruby-debug'
+  gem 'ruby-debug'
+  gem "fakeweb"
 end 
- 
+
+group :test do
+  gem "fakeweb"
+end
 
 # Bundle the extra gems:
 # gem 'bj'
