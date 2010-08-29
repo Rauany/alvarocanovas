@@ -364,12 +364,6 @@
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="multipart-post" version="0" bound="GREATER_OR_EQUAL" git="false" />
-      </requirement>
-      <source from="Gemfile" />
-    </requirement>
-    <requirement>
-      <requirement>
         <dependency name="mysql" version="2.8.1" bound="EQUAL" git="false" />
       </requirement>
       <source from="Gemfile" />
@@ -477,6 +471,12 @@
         <dependency name="rake" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source manual="true" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="rest-client" version="0" bound="GREATER_OR_EQUAL" git="false" />
+      </requirement>
+      <source from="Gemfile" />
     </requirement>
     <requirement>
       <requirement>

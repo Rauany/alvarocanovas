@@ -26,7 +26,7 @@ gem 'haml'
 gem 'httparty'
 gem "oauth-client"
 gem "httpclient"
-gem "multipart-post"
+gem "rest-client"
 
 gem  "exception_notification"
 
