@@ -4,7 +4,7 @@ class Admin::VideosController < Admin::ApplicationController
   before_filter :check_vimeo_access, :except => :authorize
 
   def get_owner
-    @owner = User::OWNER
+    @owner = User.find_by_name('owner')
   end
 
   def check_vimeo_access

@@ -3,7 +3,7 @@ class Admin::OwnersController < Admin::ApplicationController
   before_filter :get_owner
 
   def get_owner
-    @owner = User::OWNER
+    @owner = User.find_by_name('owner')
   end
 
   def edit
