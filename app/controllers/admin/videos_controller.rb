@@ -27,11 +27,11 @@ class Admin::VideosController < Admin::ApplicationController
   end
 
   def index
-    @owner.videos
+    @videos = @owner.videos
   end
 
   def show
-    @owner.videos.find(params[:id])
+    @video = @owner.videos.find(params[:id])
   end
   
 end
