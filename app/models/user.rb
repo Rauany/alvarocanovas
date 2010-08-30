@@ -16,20 +16,4 @@ class User < ActiveRecord::Base
     [first_name.to_s, last_name.to_s.upcase].join(' ')
   end
 
-  def synchronize_videos_with_vimeo(force=false)
-    destroy_videos_deleted_on_vimeo do
-      vimeo_instances_ids.collect do |vimeo_id|
-        video = Video.init_from_vimeo(vimeo_id)
-        video.user_id = id
-        video.save
-        video
-      end
-    end
-    videos(true)
-  end
-
-  def destroy_videos_deleted_on_vimeo(&user_videos_on_vimeo)
-    (videos - user_videos_on_vimeo.call).map(&:destroy)
-  end
-
 end

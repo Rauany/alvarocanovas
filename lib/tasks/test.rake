@@ -10,18 +10,7 @@ namespace :db do
 
     desc "Load paperclip files"
     task :load_paperclip_files => :environment do
-#      begin
-#  require_library_or_gem 'ruby-debug'
-#  Debugger.start
-#  if Debugger.respond_to?(:settings)
-#    Debugger.settings[:autoeval] = true
-#    Debugger.settings[:autolist] = 1
-#  end
-#rescue LoadError
-#  # ruby-debug wasn't available so neither can the debugging be
-#end
       [Category, Client, Picture, Content].each do |klass|
-#      [Video].each do |klass|
         klass.attachment_definitions.keys.each do |key|
           klass.where("#{key}_file_name IS NOT NULL").each do |instance|
             instance.send "#{key}=", File.new(File.join(Rails.root, "test/fixtures/files/", instance.send("#{key}_file_name")))
