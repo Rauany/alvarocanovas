@@ -706,6 +706,7 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] thoughtbot-shoulda (v2.11.1, /opt/local/lib/ruby/gems/1.8/gems/thoughtbot-shoulda-2.11.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] validates_timeliness (v2.3.1, /opt/local/lib/ruby/gems/1.8/gems/validates_timeliness-2.3.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] zip (v2.0.2, /opt/local/lib/ruby/gems/1.8/gems/zip-2.0.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rest-client (v1.6.1, /opt/local/lib/ruby/gems/1.8/gems/rest-client-1.6.1)" level="application" />
   </component>
 </module>
 
