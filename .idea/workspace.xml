@@ -57,7 +57,16 @@
       <file leaf-file-name="video.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/video.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="51" selection-start="254" selection-end="254" vertical-scroll-proportion="0.22605966">
+            <state line="12" column="52" selection-start="255" selection-end="255" vertical-scroll-proportion="0.22605966">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="paperclip.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/1.8/bundler/gems/paperclip-a2a5044/lib/paperclip.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="222" column="8" selection-start="10489" selection-end="10489" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -753,13 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/1.8/bundler/gems/paperclip-a2a5044/lib/paperclip.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="37" selection-start="1595" selection-end="1595" vertical-scroll-proportion="0.8269231">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/plugins/constant_in_db/lib/constants_in_db/seeds_file.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="0.03767661">
@@ -851,9 +853,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/1.8/bundler/gems/paperclip-a2a5044/lib/paperclip.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="222" column="8" selection-start="10489" selection-end="10489" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/video.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="51" selection-start="254" selection-end="254" vertical-scroll-proportion="0.22605966">
+        <state line="12" column="52" selection-start="255" selection-end="255" vertical-scroll-proportion="0.22605966">
           <folding />
         </state>
       </provider>
