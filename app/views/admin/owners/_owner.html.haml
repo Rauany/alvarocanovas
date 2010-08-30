@@ -1,0 +1,17 @@
+%div
+  %label API KEY :
+  %span= @owner.vimeo_api_key
+
+%div
+  %label API SECRET :
+  %span= @owner.vimeo_api_secret
+
+%div
+  - if @owner.vimeo_check_access
+    %label.success L'API vimeo est accessible
+  - else
+    %label.failure L'API vimeo est inaccessible
+
+%div
+  = link_to "Modifier le paramétrage", edit_admin_owner_path, :remote => true
+  = render :partial => 'admin/videos/authorize'

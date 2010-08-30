@@ -55,9 +55,6 @@ module Alvarocanovas
       'jquery.opacityrollover'
     ].collect{|f| "lib/#{f}"}
 
-    API_KEY = "0cd46f431a7919e7a6539e469a77dfb1"
-    SECRET_KEY = "9945b7731ebce6cc"
-    
   end
 
 

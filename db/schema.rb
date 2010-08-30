@@ -113,19 +113,7 @@ ActiveRecord::Schema.define(:version => 20100826164207) do
     t.text     "embed"
     t.string   "vimeo_id"
     t.integer  "user_id"
-    t.binary   "vimeo_info"
-  end
-
-  create_table "vtokens", :force => true do |t|
-    t.text     "token"
-    t.text     "text"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "perms"
-    t.string   "nsid"
-    t.string   "fullname"
-    t.string   "username"
-    t.string   "user_id"
+    t.binary   "vimeo_info_local"
   end
 
 end

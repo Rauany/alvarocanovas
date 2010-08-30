@@ -13,6 +13,7 @@ Alvarocanovas::Application.routes.draw do
   #match "admin" => "admin/categores#index", :as => :user_root  
 
   namespace 'admin' do
+    resource :owner, :only => [:edit, :update, :show]
     resources :users
     resources :videos do
       get :authorize, :on => :collection

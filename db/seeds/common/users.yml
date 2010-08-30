@@ -1,0 +1,44 @@
+alvaro:
+  name: owner
+  first_name: Alvaro
+  last_name: Canovas
+  email: photography@alvarocanovas.com
+  address: 7 rue nemours
+  city: paris
+  zip_code: 75011
+  country: France
+  vimeo_api_key: "0cd46f431a7919e7a6539e469a77dfb1"
+  vimeo_api_secret: "9945b7731ebce6cc"
+  vimeo_token:
+  vimeo_secret:
+
+
+agence:
+  name: agency
+  first_name:
+  last_name: Agence Photo
+  email: photography@mail.com
+  address: 8 rue nemours
+  city: paris
+  zip_code: 75011
+  country: France
+
+nicolas:
+  name: admin1
+  first_name: Nicolas
+  last_name: Papon
+  email: nicolas.papon@gmail.com
+  address: 7 rue nemours
+  city: paris
+  zip_code: 75011
+  country: France
+
+camille:
+  name: admin2
+  first_name: Camille
+  last_name:
+  email: camille@gmail.com
+  address: 7 rue nemours
+  city: paris
+  zip_code: 75011
+  country: France

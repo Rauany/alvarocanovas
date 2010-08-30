@@ -1,0 +1,13 @@
+{
+  "generated_in":"0.0092",
+  "stat":"ok",
+  "oauth":{
+    "token":"d2dafb64f17604f0b00c2c202221dc57",
+    "permission":"delete",
+    "user":{
+      "display_name":"Nicolas Papon",
+      "id":"4393879",
+      "username":"alvarocanovas"
+    }
+  }
+}

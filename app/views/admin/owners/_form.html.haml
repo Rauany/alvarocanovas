@@ -1,0 +1,6 @@
+= labelled_form_for :owner, @owner, :url => admin_owner_path, :remote => true, :html => { :method => :put } do |f|
+  = f.text_field :vimeo_api_key, :label_text => "Clés API vimeo"
+  = f.text_field :vimeo_api_secret, :label_text => "Secret API vimeo"
+
+  = link_to "Annuler", admin_owner_path, :remote => true
+  = f.submit "Valider"

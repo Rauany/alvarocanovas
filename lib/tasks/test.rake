@@ -20,7 +20,7 @@ namespace :db do
 #rescue LoadError
 #  # ruby-debug wasn't available so neither can the debugging be
 #end
-      [Category, Client, Picture, Content, Video].each do |klass|
+      [Category, Client, Picture, Content].each do |klass|
 #      [Video].each do |klass|
         klass.attachment_definitions.keys.each do |key|
           klass.where("#{key}_file_name IS NOT NULL").each do |instance|
