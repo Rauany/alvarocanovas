@@ -37,7 +37,7 @@
       <file leaf-file-name="videos_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/admin/videos_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="14" selection-start="744" selection-end="744" vertical-scroll-proportion="0.48979592">
+            <state line="20" column="103" selection-start="547" selection-end="641" vertical-scroll-proportion="0.3767661">
               <folding />
             </state>
           </provider>
@@ -833,7 +833,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admin/videos_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="14" selection-start="744" selection-end="744" vertical-scroll-proportion="0.48979592">
+        <state line="20" column="103" selection-start="547" selection-end="641" vertical-scroll-proportion="0.3767661">
           <folding />
         </state>
       </provider>

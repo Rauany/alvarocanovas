@@ -18,8 +18,8 @@ class Admin::VideosController < Admin::ApplicationController
       session[:oauth_secret] = @owner.vimeo.get_request_token.secret
       redirect_to @owner.vimeo.authorize_url
     else
-      if @user.vimeo_set_access(params[:oauth_token], session[:oauth_secret], params[:oauth_verifier])
-        redirect_to videos_path
+      if @owner.vimeo_set_access(params[:oauth_token], session[:oauth_secret], params[:oauth_verifier])
+        redirect_to admin_videos_path
       else
         render :action => :authorize
       end
