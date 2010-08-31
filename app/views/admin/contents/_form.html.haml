@@ -12,8 +12,7 @@
 
   = form.text_area :html_fr, :id => "html_fr_#{(Time.now.to_f*100).to_i}", :label_text => "Texte (fr)", :style => "width:510px;height:400px"
 
-
-  = link_to "Annuler", edit_admin_content_path(@content), :remote => true
-
-  = form.submit
+  .buttons
+    = link_to "Annuler", edit_admin_content_path(@content), :remote => true
+    = form.submit
 

@@ -9,10 +9,10 @@
 
 = form.file_field :image
 
-- if form.object.new_record?
-  = link_to "Annuler", admin_category_pictures_path(@category), :remote => true
-- else
-  = link_to "Annuler", admin_category_picture_path(@category,@picture), :remote => true
-
-= form.submit
+.buttons
+  - if form.object.new_record?
+    = link_to "Annuler", admin_category_pictures_path(@category), :remote => true
+  - else
+    = link_to "Annuler", admin_category_picture_path(@category,@picture), :remote => true
+  = form.submit
 

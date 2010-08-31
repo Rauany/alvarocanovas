@@ -4,17 +4,15 @@
 
   = form.text_field :title
 
-  -#- if form.object.source?
-  -#  .form_line
-  -#    %label Source actuelle
-  -#    = source_tag form.object.source.url(:small)
+  = form.text_area :description
+
 
   = form.file_field :source
 
-  - if form.object.new_record?
-    = link_to "Annuler", admin_videos_path, :remote => true
-  - else
-    = link_to "Annuler", admin_video_path(@video), :remote => true
-  
-  = form.submit
+  .buttons
+    - if form.object.new_record?
+      = link_to "Annuler", admin_videos_path, :remote => true
+    - else
+      = link_to "Annuler", admin_video_path(@video), :remote => true
+    = form.submit
 

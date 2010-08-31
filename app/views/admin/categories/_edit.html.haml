@@ -4,6 +4,6 @@
 
   = render :partial => 'admin/categories/form', :object => form
 
-  = link_to "Annuler", admin_category_path(@category), :class => 'cancel_edit_category', :remote => true
-
-  = form.submit "OK"
+  .buttons
+    = link_to "Annuler", admin_category_path(@category), :class => 'cancel_edit_category', :remote => true
+    = form.submit "OK"
