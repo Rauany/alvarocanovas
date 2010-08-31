@@ -1,3 +1,5 @@
+require "bundler/capistrano"
+
 django = "django.webflows.fr"
 
 set :application, "alvaro"
@@ -37,17 +39,15 @@ task :copy_production_database_configuration do
   run "cp #{shared_path}/config/database.yml #{release_path}/config/database.yml"
 end
 
-after "deploy:update_code", :copy_production_database_configuration
-
-
 
 namespace :bundler do
   #en attendant de bundler les gems directement dans le systeme (nécessite sudo actuellement)
   task :bundle_new_release, :roles => :app do
+    run "bundle install --deployment"
     #crée un lien symbolique de shared/bundle current/vendor/bundle
-    shared_dir = File.join(shared_path, 'bundle')
-    run "mkdir -p #{shared_dir} && ln -s #{shared_dir} #{release_path}/vendor/bundle"
-    run "cd #{release_path} && bundle install vendor/bundle --without development"
+#    shared_dir = File.join(shared_path, 'bundle')
+#    run "mkdir -p #{shared_dir} && ln -s #{shared_dir} #{release_path}/vendor/bundle"
+#    run "cd #{release_path} && bundle install vendor/bundle --without development"
   end
 end
 
@@ -57,6 +57,7 @@ namespace :compass do
   end
 end
 
+after "deploy:update_code", :copy_production_database_configuration
 after "deploy:update_code", "deploy:remove_htaccess"
 after "deploy:remove_htaccess", 'bundler:bundle_new_release'
 after 'bundler:bundle_new_release', 'compass:compile'
