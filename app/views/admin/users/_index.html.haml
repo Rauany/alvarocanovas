@@ -1,5 +1,8 @@
 #users_wrapper
-  = link_to 'Nouvel utilisateur', new_admin_user_path, :remote => true
+
+  .list_buttons
+    = link_to 'Nouvel utilisateur', new_admin_user_path, :remote => true
+    
   #users.accordion
     - @users.each do |user|
       %div.accordion_tab[user]

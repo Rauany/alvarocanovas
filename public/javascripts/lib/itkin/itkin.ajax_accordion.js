@@ -8,7 +8,7 @@
 (function($){
   var options ;
   options = $.extend({}, $.ui.accordion.prototype.options, {
-      ajaxSelectors: [['form', 'submit'], ['a','click']]
+      ajaxSelectors: null
   });
   var AjaxAccordion = $.extend({}, $.ui.accordion.prototype, {
     options: options,

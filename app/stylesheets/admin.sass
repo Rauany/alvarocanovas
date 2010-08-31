@@ -13,82 +13,48 @@
 //@import "partials/form"
 //@import "partials/two_col"
 
+$default_color: #3383BB
+$title_color: #3383BB
+
+body
+
+  #page
+    @include container
+
+    #header
+      @include column($blueprint-grid-columns)
+      padding-top: $blueprint-grid-width
+
+      h1
+        color: #DDDDDD
+
+      #current_user_links
+        float: right
+        padding-bottom: $blueprint-grid-width / 2
+
+    #flash
+      @include column($blueprint-grid-columns - 2 )
+      height: 50px
+      line-height: 50px
+      +append(1)
+      +prepend(1)
 
 
+    #page_content
+      @include column($blueprint-grid-columns)
+
+  
 body ul
   list-style-type: 0
   margin: 0
   padding: 0
 
-@mixin imageThumbs
-  img.head_image
-    position: relative
-    top: 10px
-    margin: 0 10px
-    margin-left: 35px
-
-@mixin actionLinks
-  .actions
-    float: right
-    margin: 0 10px
-    font-size: 70%
-    position: absolute
-    right: 20px
-    top: 50%
-    margin-top: -25px
-
-    a
-      display: inline
-      padding: 0
-      padding-left: 5px
-
-      &:hover
-        text-decoration: underline
-
-@mixin accordion
-
-  .header
-    -moz-border-radius: 4px 4px 4px 4px
-    line-height: 50px
-    background: url("images/ui-bg_glass_100_f6f6f6_1x400.png") repeat-x scroll 50% 50% #F6F6F6
-    border: 1px solid #CCCCCC
-    color: #1C94C4
-    font-weight: bold
-
-  +actionLinks
-  +imageThumbs
-
-
-
-@mixin sortableList
-  +actionLinks
-  +imageThumbs
-  
-  list-style: none
-  line-height: 50px
-
-  .sortable_item
-    position: relative
-    -moz-border-radius: 4px 4px 4px 4px
-
-    .ui-icon-arrowthick-2-n-s
-      width: 15px
-      height: 100%
-      float: left
-      left: 10px
-      position: relative
-      top: 17px
-      background-image: url("../stylesheets/ui-lightness/images/ui-icons_ef8c08_256x240.png")
-      background-position: -128px -48px
-      height: 15px
-
-  form
-    border: none
-    a
-      color: black
 
 
 #tabs
+
+  .ui-widget-content
+    color: $default_color
 
   .sortable
     +sortableList
@@ -101,32 +67,12 @@ body ul
       margin-left: 30px
 
   form
-    margin: 0 20px
-    color: black
-    border: 1px solid #CCCCCC
-    padding: 10px
-    +border-radius(5px 5px)
+    +form
 
-    &.edit_content
-      border: none
+  .list_buttons
+    text-align: right
+    margin-bottom: 15px
 
-    h4
-      margin: 0 0 30px
 
-    .form_line
-      margin: 5px 0
-
-      label
-        float: left
-        width: 200px
-        font-size: 90%
-
-      textarea
-        height: 100px
-
-      input,
-      textarea
-        font-size: 70%
-        width: 500px
 
 

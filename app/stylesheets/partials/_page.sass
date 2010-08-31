@@ -17,30 +17,126 @@ body
 
 
 
-body
+@mixin imageThumbs
+  img.head_image
+    position: relative
+    top: 10px
+    margin: 0 10px
+    margin-left: 35px
+
+@mixin actionLinks
+  .actions
+    float: right
+    font-size: 80%
+    position: absolute
+    right: 10px
+
+    a
+      float: right
+      margin-left: 5px
+      display: block
+      color: $default_color
+      padding-left: 0.5em
+
+@mixin accordion
+
+  +actionLinks
+  +imageThumbs
+
+  .header.ui-accordion-header
+    -moz-border-radius: 4px 4px 4px 4px
+    line-height: 50px
+    background: image-url("../stylesheets/jquery/images/ui-bg_glass_60_eeeeee_1x400.png") repeat-x scroll 50% 50% #F6F6F6
+    border: 1px solid #CCCCCC
+    color: #1C94C4
+    font-weight: bold
+
+    span.actions
+      top: 24%
+
+      span.ui-button-text
+        padding: 0
+
+
+
+
+  .ui-widget-content
+    background: image-url("../stylesheets/jquery/images/ui-bg_flat_0_eeeeee_40x100.png")
+
+
+
+
+@mixin sortableList
+  +actionLinks
+  +imageThumbs
+
+  list-style: none
+  line-height: 50px
+
+  span.actions
+    top: 32%
   
-  #page
-    @include container
 
-    #header
-      @include column($blueprint-grid-columns)
-      padding-top: $blueprint-grid-width
+  .sortable_item
+    position: relative
+    -moz-border-radius: 4px 4px 4px 4px
 
-      h1
-        color: #DDDDDD
-
-      #current_user_links
-        float: right
-        padding-bottom: $blueprint-grid-width / 2
-        
-    #flash
-      @include column($blueprint-grid-columns - 2 )
-      height: 50px
-      line-height: 50px
-      +append(1)
-      +prepend(1)
+    .ui-icon-arrowthick-2-n-s
+      width: 15px
+      height: 100%
+      float: left
+      left: 10px
+      position: relative
+      top: 17px
+      background-image: url("../stylesheets/jquery/images/ui-icons_ef8c08_256x240.png")
+      background-position: -128px -48px
+      height: 15px
 
 
-    #page_content
-      @include column($blueprint-grid-columns)
-       
+  form
+    margin: 0
+
+@mixin form
+  border: 1px solid #CCCCCC
+  margin: 10px 0
+  +border-radius(5px 5px)
+  background: image-url("../stylesheets/jquery/images/ui-bg_flat_0_eeeeee_40x100.png")
+  line-height: 20px
+
+  &.edit_content
+    border: none
+
+  h4
+    +border-radius(5px 5px)
+    background: image-url("../stylesheets/jquery/images/ui-bg_glass_35_dddddd_1x400.png") repeat-x scroll 50% 50% #DDDDDD
+    border: 1px solid #CCCCCC
+    padding: 6px
+    padding-left: 20px
+    margin: 5px
+    margin-bottom: 20px
+    color: $title_color
+
+
+  .form_line
+    margin: 5px 20px
+
+    label
+      float: left
+      width: 200px
+      font-size: 90%
+
+
+    textarea
+      height: 100px
+
+    input,
+    textarea
+      font-size: 70%
+      width: 500px
+
+  .buttons
+    margin: 20px
+    margin-bottom: 5px
+    text-align: right
+
+     

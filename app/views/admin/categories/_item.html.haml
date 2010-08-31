@@ -1,6 +1,6 @@
 %div{ :id => "category_#{category.id}", :class=>"category sortable_item accordion_tab"}
 
-  .header
+  .header.category_header
 
     %span.actions
       = link_to "Editer", edit_admin_category_path(category), :class => 'edit_category', :method => :get, :remote => true

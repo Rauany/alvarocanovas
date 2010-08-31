@@ -6,6 +6,10 @@ $.fn.htmlWithFade= function(html, speed){
 
 $(function(){
 
+  $(".actions a, .list_buttons a, .buttons a, input:submit").livequery(function(){
+    $(this).button()
+  });
+
   //user list
   $('#users').livequery(
     function(){
@@ -75,7 +79,7 @@ $(function(){
           collapsible: true,
           active:false,
           autoHeight: false,
-          ajaxSelectors: [['div > .header a','click']]
+          ajaxSelectors: [['a.cancel_edit_category','click'],['.category_header a','click']]
         },
         sortable:{
           axis: "y",
