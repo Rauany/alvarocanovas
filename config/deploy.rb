@@ -53,7 +53,7 @@ end
 
 namespace :compass do
   task :compile, :roles => :app do
-    run "cd #{release_path} && .vendor/bundle/ruby/1.8/bin/compass compile -e production --force"
+    run "cd #{release_path} && bundle exec compass compile -e production --force"
   end
 end
 
