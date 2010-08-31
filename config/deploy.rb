@@ -11,7 +11,7 @@ set :deploy_to, "~/alvaro"
 set :use_sudo, false
 
 set :user, "rails"
-set :scm_passphrase, Capistrano::CLI.password_prompt("Rails user password on django : ")
+set :scm_passphrase, "rVmEKX42912"#Capistrano::CLI.password_prompt("Rails user password on django : ")
 
 set :branch, "master"
 
