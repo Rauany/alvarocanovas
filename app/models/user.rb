@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, 
          :recoverable, :rememberable, :trackable
 
-  cache_constants :name
+#  cache_constants :name
 
   has_many :videos, :hosted_on => :vimeo
 

@@ -13,9 +13,6 @@ class Video < ActiveRecord::Base
     video.delay.upload(video.source.path) if video.source?    
   }
 
-
-
-
 end
 
 
