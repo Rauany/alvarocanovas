@@ -77,9 +77,26 @@ $(function(){
   );
 
   // Initilisation des galleries
-  $("#thumbs").livequery(function(){
+  $("#gallery.categories #thumbs, #gallery.pictures #thumbs #gallery.publications #thumbs").livequery(function(){
     $(this).gallery('classic',{ autoStart: ($(this).find('img').size() > 1) ? true : false });
   });
+
+  $("#gallery.videos #thumbs").livequery(function(){
+    $(this).gallery('classic',{
+      autoStart: false,
+      onSlideChange:function(previousIndex,nextIndex){
+        if (previousIndex != nextIndex){
+          video_id = $('ul.thumbs').children().eq(nextIndex).find('img').attr('id')
+          $.ajax({method: 'GET', url: 'videos/'+ video_id,dataType: 'script'})
+        }
+      }
+    });
+
+
+
+
+  });
+
 
   //$('#menu a').address()
 //  $.address.change(function(event) {

@@ -149,5 +149,7 @@ var Gallery = {
       $('#thumbs-wrapper, .slideLink').hide()
     }
 
+    return gallery
+
   }
 })(jQuery);

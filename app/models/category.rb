@@ -16,9 +16,9 @@ class Category < ActiveRecord::Base
   default_scope :order => 'number'
 
   def description(locale=:en)
-    if locale.to_sym == :en
+    if locale.to_s == 'en'
       read_attribute(:description)
-    else locale.to_sym == :fr
+    else locale.to_s == 'fr'
       description_fr
     end
   end

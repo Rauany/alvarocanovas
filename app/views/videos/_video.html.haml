@@ -1,4 +1,3 @@
-= render :layout => '/layouts/content' do
-  .videos
-    = raw "<iframe src=\"http://player.vimeo.com/video/14531647\" width=\"667\" height=\"500\" frameborder=\"0\"></iframe>"
-    -#= raw video.vimeo_player
+= raw "<iframe class=\"vimeo_player\"  src=\"http://player.vimeo.com/video/14531647\" width=\"711\" height=\"533\" frameborder=\"0\"></iframe>"
+-#= raw video.vimeo_player(:class=> "vimeo_player", :width => 800, :height => 533)
+
