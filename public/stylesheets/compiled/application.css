@@ -398,72 +398,72 @@ h1 a.link_to_root:hover, h1 a.link_to_root:visited:hover {
 }
 
 /*Page show Category */
-/* line 275, ../../../app/stylesheets/application.sass */
+/* line 274, ../../../app/stylesheets/application.sass */
 #main_content .vimeo_player {
   float: right;
 }
-/* line 278, ../../../app/stylesheets/application.sass */
+/* line 277, ../../../app/stylesheets/application.sass */
 #main_content .category {
   position: relative;
   top: 100px;
 }
-/* line 282, ../../../app/stylesheets/application.sass */
+/* line 281, ../../../app/stylesheets/application.sass */
 #main_content .category img {
   float: right;
   margin-right: 40px;
   margin-top: 3px;
 }
-/* line 287, ../../../app/stylesheets/application.sass */
+/* line 286, ../../../app/stylesheets/application.sass */
 #main_content .category #category_description {
   text-align: justify;
   float: right;
   width: 500px;
 }
-/* line 292, ../../../app/stylesheets/application.sass */
+/* line 291, ../../../app/stylesheets/application.sass */
 #main_content .category a.category_pictures {
   display: block;
   margin-top: 10px;
   text-align: right;
 }
-/* line 297, ../../../app/stylesheets/application.sass */
+/* line 296, ../../../app/stylesheets/application.sass */
 #main_content .content {
   position: relative;
   float: right;
 }
-/* line 301, ../../../app/stylesheets/application.sass */
+/* line 300, ../../../app/stylesheets/application.sass */
 #main_content .content .content_html {
   width: 390px;
   margin-left: 30px;
   float: right;
   text-align: justify;
 }
-/* line 307, ../../../app/stylesheets/application.sass */
+/* line 306, ../../../app/stylesheets/application.sass */
 #main_content #contact {
   text-align: right;
 }
-/* line 310, ../../../app/stylesheets/application.sass */
+/* line 309, ../../../app/stylesheets/application.sass */
 #main_content #contact #agency {
   float: right;
   width: 290px;
 }
-/* line 314, ../../../app/stylesheets/application.sass */
+/* line 313, ../../../app/stylesheets/application.sass */
 #main_content #contact a.email_address {
   letter-spacing: 0.05em;
   color: black;
 }
-/* line 320, ../../../app/stylesheets/application.sass */
+/* line 319, ../../../app/stylesheets/application.sass */
 #main_content #contact form {
   margin-top: 40px;
 }
-/* line 323, ../../../app/stylesheets/application.sass */
+/* line 322, ../../../app/stylesheets/application.sass */
 #main_content #contact form label {
   display: block;
 }
-/* line 325, ../../../app/stylesheets/application.sass */
+/* line 324, ../../../app/stylesheets/application.sass */
 #main_content #contact form label.error_field {
   color: #990000;
 }
-/* line 328, ../../../app/stylesheets/application.sass */
+/* line 327, ../../../app/stylesheets/application.sass */
 #main_content #contact form input, #main_content #contact form textarea {
   font-family: trebuchetMS, arial;
   font-size: 11px;
@@ -472,19 +472,19 @@ h1 a.link_to_root:hover, h1 a.link_to_root:visited:hover {
   background: #e5e1e1;
   padding: 2px 5px;
 }
-/* line 335, ../../../app/stylesheets/application.sass */
+/* line 334, ../../../app/stylesheets/application.sass */
 #main_content #contact form input:focus, #main_content #contact form textarea:focus {
   background: #bdbbbb;
 }
-/* line 337, ../../../app/stylesheets/application.sass */
+/* line 336, ../../../app/stylesheets/application.sass */
 #main_content #contact form input.error_field, #main_content #contact form textarea.error_field {
   border: 2px solid #990000;
 }
-/* line 341, ../../../app/stylesheets/application.sass */
+/* line 340, ../../../app/stylesheets/application.sass */
 #main_content #contact form #message_content {
   height: 130px;
 }
-/* line 344, ../../../app/stylesheets/application.sass */
+/* line 343, ../../../app/stylesheets/application.sass */
 #main_content #contact form #send_message {
   cursor: pointer;
   height: 33px;
@@ -495,17 +495,17 @@ h1 a.link_to_root:hover, h1 a.link_to_root:visited:hover {
   float: right;
   background: url('/images/mail.png?1282142397') right center no-repeat;
 }
-/* line 353, ../../../app/stylesheets/application.sass */
+/* line 352, ../../../app/stylesheets/application.sass */
 #main_content #contact form #send_message:hover {
   background-image: url('/images/mail_hover.png?1282142359');
 }
-/* line 356, ../../../app/stylesheets/application.sass */
+/* line 355, ../../../app/stylesheets/application.sass */
 #main_content #owner {
   padding-right: 30px;
   border-right: 1px solid #999999;
   float: right;
 }
-/* line 360, ../../../app/stylesheets/application.sass */
+/* line 359, ../../../app/stylesheets/application.sass */
 #main_content #owner .email_address {
   color: black;
 }
