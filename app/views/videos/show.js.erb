@@ -1,7 +1,7 @@
 $(".vimeo_player")
   .fadeOut(function(){
     $(this)
-      .replaceWith('<%= render_j :partial => "video" %>')
+      .replaceWith('<%= render_j :partial => @video %>')
   })
 
 
