@@ -2,11 +2,18 @@
 //@import "blueprint/scaffolding"
 
 @import blueprint
+@import "compass/css3/border-radius"
+@import "compass/css3/text-shadow"
+@import 'compass/css3/font-face'
+
+@include font-face("AntiqueOlive", font-files("AntiqueOliveStd-Light.otf",opentype),'this.eot')
+
 
 body
   @include blueprint-typography(true)
   @include blueprint-utilities
   @include blueprint-debug
+
 
   //@include blueprint-interaction;
 
@@ -30,6 +37,7 @@ body
     font-size: 80%
     position: absolute
     right: 10px
+    top: 24%
 
     a
       float: right
@@ -37,6 +45,8 @@ body
       display: block
       color: $default_color
       padding-left: 0.5em
+        
+      
 
 @mixin accordion
 
@@ -46,22 +56,15 @@ body
   .header.ui-accordion-header
     -moz-border-radius: 4px 4px 4px 4px
     line-height: 50px
-    background: image-url("../stylesheets/jquery/images/ui-bg_glass_60_eeeeee_1x400.png") repeat-x scroll 50% 50% #F6F6F6
-    border: 1px solid #CCCCCC
-    color: #1C94C4
     font-weight: bold
 
-    span.actions
-      top: 24%
+    span.ui-button-text
+      padding: 0
 
-      span.ui-button-text
-        padding: 0
+  .ui-state-active
+    color: black
+    border-color: #AAAAAA
 
-
-
-
-  .ui-widget-content
-    background: image-url("../stylesheets/jquery/images/ui-bg_flat_0_eeeeee_40x100.png")
 
 
 
@@ -72,10 +75,6 @@ body
 
   list-style: none
   line-height: 50px
-
-  span.actions
-    top: 32%
-  
 
   .sortable_item
     position: relative
@@ -88,7 +87,7 @@ body
       left: 10px
       position: relative
       top: 17px
-      background-image: url("../stylesheets/jquery/images/ui-icons_ef8c08_256x240.png")
+      background-image: image-url("../stylesheets/jquery/images/ui-icons_454545_256x240.png")
       background-position: -128px -48px
       height: 15px
 
@@ -99,6 +98,7 @@ body
 @mixin form
   border: 1px solid #CCCCCC
   margin: 10px 0
+  padding-top: 5px
   +border-radius(5px 5px)
   background: image-url("../stylesheets/jquery/images/ui-bg_flat_0_eeeeee_40x100.png")
   line-height: 20px
@@ -113,6 +113,7 @@ body
     padding: 6px
     padding-left: 20px
     margin: 5px
+    margin-top: 0
     margin-bottom: 20px
     color: $title_color
 

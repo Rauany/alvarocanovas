@@ -9,28 +9,47 @@
 
 // Combine the partials into a single screen stylesheet.
 @import "partials/page"
-@import "compass/css3/border-radius"
+
 //@import "partials/form"
 //@import "partials/two_col"
 
 $default_color: #3383BB
 $title_color: #3383BB
 
+//        background: image-url("../stylesheets/jquery/images/ui-bg_inset-hard_75_999999_1x100.png") repeat-x scroll left 20% #DDDDDD
+//        border: 1px solid #CCCCCC
+
 body
 
   #page
+
+
     @include container
 
-    #header
-      @include column($blueprint-grid-columns)
-      padding-top: $blueprint-grid-width
+    a
+      outline: none
 
-      h1
-        color: #DDDDDD
+    ul
+      list-style-type: 0
+      margin: 0
+      padding: 0
 
-      #current_user_links
-        float: right
-        padding-bottom: $blueprint-grid-width / 2
+    h1
+      font-family: AntiqueOlive, trebuchet MS, garuda,verdana, arial
+      font-size: 23px
+      line-height: 38px
+      text-transform: uppercase
+      float: right
+      letter-spacing: 2px
+      color: #999999
+      margin-top: 20px
+
+      span
+        color: #990000
+
+    #current_user_links
+      float: right
+      padding-bottom: $blueprint-grid-width / 2
 
     #flash
       @include column($blueprint-grid-columns - 2 )
@@ -43,35 +62,35 @@ body
     #page_content
       @include column($blueprint-grid-columns)
 
-  
-body ul
-  list-style-type: 0
-  margin: 0
-  padding: 0
+    #tabs
 
+      background: none
 
+      .ui-state-active
+        background: white
+        a
+          color: black
 
-#tabs
+      .ui-widget-content
+        color: $default_color
+        background: white
 
-  .ui-widget-content
-    color: $default_color
+      .sortable
+        +sortableList
 
-  .sortable
-    +sortableList
+      .accordion
+        +accordion
 
-  .accordion
-    +accordion
+      #users
+        .name
+          margin-left: 30px
 
-  #users
-    .name
-      margin-left: 30px
+      form
+        +form
 
-  form
-    +form
-
-  .list_buttons
-    text-align: right
-    margin-bottom: 15px
+      .list_buttons
+        text-align: right
+        margin-bottom: 15px
 
 
 

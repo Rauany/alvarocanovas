@@ -3,5 +3,5 @@
   %span.actions
     = link_to "Editer", edit_admin_publication_path(publication), :remote => true
     = link_to "Supprimer", admin_publication_path(publication), :method => :delete, :remote => true, :class => "delete_publication"
-  = image_tag publication.image.url(:small), :class=> 'head_image'
+  = image_tag publication.image.url(:admin), :class=> 'head_image'
   = publication.title if publication.title? 
