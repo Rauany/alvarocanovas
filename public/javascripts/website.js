@@ -1,3 +1,17 @@
+$.fn.replaceWithFade=function(html,speed){
+  var speed = speed || 'fast',
+      html = html
+  return $.each(this, function(){
+    $wrapper = $(this).wrap('<div class="wrapper"></div>').parent();
+    $wrapper.fadeOut(speed, function(){
+      $(this).html(html)
+    }).fadeIn(speed,function(){
+      $(this).children().unwrap()
+    });
+  })
+
+}
+
 var menuTimeout, sideMenuTimeout, ThumbsTimeout;
 
 $(function(){

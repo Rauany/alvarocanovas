@@ -6,20 +6,14 @@ gem 'mysql', '2.8.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 #gem 'sqlite3-ruby', :require => 'sqlite3'
-
-gem 'will_paginate', '3.0.pre2'
-
-
+#gem 'will_paginate', '3.0.pre2'
 gem 'system_timer'
 
 gem 'paperclip', :git => "git://github.com/itkin/paperclip.git"
 gem 'delayed_job', :git => 'git://github.com/collectiveidea/delayed_job.git'
-gem 'delayed_paperclip', :git => 'git://github.com/jstorimer/delayed_paperclip.git', :branch => 'rails3'
 
 gem 'vimeo', :git  => "git://github.com/itkin/vimeo.git"
-
 gem 'capistrano'
-gem 'capistrano-ext'
 
 gem 'compass'
 gem 'haml'

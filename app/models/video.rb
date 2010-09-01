@@ -10,7 +10,7 @@ class Video < ActiveRecord::Base
   validates_attachment_presence :source
 
   after_create { |video|
-    video.upload(video.source.path) if video.source?    
+    video.delay.upload(video.source.path) if video.source?    
   }
 
 

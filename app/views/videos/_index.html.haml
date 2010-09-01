@@ -1,7 +1,8 @@
-= render :partial => 'video', :object => @videos.first
+= render :layout => '/layouts/content' do
+  = render :partial => 'video', :object => @videos.first
 
-= render :layout => 'pictures/gallery' do
-  = render :partial => 'thumb', :collection => @videos, :as => :video
+  = render :layout => 'pictures/gallery' do
+    = render :partial => 'thumb', :collection => @videos, :as => :video
 
 
 
