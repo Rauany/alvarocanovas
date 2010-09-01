@@ -1,7 +1,7 @@
 class VideosController < ApplicationController
   
   def index
-    @videos = Video.all
+    @videos = Video.where("vimeo_id is not null")
   end
 
   def show
