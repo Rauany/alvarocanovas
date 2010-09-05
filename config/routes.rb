@@ -16,7 +16,7 @@ Alvarocanovas::Application.routes.draw do
     resource :owner, :only => [:edit, :update, :show]
     resources :users
     resources :videos do
-      get :authorize, :on => :collection
+      get :authorize, :reorder, :on => :collection
     end
     resources :contents
     resources :publications do

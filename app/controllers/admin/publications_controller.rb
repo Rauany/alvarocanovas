@@ -48,6 +48,7 @@ class Admin::PublicationsController < Admin::ApplicationController
     end
     render :text => nil
   end
+
   def reorder
     params[:ordered_ids].each_with_index do |picture_id, index|
       Picture.find(picture_id).update_attribute(:number, index + 1)

@@ -33,5 +33,13 @@ class Admin::VideosController < Admin::ApplicationController
   def show
     @video = @owner.videos.find(params[:id])
   end
+
+  def reorder
+    params[:ordered_ids].each_with_index do |video_id, index|
+      Video.find(video_id).update_attribute(:number, index + 1)
+    end
+    render :text => nil
+  end
+
   
 end
