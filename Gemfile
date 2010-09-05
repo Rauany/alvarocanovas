@@ -24,8 +24,6 @@ gem "rest-client"
 
 gem "whenever"
 
-gem  "exception_notification"
-
 gem 'devise', :branch => '1.1'
 
 # Use unicorn as the web server

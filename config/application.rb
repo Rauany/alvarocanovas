@@ -55,9 +55,6 @@ module Alvarocanovas
       'jquery.galleriffic',
       'jquery.opacityrollover'
     ].collect{|f| "lib/#{f}"}
-
   end
 
-
-  
 end

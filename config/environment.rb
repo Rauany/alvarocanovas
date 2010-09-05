@@ -4,13 +4,13 @@ require File.expand_path('../application', __FILE__)
 # Initialize the rails application
 Alvarocanovas::Application.initialize!
 
-require 'exception_notification'
-Alvarocanovas::Application.config.middleware.use ExceptionNotification,
-  :email_prefix => "[Alvaro] ",
-  :sender_address => %{"Rails" <notifier@w3bflows.com>},
-  :exception_recipients => %w{nicolas@w3bflows.com}
+#require 'exception_notification'
+#Alvarocanovas::Application.config.middleware.use ExceptionNotification,
+#  :email_prefix => "[Alvaro] ",
+#  :sender_address => %{"Rails" <notifier@w3bflows.com>},
+#  :exception_recipients => %w{nicolas@w3bflows.com}
 
-Haml::Template.options[:ugly] = false
+
 
 
 #Vimeo :

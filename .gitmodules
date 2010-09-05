@@ -14,3 +14,6 @@
 [submodule "vendor/plugins/vimeo_for_everybody"]
 	path = vendor/plugins/vimeo_for_everybody
 	url = git://github.com/itkin/vimeo_for_everybody.git
+[submodule "vendor/plugins/exception_notification"]
+	path = vendor/plugins/exception_notification
+	url = git://github.com/sickill/exception_notification.git

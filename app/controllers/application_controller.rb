@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
-  include ExceptionNotification::Notifiable
-  
+
   protect_from_forgery
 
   layout :layout_by_resource

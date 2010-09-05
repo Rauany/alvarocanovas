@@ -5,6 +5,7 @@ tmp/**/*
 .idea
 public/system/**/*
 vendor/bundle/**/*
+public/stylesheets/compiled/**/*
 public/stylesheets/application_all.css
 public/stylesheets/admin_all.css
 public/javascripts/application_all.js

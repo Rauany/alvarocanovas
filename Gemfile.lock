@@ -76,7 +76,6 @@ GEM
       warden (~> 0.10.7)
     erubis (2.6.6)
       abstract (>= 1.0.0)
-    exception_notification (2.3.3.0)
     fakeweb (1.3.0)
     haml (3.0.18)
     highline (1.6.1)
@@ -154,7 +153,6 @@ DEPENDENCIES
   compass
   delayed_job!
   devise
-  exception_notification
   fakeweb
   haml
   httparty
