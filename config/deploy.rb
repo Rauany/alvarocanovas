@@ -31,9 +31,9 @@ namespace :deploy do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 
-  task :remove_htaccess, :roles => :app do
-    run "rm -f #{release_path}/public/.htaccess"
-  end
+#  task :remove_htaccess, :roles => :app do
+#    run "rm -f #{release_path}/public/.htaccess"
+#  end
 end
 
 task :copy_production_database_configuration do
