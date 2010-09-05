@@ -8,7 +8,7 @@ class Video < ActiveRecord::Base
   }
 
   after_create { |video|
-    video.delay.upload(video.source.path) if video.source?
+    video.upload(video.source.path) if video.source?
   }
 
 

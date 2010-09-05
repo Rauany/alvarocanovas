@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100905142506) do
+ActiveRecord::Schema.define(:version => 20100905194647) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -115,6 +115,7 @@ ActiveRecord::Schema.define(:version => 20100905142506) do
     t.integer  "user_id"
     t.binary   "vimeo_info_local"
     t.integer  "number"
+    t.boolean  "is_transcoding"
   end
 
 end
