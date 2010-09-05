@@ -15,12 +15,13 @@ class Admin::VideosControllerTest < ActionController::TestCase
 
     params = {
         :video => {
-            :title => 'test',
+            :title => 'io io nico',
             :source => File.open(File.join(FILES_PATH,"01.mp4"))
         }
     }
     assert_difference "Video.count" do
       post :create, params
+      assert_equal 'io io nico', assigns(:video).title
     end
 
   end
