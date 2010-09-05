@@ -11,13 +11,14 @@ $(function(){
   });
 
   //user list
-  $('#users').livequery(
+  $('#users.accordion').livequery(
     function(){
       $(this).ajaxAccordion({
           header: ".header",
           collapsible: true,
           active:false,
-          autoHeight: false
+          autoHeight: false,
+          ajaxSelectors: [['form', 'submit'],['a', 'click']]
       });
     },
     function(){

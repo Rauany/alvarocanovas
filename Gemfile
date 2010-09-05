@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0.rc'
+gem 'rails', '3.0.0'
 gem 'mysql', '2.8.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -21,6 +21,8 @@ gem 'httparty'
 gem "oauth-client"
 gem "httpclient"
 gem "rest-client"
+
+gem "whenever"
 
 gem  "exception_notification"
 

@@ -1,4 +1,4 @@
-#require "bundler/capistrano"
+require "bundler/capistrano"
 
 django = "django.webflows.fr"
 
@@ -52,16 +52,16 @@ namespace :bundler do
   end
 end
 
-namespace :compass do
-  task :compile, :roles => :app do
-    run "cd #{release_path} && bundle exec compass compile -e production --force"
-  end
-end
+#namespace :compass do
+#  task :compile, :roles => :app do
+#    run "cd #{release_path} && bundle exec compass compile -e production --force"
+#  end
+#end
 
 after "deploy:update_code", :copy_production_database_configuration
 after "deploy:update_code", "deploy:remove_htaccess"
 after "deploy:remove_htaccess", 'bundler:bundle_new_release'
-after 'bundler:bundle_new_release', 'compass:compile'
+#after 'bundler:bundle_new_release', 'compass:compile'
 
 after "deploy:stop",    "delayed_job:stop"
 after "deploy:start",   "delayed_job:start"
