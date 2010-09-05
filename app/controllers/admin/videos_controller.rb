@@ -39,6 +39,20 @@ class Admin::VideosController < Admin::ApplicationController
     @video = @owner.videos.new
   end
 
+  def create
+    @video = @owner.videos.build(params[:video])
+    unless @video.save
+      render :action => :new
+    end
+  end
+
+  def update
+    @video = @owner.videos.find(params[:video])
+    unless @video.save
+      render :action => :edit
+    end
+  end
+
   def destroy
     @video = @owner.videos.find(params[:id])
     if @video.destroy
