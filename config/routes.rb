@@ -19,7 +19,9 @@ Alvarocanovas::Application.routes.draw do
       get :authorize, :on => :collection
     end
     resources :contents
-    resources :publications
+    resources :publications do
+      get 'reorder', :on => :collection
+    end
     resources :categories do
       collection do
         get :reorder, :list
