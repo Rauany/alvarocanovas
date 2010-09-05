@@ -5,9 +5,9 @@
     = link_to "Supprimer", admin_video_path(video), :method => :delete, :remote => true, :class => "delete_video"
   -#= image_tag video.source.url(:small), :class=> 'head_source'
   - if video.vimeo_id
-    = image_tag video.vimeo_thumbnail_url(:small), :style => "height:40px"
+    = image_tag video.vimeo_thumbnail_url(:small), :style => "height:40px", :class => "head_image"
   - elsif video.vimeo_info["is_converting"]
-    = image_tag "vimeo_loader.giff"
+    = image_tag "vimeo_loader.giff", :class => "head_image"
   - else
     %span.error An error occured
   
