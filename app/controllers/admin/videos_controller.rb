@@ -41,22 +41,26 @@ class Admin::VideosController < Admin::ApplicationController
 
   def create
     @video = @owner.videos.build(params[:video])
-    unless @video.save
-      render :action => :new
+    if @video.save
+      respond_to_parent { render :action => 'create.js.erb' }
+    else
+      respond_to_parent { render :action => 'new.js.erb' }
     end
   end
 
   def update
     @video = @owner.videos.find(params[:video])
-    unless @video.save
-      render :action => :edit
+    if @video.save
+      respond_to_parent { render :action => 'update.js.erb' }
+    else
+      respond_to_parent { render :action => 'edit.js.erb' }
     end
   end
 
   def destroy
     @video = @owner.videos.find(params[:id])
     if @video.destroy
-      render :text => nil
+      respond_to_parent { render :action => 'index.js.erb' }
     else
       render :text => nil
     end
