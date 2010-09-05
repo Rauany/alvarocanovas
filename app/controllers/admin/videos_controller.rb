@@ -1,7 +1,10 @@
 class Admin::VideosController < Admin::ApplicationController
 
   before_filter :get_owner
-  before_filter :check_vimeo_access, :except => :authorize
+
+  before_filter :except => :authorize do
+    check_vimeo_access if Rails.env == "production"
+  end
 
 
   def get_owner
@@ -41,12 +44,18 @@ class Admin::VideosController < Admin::ApplicationController
 
   def create
     @video = @owner.videos.build(params[:video])
+    @videos = @owner.videos(true)
     if @video.save
       respond_to_parent { render :action => 'create.js.erb' }
     else
       respond_to_parent { render :action => 'new.js.erb' }
     end
   end
+
+  def edit
+    @video = @owner.videos.find(params[:id])
+  end
+
 
   def update
     @video = @owner.videos.find(params[:video])
@@ -59,6 +68,7 @@ class Admin::VideosController < Admin::ApplicationController
 
   def destroy
     @video = @owner.videos.find(params[:id])
+    @videos = @owner.videos
     if @video.destroy
       respond_to_parent { render :action => 'index.js.erb' }
     else

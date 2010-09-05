@@ -1,5 +1,1 @@
-$('#videos_wrapper')
-    .fadeOut(function(){
-      $(this).html('<%= render_j :partial => 'index' %>')
-    })
-    .fadeIn()
+$('#videos_wrapper').htmlWithFade('<%= render_j :partial => 'index' %>')

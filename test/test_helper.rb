@@ -3,6 +3,8 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'fakeweb'
 
+#system "cd #{Rails.root}\;RAILS_ENV=test script/delayed_job restart"
+
 FakeWeb.allow_net_connect = false
 
 class ActiveSupport::TestCase
