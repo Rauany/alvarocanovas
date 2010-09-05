@@ -6,7 +6,7 @@
   -#= image_tag video.source.url(:small), :class=> 'head_source'
   - if video.vimeo_id
     = image_tag video.vimeo_thumbnail_url(:small), :style => "height:40px", :class => "head_image"
-  - elsif video.vimeo_info["is_converting"]
+  - elsif video.vimeo_info["is_transcoding"]
     = image_tag "vimeo_loader.giff", :class => "head_image"
   - else
     %span.error An error occured
