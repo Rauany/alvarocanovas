@@ -27,11 +27,13 @@ nicolas:
   name: admin1
   first_name: Nicolas
   last_name: Papon
-  email: nicolas.papon@gmail.com
+  email: nicolas.papon@w3bflows.com
   address: 7 rue nemours
   city: paris
   zip_code: 75011
   country: France
+  password_salt: '$2a$10$eXOWjp/wkHWPQ/yiXMg5O.'
+  encrypted_password: '$2a$10$eXOWjp/wkHWPQ/yiXMg5O..VIk6bfVR8cVdF.iWAZUak6gATKZRxe'
 
 camille:
   name: admin2
