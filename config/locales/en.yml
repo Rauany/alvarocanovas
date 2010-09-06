@@ -24,3 +24,10 @@ en:
       content:
         html: "English version"
         html_fr: "French version"
+
+  message:
+    title: SEND A MESSAGE
+    name: "Name"
+    phone: "Phone"
+    content: "Message"
+    email: "E-mail"

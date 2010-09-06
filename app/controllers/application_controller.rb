@@ -7,7 +7,8 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
 
   def set_locale # if params[:locale] is nil then I18n.default_locale will be used
-    I18n.locale =  params[:locale] =  params[:locale] || :fr
+    session[:locale] = params[:locale] ? params[:locale] : (session[:locale] || :fr)
+    I18n.locale = session[:locale]
   end 
 
   def layout_by_resource

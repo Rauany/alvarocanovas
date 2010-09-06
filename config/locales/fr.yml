@@ -24,3 +24,21 @@ fr:
       content:
         html: "English version"
         html_fr: "French version"
+
+
+  message:
+    title: ENVOYER UN MESSAGE
+    name: "Nom"
+    phone: "Téléphone"
+    content: "Message"
+    email: "E-mail"
+
+  errors:
+    messages:
+      blank: "doit etre rempli"
+
+
+
+
+
+

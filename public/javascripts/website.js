@@ -9,8 +9,8 @@ $.fn.htmlWithFade= function(html, fade_out_speed,fade_in_speed ){
 }
 
 $.fn.replaceWithFade=function(html,fade_out_speed,fade_in_speed){
-  var fade_out_speed = speed || 'slow',
-      fade_in_speed = speed || 'fast',
+  var fade_out_speed = fade_out_speed || 'slow',
+      fade_in_speed = fade_in_speed || 'fast',
       html = html ;
   return $.each(this, function(){
     $wrapper = $(this).wrap('<div class="wrapper"></div>').parent();

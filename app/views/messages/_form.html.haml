@@ -1,8 +1,8 @@
 = labelled_form_for message, :url => messages_path, :remote => true do |f|
-  %h4 SEND A MESSAGE
-  -#= error_messages_for :message, :header_message => nil, :message => nil
-  = f.text_field :name, :append_to_label => message.errors.on(:name)
-  = f.text_field :email, :append_to_label => message.errors.on(:email)
-  = f.text_field :phone, :append_to_label => message.errors.on(:phone)
-  = f.text_area :content, :label_text => 'message', :append_to_label => message.errors.on(:content)
+  %h4= t('message.title')
+
+  = f.text_field :name, :label_text => t('message.name'), :append_to_label => message.errors.on(:name)
+  = f.text_field :email, :label_text => t('message.email'), :append_to_label => message.errors.on(:email)
+  = f.text_field :phone, :label_text => t('message.phone'), :append_to_label => message.errors.on(:phone)
+  = f.text_area :content, :label_text => t('message.content'), :append_to_label => message.errors.on(:content)
   = f.submit "", :id => 'send_message'
