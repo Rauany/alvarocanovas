@@ -1,6 +1,6 @@
 = labelled_form_for([:admin,@user], :remote => true) do |f|
 
-  %h3= @user.new_record? ? "Créer un nouvel utilisateur" : "Modifier l'utilisateur"
+  %h4= @user.new_record? ? "Créer un nouvel utilisateur" : "Modifier l'utilisateur"
 
   = f.error_messages :header_tag => "h4", :header_message => "", :header_message => nil
 
