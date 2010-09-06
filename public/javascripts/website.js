@@ -91,7 +91,7 @@ $(function(){
   );
 
   // Initilisation des galleries
-  $("#gallery.categories #thumbs, #gallery.pictures #thumbs #gallery.publications #thumbs").livequery(function(){
+  $("#gallery.categories #thumbs, #gallery.pictures #thumbs, #gallery.publications #thumbs").livequery(function(){
     $(this).gallery('classic',{ autoStart: ($(this).find('img').size() > 1) ? true : false });
   });
 
