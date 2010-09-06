@@ -7,7 +7,7 @@ class VideoTest < ActiveSupport::TestCase
   RESPONSES_PATH = File.join(Rails.root,'test/fakeweb_responses')
 
   def setup
-    @owner = User::OWNER
+    @owner = User.find_by_name('owner')
   end
 
 
