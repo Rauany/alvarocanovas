@@ -17,14 +17,6 @@ GIT
       oauth (>= 0.3.6)
       oauth-client (>= 0.1.0)
 
-GIT
-  remote: git://github.com/rubaidh/google_analytics.git
-  revision: d834044d84a8954bf58d57663523b25c2a8cbbc6
-  specs:
-    google_analytics (1.1.4)
-      actionpack
-      activesupport
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -153,7 +145,6 @@ DEPENDENCIES
   compass
   devise
   fakeweb
-  google_analytics!
   haml
   httparty
   httpclient
