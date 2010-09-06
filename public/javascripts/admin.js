@@ -6,6 +6,11 @@ $.fn.htmlWithFade= function(html, speed){
 
 $(function(){
 
+  $('form').live('submit', function(){
+    $(this).find('div.ajax-loader').css('display','block')
+    return true
+  });
+
   $(".actions a, .list_buttons a, .buttons a, input:submit").livequery(function(){
     $(this).button()
   });

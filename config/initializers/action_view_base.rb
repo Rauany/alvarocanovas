@@ -16,4 +16,7 @@ class ActionView::Base
   def render_j(*agrs)
     escape_javascript render(*agrs)
   end
+  def form_tag_html(html_options)
+    super + content_tag(:div, content_tag(:div,' '), :class => "ajax-loader")
+  end
 end

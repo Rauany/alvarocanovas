@@ -61,6 +61,9 @@ body
     span.ui-button-text
       padding: 0
 
+  form
+
+
   .ui-state-active
     color: black
     border-color: #AAAAAA
@@ -94,14 +97,32 @@ body
 
   form
     margin: 0
+    border: none
 
 @mixin form
-  border: 1px solid #CCCCCC
   margin: 10px 0
   padding-top: 5px
-  +border-radius(5px 5px)
   background: image-url("../stylesheets/jquery/images/ui-bg_flat_0_eeeeee_40x100.png")
   line-height: 20px
+  position: relative
+  border: 1px solid #CCCCCC
+  +border-radius(5px 5px)
+
+  .ajax-loader
+    position: absolute
+    display: none
+    height: 100%
+    width: 100%
+    opacity: 0.5
+    background: white
+    +border-radius(5px 5px)
+    z-index: 1000
+
+    div
+      position: absolute
+      height: 100%
+      width: 100%
+      background: image-url('loader.gif') center center no-repeat
 
   &.edit_content
     border: none
