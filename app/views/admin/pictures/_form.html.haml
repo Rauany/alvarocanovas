@@ -1,5 +1,7 @@
 %h4= form.object.new_record? ? "Ajouter une photographie" : "Modifier la photographie"
 
+= form.error_messages :header_tag => "h4", :header_message => "", :header_message => nil
+
 = form.select :top, [["OUI",true], ["Non",false]], :label_text => "A l'affiche"
 
 - if form.object.image?

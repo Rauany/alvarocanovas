@@ -2,4 +2,25 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+
+  menu:
+    editorial: Editorial
+    advertizing: Advertizing
+    publications: Publications
+    multimedia: Multimedia
+    bio: Bio
+    current_work: Current work
+    users: Users
+    contact: Contact
+
+  activerecord:
+    attributes:
+      category:
+        description: "English description"
+        description_fr: "French description"
+      client:
+        description: "English description"
+        description_fr: "French description"
+      content:
+        html: "English version"
+        html_fr: "French version"

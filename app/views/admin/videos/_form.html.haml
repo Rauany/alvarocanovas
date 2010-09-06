@@ -2,10 +2,11 @@
 
   %h4= form.object.new_record? ? "Ajouter une video" : "Modifier la video"
 
+  = form.error_messages :header_tag => "h4", :header_message => "", :header_message => nil
+
   = form.text_field :title
 
   = form.text_area :description
-
 
   = form.file_field :source
 

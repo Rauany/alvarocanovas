@@ -1,10 +1,13 @@
 class Category < ActiveRecord::Base
-
-  has_many :pictures, :dependent => :destroy
+  default_scope :order => 'number'
 
   before_create {|category|
     category.number = Category.count + 1
   }
+
+
+  has_many :pictures, :dependent => :destroy
+
 
   has_attached_file :image,
                     :styles => {
@@ -12,8 +15,11 @@ class Category < ActiveRecord::Base
                       :large => ['200x200', :jpg] #{ :geometry => '200x200', :quality => 80, :format => 'JPG'}
                     }
 
+  validates_attachment_presence :image
 
-  default_scope :order => 'number'
+  validates_presence_of :title, :description, :description_fr, :if => Proc.new{|instance|
+    instance.class.name == "Category"
+  }
 
   def description(locale=:en)
     if locale.to_s == 'en'

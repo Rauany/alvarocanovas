@@ -5,6 +5,8 @@
 @import "compass/css3/border-radius"
 @import "compass/css3/text-shadow"
 @import 'compass/css3/font-face'
+@import "compass/utilities/lists"
+
 
 @include font-face("AntiqueOlive", font-files("AntiqueOliveStd-Light.otf",opentype),'this.eot')
 
@@ -22,7 +24,8 @@ body
 // Or leave it in if you're happy with how blueprint looks out-of-the-box
 //@include blueprint-scaffolding("body")
 
-
+$red = #990000
+$light_red = #fadbdb
 
 @mixin imageThumbs
   img.head_image
@@ -107,6 +110,25 @@ body
   position: relative
   border: 1px solid #CCCCCC
   +border-radius(5px 5px)
+
+  .errorExplanation
+    margin: 5px 20px
+    border: 2px solid $red
+    background: $light_red
+    +border-radius(5px 5px)
+    padding: 15px
+    color: $red
+
+    p
+      margin: 0
+    ul
+      padding: 0
+      padding-left: 20px
+      margin: 0
+      +no-bullets
+
+
+
 
   .ajax-loader
     position: absolute

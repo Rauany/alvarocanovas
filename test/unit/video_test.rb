@@ -9,9 +9,6 @@ class VideoTest < ActiveSupport::TestCase
   def setup
     @owner = User::OWNER
   end
-  def teardown
-    Delayed::Job.delete_all
-  end
 
 
 end

@@ -8,6 +8,7 @@ require 'fakeweb'
 FakeWeb.allow_net_connect = false
 
 class ActiveSupport::TestCase
+  include Devise::TestHelpers
   RESPONSES_PATH = File.join(Rails.root,'test/fakeweb_responses')
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
   #

@@ -3,6 +3,7 @@ class Message
   include ActiveModel::Naming
 
   attr_accessor :attributes
+
   validates_presence_of :name, :email, :content, :phone
 
   [:name, :email, :content, :phone].each do |key|

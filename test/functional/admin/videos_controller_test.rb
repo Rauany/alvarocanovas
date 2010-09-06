@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Admin::VideosControllerTest < ActionController::TestCase
   FILES_PATH = File.join(Rails.root,'test/fixtures/files')
-  include Devise::TestHelpers
+
   def setup
     @user = User.find_by_email("nicolas.papon@w3bflows.com")
     sign_in @user

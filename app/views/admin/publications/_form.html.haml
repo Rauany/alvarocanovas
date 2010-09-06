@@ -2,6 +2,8 @@
 
   %h4= form.object.new_record? ? "Ajouter une publication" : "Modifier la publication"
 
+  = form.error_messages :header_tag => "h4", :header_message => "", :header_message => nil
+
   = form.text_field :title
 
   - if form.object.image?

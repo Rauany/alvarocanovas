@@ -7,18 +7,15 @@ class Video < ActiveRecord::Base
     video.number = video.class.maximum('number').to_i + 1
   }
 
-
-
-  has_attached_file :source, :styles => {} 
-
-
+  belongs_to :user
 
   hosted_on_vimeo :account => :user
 
-  belongs_to :user
+  has_attached_file :source, :styles => {}
 
   validates_attachment_presence :source
 
+  validates_presence_of :title
 
 end
 

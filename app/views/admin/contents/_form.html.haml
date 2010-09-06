@@ -1,5 +1,7 @@
 = labelled_form_for [:admin, @content], :remote => true do |form|
 
+  = form.error_messages :header_tag => "h4", :header_message => "", :header_message => nil
+
   %h4= "Modifier #{form.object.label}"
 
   = form.text_field :label
