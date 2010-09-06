@@ -25,3 +25,4 @@ Alvarocanovas::Application.initialize!
 #
 #Purpose: (not shown to users)
 #Photographic and video galleries
+

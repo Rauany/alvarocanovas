@@ -63,8 +63,7 @@ Alvarocanovas::Application.configure do
 
   ActiveSupport.on_load(:after_initialize) do
     Haml::Template.options[:ugly] = false
-    Rubaidh::GoogleAnalytics.tracker_id = 'UA-12345-67'
   end
 
-  
+
 end

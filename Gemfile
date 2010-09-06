@@ -26,7 +26,6 @@ gem "whenever"
 
 gem 'devise', :branch => '1.1'
 
-gem 'google_analytics', :git => "git://github.com/rubaidh/google_analytics.git"
 
 
 # Use unicorn as the web server

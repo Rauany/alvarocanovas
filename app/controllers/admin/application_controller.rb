@@ -6,7 +6,6 @@ class Admin::ApplicationController < ActionController::Base
 
   protect_from_forgery
 
-  skip_after_filter :add_google_analytics_code
 
 
 end
