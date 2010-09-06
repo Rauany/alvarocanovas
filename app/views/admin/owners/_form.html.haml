@@ -1,4 +1,7 @@
 = labelled_form_for :owner, @owner, :url => admin_owner_path, :remote => true, :html => { :method => :put } do |f|
+
+  = f.error_messages :header_tag => "h4", :header_message => "", :header_message => nil
+
   = f.text_field :vimeo_api_key, :label_text => "Clés API vimeo"
   = f.text_field :vimeo_api_secret, :label_text => "Secret API vimeo"
 

@@ -2,7 +2,7 @@
 
   %h3= @user.new_record? ? "Créer un nouvel utilisateur" : "Modifier l'utilisateur"
 
-  = form.error_messages :header_tag => "h4", :header_message => "", :header_message => nil
+  = f.error_messages :header_tag => "h4", :header_message => "", :header_message => nil
 
   = f.text_field :first_name
   = f.text_field :last_name
