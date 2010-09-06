@@ -9,7 +9,7 @@
         .header
           %span.actions
             = link_to 'Editer', edit_admin_user_path(user), :class => "edit_user", :remote => true
-            = link_to 'Supprimer', [:admin,user], :confirm => 'Are you sure?', :method => :delete, :remote => true, :class => "delete_user"
+            = link_to 'Supprimer', [:admin,user], :confirm => 'Are you sure?', :method => :delete, :remote => true, :class => "delete_user delete"
           %span.name= user.full_name
         .content
           = render :partial => user

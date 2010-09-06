@@ -2,6 +2,6 @@
   %span.ui-icon-arrowthick-2-n-s
   %span.actions
     = link_to "Editer", edit_admin_publication_path(publication), :remote => true
-    = link_to "Supprimer", admin_publication_path(publication), :method => :delete, :remote => true, :class => "delete_publication"
+    = link_to "Supprimer", admin_publication_path(publication), :method => :delete, :remote => true, :class => "delete_publication delete"
   = image_tag publication.image.url(:admin), :class=> 'head_image'
   = publication.title if publication.title? 

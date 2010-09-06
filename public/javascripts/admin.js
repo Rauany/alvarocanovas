@@ -85,7 +85,7 @@ $(function(){
           collapsible: true,
           active:false,
           autoHeight: false,
-          ajaxSelectors: [['a.cancel_edit_category','click'],['.category_header a','click']]
+          ajaxSelectors: [['a.cancel_edit_category','click'],['.category_header a.add_picture,.category_header a.edit_category','click']]
         },
         sortable:{
           axis: "y",
@@ -137,13 +137,14 @@ $(function(){
 
 
   //properly destroy a picture
-  $("a.delete_picture").livequery('click', function(evt){
+  $(".ui-sortable a.delete").livequery('click', function(evt){
     evt.stopImmediatePropagation();
     evt.preventDefault();
-    $(this).parents('.picture').fadeOut(function(){
-      $(evt.target).callRemote();
+    $link = $(this).closest('a');
+    $(this).closest('.sortable_item').fadeOut(function(){
+      $link.callRemote();
       $(this).remove();
-      $(this).closest(".pictures").sortable('refresh');
+      $(this).closest(".ui-sortable").sortable('refresh');
     });
   });
 

@@ -4,7 +4,7 @@
 
     %span.actions
       = link_to "Editer", edit_admin_category_path(category), :class => 'edit_category', :method => :get, :remote => true
-      = link_to "Supprimer", admin_category_path(category), :class => "delete_category", :method => :delete, :remote => true
+      = link_to "Supprimer", admin_category_path(category), :class => "delete_category delete", :method => :delete, :remote => true
       = link_to "Ajouter une photographie", new_admin_category_picture_path(category), :class => "add_picture", :remote => true
 
     = yield
