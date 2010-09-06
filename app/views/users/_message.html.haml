@@ -1,0 +1,33 @@
+%div#contact
+
+  %div#agency
+
+    %p
+      Alvaro CANOVAS is represented by
+    %p
+      = @agency.full_name.upcase
+    %p
+      = @agency.address
+    %p
+      = @agency.phone_number
+    %p
+      = @agency.phone_number
+    %p
+      = mail_to @agency.email, @agency.email, :target => "_blank", :class=>"email_address"
+
+    = render :partial => 'messages/form', :locals => { :message => Message.new }
+
+  %div#owner
+    %p
+      = @owner.first_name
+      = @owner.last_name.upcase
+    %p
+      = @owner.city
+    %p
+      = @owner.country
+    %p
+      = @owner.phone_number
+    %p
+      Commissions, print sales and general enquiries
+    %p
+      = mail_to @owner.email, @owner.email, :target => '_blank', :class=>"email_address"

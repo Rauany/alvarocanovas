@@ -70,10 +70,8 @@ class Admin::VideosController < Admin::ApplicationController
     @video = @owner.videos.find(params[:id])
     if @video.destroy
       @videos = @owner.videos
-      render :action => 'index.js.erb'
-    else
-      render :text => nil
     end
+    render :text => nil
   end
 
   def reorder
