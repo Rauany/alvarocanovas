@@ -30,6 +30,10 @@ namespace :deploy do
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
+  desc "Update the crontab file"
+  task :update_crontab, :roles => :db do
+   run "cd #{release_path} && whenever --update-crontab #{application}"
+  end
 end
 
 task :copy_production_database_configuration do
@@ -44,6 +48,8 @@ end
 
 after "deploy:update_code", :copy_production_database_configuration
 after "bundle:install", 'compass:compile'
+after "compass:compile", "deploy:update_crontab"
+
 
 
 after "deploy:stop",    "delayed_job:stop"
