@@ -1,11 +1,4 @@
 GIT
-  remote: git://github.com/collectiveidea/delayed_job.git
-  revision: b983b7e
-  specs:
-    delayed_job (2.1.0.pre)
-      daemons
-
-GIT
   remote: git://github.com/itkin/paperclip.git
   revision: a2a5044
   specs:
@@ -23,6 +16,14 @@ GIT
       json (>= 1.1.9)
       oauth (>= 0.3.6)
       oauth-client (>= 0.1.0)
+
+GIT
+  remote: git://github.com/rubaidh/google_analytics.git
+  revision: d834044d84a8954bf58d57663523b25c2a8cbbc6
+  specs:
+    google_analytics (1.1.4)
+      actionpack
+      activesupport
 
 GEM
   remote: http://rubygems.org/
@@ -70,7 +71,6 @@ GEM
     compass (0.10.5)
       haml (>= 3.0.4)
     crack (0.1.8)
-    daemons (1.1.0)
     devise (1.1.2)
       bcrypt-ruby (~> 2.1.2)
       warden (~> 0.10.7)
@@ -151,9 +151,9 @@ PLATFORMS
 DEPENDENCIES
   capistrano
   compass
-  delayed_job!
   devise
   fakeweb
+  google_analytics!
   haml
   httparty
   httpclient

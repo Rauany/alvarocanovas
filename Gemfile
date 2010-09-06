@@ -10,7 +10,7 @@ gem 'mysql', '2.8.1'
 gem 'system_timer'
 
 gem 'paperclip', :git => "git://github.com/itkin/paperclip.git"
-gem 'delayed_job', :git => 'git://github.com/collectiveidea/delayed_job.git'
+#gem 'delayed_job', :git => 'git://github.com/collectiveidea/delayed_job.git'
 
 gem 'vimeo', :git  => "git://github.com/itkin/vimeo.git"
 gem 'capistrano'
@@ -25,6 +25,9 @@ gem "rest-client"
 gem "whenever"
 
 gem 'devise', :branch => '1.1'
+
+gem 'google_analytics', :git => "git://github.com/rubaidh/google_analytics.git"
+
 
 # Use unicorn as the web server
 # gem 'unicorn'
