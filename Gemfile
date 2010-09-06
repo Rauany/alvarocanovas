@@ -24,7 +24,7 @@ gem "rest-client"
 
 gem "whenever"
 
-gem 'devise', :branch => '1.1'
+gem 'devise'
 
 
 
