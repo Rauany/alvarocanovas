@@ -1,9 +1,2 @@
-$('#content').fadeOut('slow',
-  function(){
-    $('#side_content')
-      .html('');
-    $('#main_content')
-      .html('<%= render_j :partial => 'pictures/index', :locals => { :pictures => @pictures } %>');
-    $(this).fadeIn();
-  }
-);
+$('#content').htmlWithFade('<%= render_j :partial => 'pictures/index', :locals => { :pictures => @pictures } %>','slow');
+

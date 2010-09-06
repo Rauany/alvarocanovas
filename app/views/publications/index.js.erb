@@ -1,7 +1,1 @@
-$('#content').fadeOut('slow',
-  function(){
-    $(this)
-      .html('<%= render_j :partial => 'index'%>')
-      .fadeIn();
-  }
-);
+$('#content').htmlWithFade('<%= render_j :partial => 'index'%>','slow')

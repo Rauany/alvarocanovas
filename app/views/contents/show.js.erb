@@ -1,7 +1,1 @@
-$('#content')
-  .fadeOut('slow', function(){
-    $('#side_content').html('');
-    $('#main_content').html('<%= render_j :partial => 'content'%>');
-    $(this).fadeIn();
-  }
-);
+$('#content').htmlWithFade('<%= render_j :partial => 'content', :layout => 'layouts/content'%>','slow');
