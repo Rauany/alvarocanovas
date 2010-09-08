@@ -3,7 +3,8 @@
   %div#agency
 
     %p
-      Alvaro CANOVAS is represented by
+      Alvaro CANOVAS
+      = t('is_represented_by')
     %p
       = @agency.full_name.upcase
     %p
@@ -28,6 +29,6 @@
     %p
       = @owner.phone_number
     %p
-      Commissions, print sales and general enquiries
+      = t('enquiries')
     %p
       = mail_to @owner.email, @owner.email, :target => '_blank', :class=>"email_address"
