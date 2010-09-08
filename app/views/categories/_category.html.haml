@@ -1,7 +1,7 @@
 %div[@category]
 
   #category_description
-    = raw @category.description(params[:locale])
-    = link_to "direct to slideshow", category_pictures_path(:category_id => @category), :remote => true, :class => "category_pictures"
+    = raw @category.description(I18n.locale)
+    = link_to t('go_to_slideshow'), category_pictures_path(:category_id => @category), :remote => true, :class => "category_pictures"
 
   = image_tag @category.image.url(:large), :class=> "category_image"
