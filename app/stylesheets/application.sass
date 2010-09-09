@@ -141,6 +141,21 @@ img
 
       .vimeo_player
         float: right
+        .ajax-loader
+          position: absolute
+          display: none
+          height: 100%
+          width: 100%
+          opacity: 0.5
+          background: white
+          +border-radius(5px 5px)
+          z-index: 1000
+
+          div
+            position: absolute
+            height: 100%
+            width: 100%
+            background: image-url('loader.gif') center center no-repeat
 
       .category
         float: right

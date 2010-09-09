@@ -1,3 +1,10 @@
-$(".vimeo_player").replaceWithFade('<%= render_j :partial => @video %>','slow')
+$(".vimeo_player")
+    .find('.ajax-loader')
+    .fadeIn(function(){
+      $(this).next('iframe').attr(src,'<%= @video.vimeo_player_url%>')
+    })
+    .delay(2000)
+    .fadeOut()
+
 
 
