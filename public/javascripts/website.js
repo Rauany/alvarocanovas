@@ -29,7 +29,7 @@ $(function(){
 
   // Initialisation menu principal
 
-  $('#menu > ul').css({opacity:0});
+  $('#menu li.first_level').fadeTo(1,0);
   $('#menu').hover(
     function(){
       $(this)
@@ -40,7 +40,7 @@ $(function(){
             .find('h2').animate({top: "60px"})
             .find('span').fadeOut(100);
           $this
-            .find('>ul')
+            .find('li.first_level')
             .fadeTo(200,1);
           $this.dequeue();
         });
@@ -53,7 +53,7 @@ $(function(){
           .find('h2').animate({top: "20px"})
           .find('span').fadeIn(100);
         $(this)
-          .find('>ul')
+          .find('li.first_level')
           .fadeTo(200,0);
         $(this).dequeue()
       })

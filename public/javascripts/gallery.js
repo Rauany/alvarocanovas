@@ -78,12 +78,12 @@ var Gallery = {
     // additional styling for hover effect on thumbs
     $('#thumbs ul.thumbs li, div.navigation a.pageLink').opacityrollover({
       mouseOutOpacity:   Gallery.onMouseOutOpacity,
-      mouseOverOpacity:  1.0,
+      mouseOverOpacity:  1,
       fadeSpeed:         'fast',
       exemptionSelector: '.selected'
     });
 
-    gallery = this.galleriffic($.extend({},Gallery[thema],options))
+    var gallery = this.galleriffic(jQuery.extend({},Gallery[thema],options));
 
     /**************** Event handlers for custom next / prev page links **********************/
 
@@ -101,12 +101,14 @@ var Gallery = {
       e.preventDefault();
     })
 
+    $('#gallery .slideLink').fadeTo(1,0);
+
     $('#gallery .slideLink').hover(
       function(){
-        $(this).fadeTo('fast',0.4)
+        $(this).fadeTo('fast',0.4);
       },
       function(){
-        $(this).fadeTo('fast',0)
+        $(this).fadeTo('fast',0);
       }
     );
 
