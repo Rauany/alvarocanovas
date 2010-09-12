@@ -28,7 +28,7 @@ var menuTimeout, sideMenuTimeout, ThumbsTimeout;
 $(function(){
 
   // Initialisation menu principal
-
+  $('#menu h2').css('width',$('#main_menu_list').width()-10 + 'px');
   $('#menu li.first_level').fadeTo(1,0);
   $('#menu').hover(
     function(){
@@ -37,7 +37,9 @@ $(function(){
         .queue(function(){
           $this = $(this);
           $this
-            .find('h2').animate({top: "60px"})
+            .find('h2').animate({top: "60px"}, function(){
+              $('#menu ul.sub_items').css('borderTop', '1px solid');
+            })
             .find('span').fadeOut(100);
           $this
             .find('li.first_level')
@@ -49,6 +51,7 @@ $(function(){
      $(this)
       .delay(2000)
       .queue(function(){
+        $('#menu ul.sub_items').css('borderTop', 'none');
         $(this)
           .find('h2').animate({top: "20px"})
           .find('span').fadeIn(100);
@@ -63,12 +66,12 @@ $(function(){
 
   $('#menu ul ul').hide();
   // Sous menus du menu principal
-  $("#menu li").hover(
+  $("#menu li.first_level").hover(
     function(){
-      $(this).find('>ul').fadeIn('fast')
+      $(this).find('ul').fadeIn('fast')
     },
     function(){
-      $(this).find('>ul').fadeOut('fast')
+      $(this).find('ul').fadeOut('fast')
     }
   );
 

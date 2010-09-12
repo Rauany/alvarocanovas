@@ -1,4 +1,6 @@
-%li.first_level
-  = link 
-  %ul.sub_items
-    = yield if block_given? 
+%li{:class => 'first_level' }
+  = link
+  - unless yield.blank?
+    %ul.sub_items
+      =  yield
+

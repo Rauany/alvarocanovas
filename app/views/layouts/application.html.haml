@@ -38,28 +38,28 @@
 
         %ul#main_menu_list
 
-          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to(t('menu.editorial'), categories_path, :remote => true) } do
+          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to(t('menu.editorial'), categories_path, :remote => true, :class => "first_level_link") } do
             - Category.where(:type=> nil).each do |category|
               %li
                 = link_to category.title, category_path(:id =>category), :remote => true
 
-          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to(t('menu.advertizing'), categories_path, :remote => true ) } do
+          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to(t('menu.advertizing'), categories_path, :remote => true, :class => "first_level_link" ) } do
             - Client.all.each do |client|
               %li
                 = link_to client.title, category_pictures_path(:category_id =>client), :remote => true
 
-          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to(t("menu.publications"), publications_path, :remote => true) } do
+          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to(t("menu.publications"), publications_path, :remote => true, :class => "first_level_link") } do
             = ''
 
-          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to(t("menu.multimedia"), videos_path, :remote => true) } do
+          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to(t("menu.multimedia"), videos_path, :remote => true, :class => "first_level_link") } do
             = ''
-          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to(t('menu.current_work'), content_path(:id =>Content::CURRENT_WORK), :remote => true)} do
-            = ''
-
-          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to(t('menu.bio'), content_path(:id =>Content::BIO), :remote => true)} do
+          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to(t('menu.current_work'), content_path(:id =>Content::CURRENT_WORK), :remote => true, :class => "first_level_link")} do
             = ''
 
-          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to(t('menu.contact'), contact_path, :remote => true )} do
+          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to(t('menu.bio'), content_path(:id =>Content::BIO), :remote => true, :class => "first_level_link")} do
+            = ''
+
+          = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to(t('menu.contact'), contact_path, :remote => true, :class => "first_level_link" )} do
             = ''
 
       #content
