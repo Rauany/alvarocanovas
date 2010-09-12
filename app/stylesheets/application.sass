@@ -62,7 +62,7 @@ img
   #menu
     text-transform: uppercase
     float: left
-    position: absolute
+    position: relative
     top: 0
     left: 10px
     min-height: 75px
@@ -71,35 +71,48 @@ img
 
     h2
       border-top: 1px solid
-      width: 100%
       font-size: inherit
+      width: 100%
       margin: 0
       position: absolute
       top: 20px
+      left: 0
+
+
 
     ul#main_menu_list
-      margin: 0 -8px
       margin-top: 40px
-      display: 'block'
+      float: left
+      margin-left: -10px
 
       li.first_level
         float: left
-        position: relative
-        top: 1px
         padding: 0 10px
+        background: white
 
-        &:hover > a
-          color: $client-red
+        a.first_level_link
+          float: left
+          height: 20px
+          line-height: 20px
+          &:hover
+            color: $client-red
 
-        .sub_items
-          padding-bottom: 5px
+        ul.sub_items
           text-transform: none
+          float: left
+          clear: left
+          position: absolute
+          top: 60px
+          background: white
+          width: 100px
 
           li
-            padding: 2px 0
+            float: left
+            clear: left
 
             a
-              display: block
+              float: left
+              line-height: 20px
 
               &:hover
                 color: $client-red
