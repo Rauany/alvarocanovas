@@ -65,5 +65,13 @@ Alvarocanovas::Application.configure do
     Haml::Template.options[:ugly] = false
   end
 
+  config.action_view.javascript_expansions[:defaults] = [
+    'jquery1.4.1.min',
+    'rails',
+    'jquery.livequery.min',
+    'jquery.galleriffic',
+    'jquery.opacityrollover'
+  ].collect{|f| "lib/#{f}"}
+
 
 end

@@ -6,3 +6,4 @@
   = f.text_field :phone, :label_text => t('message.phone'), :append_to_label => message.errors.on(:phone)
   = f.text_area :content, :label_text => t('message.content'), :append_to_label => message.errors.on(:content)
   = f.submit "", :id => 'send_message'
+  %span.flash= flash[:sent]

@@ -32,6 +32,7 @@ fr:
     phone: "Téléphone"
     content: "Message"
     email: "E-mail"
+    sent: Votre email a été envoyé !!
 
   errors:
     messages:

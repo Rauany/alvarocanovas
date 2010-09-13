@@ -31,6 +31,7 @@ en:
     phone: "Phone"
     content: "Message"
     email: "E-mail"
+    sent: Your email has been sent !!
 
   go_to_slideshow: direct to slideshow
   overview: Overview

@@ -22,5 +22,12 @@ Alvarocanovas::Application.configure do
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
+  config.action_view.javascript_expansions[:defaults] = [
+    'jquery1.4.1',
+    'rails',
+    'jquery.livequery',
+    'jquery.galleriffic',
+    'jquery.opacityrollover'
+  ].collect{|f| "lib/#{f}"}
 
 end

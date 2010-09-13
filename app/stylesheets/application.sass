@@ -237,11 +237,15 @@ img
             border: none
             background: #e5e1e1
             padding: 2px 5px
-            &:focus
-              background: #bdbbbb
+
             &.error_field
               border: 2px solid $client-red
 
+          .flash
+            float: right
+            color: $client_red
+            font-size: 0.8em
+            line-height: 43px
 
           #message_content
             height: 130px
@@ -255,8 +259,6 @@ img
             right: -5px
             float: right
             background: image-url('mail.png') right center no-repeat
-            &:hover
-              background-image: image-url('mail_hover.png')
 
         #owner
           padding-right: 30px
@@ -386,10 +388,17 @@ img
     bottom: 0
     left: 10px
 
-    .version_change a
-      font-size: 0.8em
+    .version_change, .copyright
+      line-height: 15px
+      a
+        font-size: 0.8em
+        line-height: 15px
+        &:hover
+          color: $client-red
+
 
     .social_icons
+      margin-top: 5px
       a
         margin-right: 5px
         float: left

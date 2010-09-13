@@ -125,6 +125,26 @@ $(function(){
 
   });
 
+  $('form input, form textarea').livequery(function(){
+    if ($(this).attr('id') !="send_message"){
+      $(this).focus(function(){
+        $(this).css('backgroundColor','#bdbbbb')
+      },function(){
+        $(this).css('backgroundColor','#e5e1e1')
+      })
+    }
+  });
+
+  $("#send_message").livequery(function(){
+    $(this).hover(function(){
+      $(this).css('backgroundImage','url("/images/mail_hover.png")')
+    },function(){
+      $(this).css('backgroundImage','url("/images/mail.png")')
+    })
+  })
+
+
+
 
   //$('#menu a').address()
 //  $.address.change(function(event) {

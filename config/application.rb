@@ -47,14 +47,6 @@ module Alvarocanovas
       g.test_framework :test_unit, :fixture => true
     end
 
-    config.action_view.javascript_expansions[:defaults] = [
-      'jquery',
-      'rails',
-      'jquery.livequery',
-      'jquery-ui-1.8.2.custom',
-      'jquery.galleriffic',
-      'jquery.opacityrollover'
-    ].collect{|f| "lib/#{f}"}
   end
 
 end
