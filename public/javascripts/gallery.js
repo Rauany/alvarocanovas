@@ -101,27 +101,28 @@ var Gallery = {
       e.preventDefault();
     })
 
-    $('#gallery .slideLink').fadeTo(1,0);
+    if(!$('#gallery').hasClass('categories')){
+      $('#gallery .slideLink').fadeTo(1,0);
 
-    $('#gallery .slideLink').hover(
-      function(){
-        $(this).fadeTo('fast',0.4);
-      },
-      function(){
-        $(this).fadeTo('fast',0);
-      }
-    );
+      $('#gallery .slideLink').hover(
+        function(){
+          $(this).fadeTo('fast',0.4);
+        },
+        function(){
+          $(this).fadeTo('fast',0);
+        }
+      );
 
-    $('#gallery .slideLink.next').click(function(e){
-      gallery.next();
-      e.preventDefault();
-    });
+      $('#gallery .slideLink.next').click(function(e){
+        gallery.next();
+        e.preventDefault();
+      });
 
-    $('#gallery .slideLink.prev').click(function(e){
-      gallery.previous();
-      e.preventDefault();
-    });
-
+      $('#gallery .slideLink.prev').click(function(e){
+        gallery.previous();
+        e.preventDefault();
+      });
+    }
     $('#gallery #thumbs-wrapper').hover(
       function(){
         $(this).clearQueue();
@@ -139,7 +140,7 @@ var Gallery = {
         $(this).queue(function(){
           $(this)
             .find("#thumbs-hidder")
-            .animate({height:"100%"})
+            .animate({height:"62px"})
             .find('span')
             .fadeIn('slow');
           $(this).dequeue();

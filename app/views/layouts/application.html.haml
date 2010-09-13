@@ -66,10 +66,11 @@
         = yield
 
       #footer
-        - if I18n.locale.to_s == 'fr'
-          = link_to "english version", root_url(:locale => 'en'), :class=> "version_change"
-        - else
-          = link_to "version francaise", root_url(:locale => 'fr'), :class=> "version_change"
+        .version_change
+          - if I18n.locale.to_s == 'fr'
+            = link_to "english version", root_url(:locale => 'en')
+          - else
+            = link_to "version francaise", root_url(:locale => 'fr')
 
         = social_icons(:size => 20) do |icon|
           = icon.twitter
