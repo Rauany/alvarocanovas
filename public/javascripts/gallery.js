@@ -129,7 +129,7 @@ var Gallery = {
         $(this).queue(function(){
           $(this)
             .find("#thumbs-hidder")
-            .animate({height:"1px"})
+            .animate({height:"2px"})
             .find('span')
             .fadeOut('fast');
           $(this).dequeue();
@@ -140,7 +140,7 @@ var Gallery = {
         $(this).queue(function(){
           $(this)
             .find("#thumbs-hidder")
-            .animate({height:"62px"})
+            .animate({height:"67px"})
             .find('span')
             .fadeIn('slow');
           $(this).dequeue();
