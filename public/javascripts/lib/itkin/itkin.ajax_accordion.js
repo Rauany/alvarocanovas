@@ -45,7 +45,7 @@
             });
         }
       );
-      self.element.delegate('.ajaxAccordion-tab', 'ajax:complete', function(){
+      self.element.find('.ajaxAccordion-tab').livequery('ajax:complete', function(){
         self.activate($(this).index());
       });
     },
