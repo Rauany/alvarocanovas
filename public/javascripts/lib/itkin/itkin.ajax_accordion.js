@@ -51,6 +51,7 @@
     },
     _create: function(){
       this.element.children().addClass('ajaxAccordion-tab');
+
       this._enableAjax();
       $.ui.accordion.prototype._create.call(this);
 
