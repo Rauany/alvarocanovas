@@ -24,7 +24,7 @@ gem "rest-client"
 
 gem "whenever"
 
-gem 'devise'
+gem 'devise', :git => "git://github.com/plataformatec/devise.git"
 
 
 
