@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
 #  cache_constants :name
 
-  has_many :videos, :hosted_on => :vimeo
+#  has_many :videos, :hosted_on => :vimeo
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
