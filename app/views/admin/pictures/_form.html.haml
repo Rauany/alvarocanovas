@@ -2,7 +2,7 @@
 
 = form.error_messages :header_tag => "h4", :header_message => "", :header_message => nil
 
-= form.select :top, [["OUI",true], ["Non",false]], :label_text => "A l'affiche"
+= form.select :top, [ ["Non",false],["OUI",true]], :label_text => "A l'affiche"
 
 - if form.object.image?
   .form_line
