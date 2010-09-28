@@ -1,2 +1,3 @@
 $('#content_<%=@content.id%>_label')
   .html('<%= @content.label%>');
+$('.edit_content').replaceWith('<%= render_j 'form'%>')
