@@ -3,6 +3,6 @@
   %span.actions
     = link_to "Editer", edit_admin_category_picture_path(category,picture), :remote => true
     = link_to "Supprimer", admin_category_picture_path(category,picture), :method => :delete, :remote => true, :class => "delete_picture delete"
-  = image_tag picture.image.url(:admin), :class=> 'head_image'
   %span.number= "#" + picture.number.to_s
+  = image_tag picture.image.url(:admin), :class=> 'head_image'
   = picture.title if picture.title?
