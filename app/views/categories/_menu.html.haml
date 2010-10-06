@@ -16,5 +16,6 @@
 
   - elsif not @category.type.nil?
 
-    = image_tag @category.image.url(:large)
+    = link_to image_tag(@category.image.url(:large)), "#{@category.link}", :target => '_blank', :title => "Cliquer ici pour accéder au site web de #{@category.title}"
+
 
