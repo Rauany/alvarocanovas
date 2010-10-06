@@ -8,7 +8,7 @@
     = image_tag video.vimeo_thumbnail_url(:small), :style => "height:40px", :class => "head_image"
   - else
     %span.error An error occured
-
+  %span.number= "#" + video.number.to_s
   = video.title if video.title?
   = " (transcoding at vimeo)" if video.is_transcoding
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100905194647) do
+ActiveRecord::Schema.define(:version => 20101006152648) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20100905194647) do
     t.datetime "image_updated_at"
     t.string   "type"
     t.text     "description_fr"
+    t.string   "link"
   end
 
   create_table "contents", :force => true do |t|

@@ -1,10 +1,6 @@
 class Picture < ActiveRecord::Base
 
-  default_scope :order => 'number'
-
-  before_create {|picture|
-    picture.number = picture.class.maximum('number').to_i + 1
-  }
+  order_collection_by :number, :asc, :new_instance => :end, :parent => :category
 
   belongs_to :category
 

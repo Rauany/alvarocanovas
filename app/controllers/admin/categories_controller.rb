@@ -1,8 +1,7 @@
 class Admin::CategoriesController < Admin::ApplicationController
 
-
   def index
-    @categories = Category.where(:type => params[:type]).includes(:pictures)
+    @categories = Category.where(:type => params[:type].blank? ? nil : params[:type]).includes(:pictures)
     render :action => :index
   end
 
@@ -32,13 +31,13 @@ class Admin::CategoriesController < Admin::ApplicationController
   end
 
   def new
-    @category = Category.where(:type => params[:type]).new
+    @category = params[:type].blank? ? Category.new : Client.new
   end
 
   def create
     @category = params[:type] == "Client" ? Client.new(params[:category]) : Category.new(params[:category])
     if @category.save
-      @categories = Category.where(:type => params[:type]).includes(:pictures)
+      @categories = @category.class.where(:type => params[:type].blank? ? nil : params[:type]).includes(:pictures)
       flash.now[:notice] = "Reportage créé avec succés"
       respond_to_parent { render :action => 'create.js.erb' }
     else
@@ -52,11 +51,12 @@ class Admin::CategoriesController < Admin::ApplicationController
     render :action => :update
   end
   
+
   def reorder
-    params[:ordered_ids].each_with_index do |category_id, index|
-      Category.find(category_id).update_attribute(:number, index + 1)
-    end
-    render :text => nil
+    @category = Category.find(params[:id])
+    @category.update_attribute(:number, params[:position])
+    @categories = Category.find_all_by_id(params[:ids])
+    render :json => @categories.map(&:number)
   end
 
 end

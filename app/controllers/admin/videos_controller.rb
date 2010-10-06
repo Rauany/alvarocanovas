@@ -75,10 +75,10 @@ class Admin::VideosController < Admin::ApplicationController
   end
 
   def reorder
-    params[:ordered_ids].each_with_index do |video_id, index|
-      Video.find(video_id).update_attribute(:number, index + 1)
-    end
-    render :text => nil
+    @video = Video.find_by_id(params[:id])
+    @video.update_attribute(:number, params[:position])
+    @videos = Video.find_all_by_id(params[:ids])
+    render :json => @videos.map(&:number)
   end
 
   

@@ -1,10 +1,6 @@
 class Category < ActiveRecord::Base
-  default_scope :order => 'number'
 
-  before_create {|category|
-    category.number = Category.count + 1
-  }
-
+  order_collection_by :number, :asc, :new_instance => :end
 
   has_many :pictures, :dependent => :destroy
 

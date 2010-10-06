@@ -53,10 +53,12 @@ class Admin::PicturesController < Admin::ApplicationController
     end
     render :text => nil
   end
+
   def reorder
-    params[:ordered_ids].each_with_index do |picture_id, index| 
-      Picture.find(picture_id).update_attribute(:number, index + 1)
-    end
-    render :text => nil    
+    @picture = @category.pictures.find_by_id(params[:id])
+    @picture.update_attribute(:number, params[:position])
+    @pictures = Picture.find_all_by_id(params[:ids])
+    render :json => @pictures.map(&:number)
   end
+
 end

@@ -33,16 +33,24 @@ $(function(){
 
   $("#publications, #videos").livequery(function(){
     var controller_name = $(this).attr('id')
+    var self = $(this);
     $(this).sortable(
       {
         axis:'y',
         forcePlaceholderSize: true,
         update: function(evt,ui){
-          $.get('/admin/'+ controller_name +'/reorder',
-            {
-              ordered_ids: $.map($(evt.target).children(), function(li) {
-                return li.id.match(/\d+/)
-              })
+          var $elt = $(ui.item);
+          $.get('/admin/'+ controller_name +'/reorder', {
+            ids: $.map($(evt.target).children(), function(sortedElt) {
+                return sortedElt.id.match(/\d+/)
+              }),
+              position: $elt.index()+1,
+              id: $elt.attr('id').match(/\d+/).toString()
+            },function(data){
+              var data = data;
+              $.each(self.children().find('.number'), function(i,elt){
+                $(elt).html("#" + data[i] )
+              });
             }
           );
         }
@@ -79,6 +87,7 @@ $(function(){
 //  categories sortable accordions
   $('.categories').livequery(
     function(e){
+      var self = $(this);
       $(this).sortableAccordion({
         accordion:{
           header: ".header",
@@ -90,12 +99,19 @@ $(function(){
         sortable:{
           axis: "y",
           handle: ".header",
-          update: function(evt){
-            $.get('/admin/categories/reorder',
-              {
-                ordered_ids: $.map($(evt.target).children(), function(sortedElt) {
+          update: function(evt,data){
+            $elt = $(data.item);
+            $.get('/admin/categories/reorder', {
+                ids: $.map($(evt.target).children(), function(sortedElt) {
                   return sortedElt.id.match(/\d+/)
-                })
+                }),
+                position: $elt.index()+1,
+                id: $elt.attr('id').match(/\d+/).toString()
+              },function(data){
+                var data = data;
+                $.each(self.children().find('.header .number'), function(i,elt){
+                  $(elt).html("#" + data[i] )
+                });
               }
             );
           }
@@ -116,15 +132,23 @@ $(function(){
   //Init the sortable lists of pictures, within each category (.category)
   $('.pictures.sortable').livequery(
     function(){
+      var self = $(this);
       $(this).sortable({
         axis: "y",
         forcePlaceholderSize: true,
         update:function(evt,ui){
-          $.get('/admin/categories/' + evt.target.id.match(/\d+/) + '/pictures/reorder',
-            {
-              ordered_ids: $.map($(evt.target).children(), function(li) {
-                return li.id.match(/\d+/)
-              })
+          var $elt = $(ui.item);
+          $.get('/admin/categories/' + evt.target.id.match(/\d+/) + '/pictures/reorder', {
+              ids: $.map($(evt.target).children(), function(sortedElt) {
+                return sortedElt.id.match(/\d+/)
+              }),
+              position: $elt.index()+1,
+              id: $elt.attr('id').match(/\d+/).toString()
+            },function(data){
+              var data = data;
+              $.each(self.children().find('.number'), function(i,elt){
+                $(elt).html("#" + data[i] )
+              });
             }
           );
         }

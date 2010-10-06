@@ -50,10 +50,10 @@ class Admin::PublicationsController < Admin::ApplicationController
   end
 
   def reorder
-    params[:ordered_ids].each_with_index do |picture_id, index|
-      Picture.find(picture_id).update_attribute(:number, index + 1)
-    end
-    render :text => nil
+    @publication = Publication.find_by_id(params[:id])
+    @publication.update_attribute(:number, params[:position])
+    @publications = Publication.find_all_by_id(params[:ids])
+    render :json => @publications.map(&:number)
   end
 
 end
