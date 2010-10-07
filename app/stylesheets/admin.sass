@@ -9,7 +9,7 @@
 
 // Combine the partials into a single screen stylesheet.
 @import "partials/page"
-
+@import "compass/css3/opacity"
 //@import "partials/form"
 //@import "partials/two_col"
 
@@ -102,10 +102,29 @@ body
         position: relative
         top: 2px
 
-      .pictures.sortable
+      .pictures.sortable, #publications.sortable
         span.number
           margin-left: 15px
           top: 0
         img.head_image
           margin-left: 0
 
+      img.top
+        height: 32px
+        position: relative
+        top: 7px
+
+      .top_picture
+        float: left
+        position: relative
+        .tool_box
+          position: absolute
+          +opacity(0)
+          a
+            line-height: 20px
+            img
+              width: 20px
+      .stretcher
+        clear: both
+        height: 1px
+        width: 100%

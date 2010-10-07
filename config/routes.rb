@@ -22,6 +22,8 @@ Alvarocanovas::Application.routes.draw do
     resources :publications do
       get 'reorder', :on => :collection
     end
+    match 'top_list_pictures' => "pictures#top_list"
+    match "remove_picture_from_top_list/:id" => "pictures#remove_from_top_list", :as => 'remove_picture_from_top_list'
     resources :categories do
       collection do
         get :reorder, :list

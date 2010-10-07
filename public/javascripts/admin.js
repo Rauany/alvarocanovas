@@ -173,7 +173,21 @@ $(function(){
   });
 
 
-  
+  $('div.top_picture').livequery(function(){
+    $(this).hover(function(){
+      $(this).children('.tool_box').fadeTo('fast',0.7);
+    },function(){
+     $(this).children('.tool_box').fadeTo('fast', 0);
+    })
+  })
+
+  $('div.top_picture > div.tool_box').livequery(function(){
+    $(this).hover(function(){
+      $(this).fadeTo('fast',1);
+    },function(){
+     $(this).fadeTo('fast', 0.7);
+    })
+  })
 
 });
 

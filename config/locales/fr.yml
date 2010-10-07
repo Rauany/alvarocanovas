@@ -12,6 +12,7 @@ fr:
     current_work: Current work
     users: Users
     contact: Contact
+    top_pictures: diaporama d'entrée
 
   activerecord:
     attributes:

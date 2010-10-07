@@ -7,9 +7,10 @@ class Picture < ActiveRecord::Base
 
   has_attached_file :image,
                     :styles => {
-                      :admin => ['50x50','jpg'],  
-                      :small => ['80x60>', 'jpg'],
-                      :large => ['800x533><', 'jpg']
+                      :admin => ['x33','jpg'],
+                      :medium => ["x60",'jpg'],
+                      :small => ['80x60!', 'jpg'],
+                      :large => ['x533', 'jpg']
                     }
   
 

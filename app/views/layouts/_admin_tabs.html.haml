@@ -1,6 +1,7 @@
 #tabs
   %ul
     %li= link_to t('menu.editorial'), '#tab-0'
+    %li= link_to t('menu.top_pictures'), admin_top_list_pictures_path, :remote => true
     %li= link_to t('menu.advertizing'), admin_categories_path(:type => "Client"), :remote => true
     %li= link_to t("menu.publications"), admin_publications_path
     %li= link_to t("menu.multimedia"), admin_videos_path, :remote => true

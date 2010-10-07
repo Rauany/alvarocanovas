@@ -4,11 +4,11 @@
     = link_to "Editer", edit_admin_video_path(video), :remote => true
     = link_to "Supprimer", admin_video_path(video), :method => :delete, :remote => true, :class => "delete_video delete"
   -#= image_tag video.source.url(:small), :class=> 'head_source'
+  %span.number= "#" + video.number.to_s
   - if video.vimeo_id and video.vimeo_info["thumbnails"]
     = image_tag video.vimeo_thumbnail_url(:small), :style => "height:40px", :class => "head_image"
   - else
     %span.error An error occured
-  %span.number= "#" + video.number.to_s
   = video.title if video.title?
   = " (transcoding at vimeo)" if video.is_transcoding
 

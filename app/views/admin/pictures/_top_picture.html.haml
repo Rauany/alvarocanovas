@@ -1,0 +1,5 @@
+%div[picture, :top]
+  .tool_box
+    = link_to admin_remove_picture_from_top_list_path(picture.id), :method => :post, :remote => true do
+      = image_tag 'circle-minus.png'
+  = image_tag(picture.image.url(:medium))

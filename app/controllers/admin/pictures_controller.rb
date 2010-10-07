@@ -1,6 +1,6 @@
 class Admin::PicturesController < Admin::ApplicationController
 
-  before_filter :get_category
+  before_filter :get_category, :except => [:top_list, :remove_from_top_list]
 
   def get_category
     @category = Category.find(params[:category_id])
@@ -60,5 +60,15 @@ class Admin::PicturesController < Admin::ApplicationController
     @pictures = Picture.find_all_by_id(params[:ids])
     render :json => @pictures.map(&:number)
   end
-
+  def top_list
+    @pictures = Picture.where(:top => true)
+  end
+  def remove_from_top_list
+    @picture = Picture.find_by_id(params[:id])
+    if @picture.update_attribute(:top, false)
+      render :action => :remove_from_top_list
+    else
+      render :text => nil
+    end
+  end
 end
