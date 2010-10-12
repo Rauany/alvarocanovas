@@ -13,6 +13,7 @@ en:
     users: Users
     contact: Contact
     top_pictures: Slide Show
+    contact: Contact
 
   activerecord:
     attributes:
@@ -39,3 +40,5 @@ en:
 
   enquiries: Commissions, print sales and general enquiries
   is_represented_by: is represented by
+
+  links: links

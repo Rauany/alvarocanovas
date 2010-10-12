@@ -5,6 +5,7 @@ class Admin::ContentsController < Admin::ApplicationController
     @content = Content.find(params[:id])
     render :action => :edit
   end
+
   def update
     @content = Content.find(params[:id])
     if @content.update_attributes(params[:content])
@@ -16,5 +17,15 @@ class Admin::ContentsController < Admin::ApplicationController
     end
   end
 
-  
+  def edit_contact_page
+    @contact = Content::CONTACT
+    @links =   Content::LINKS
+  end
+
+  def update_contact_page
+    @contact = Content::CONTACT
+    @links =   Content::LINKS
+    @contact.update_attributes(params[:contact]) and @links.update_attributes(params[:links])
+  end
+
 end

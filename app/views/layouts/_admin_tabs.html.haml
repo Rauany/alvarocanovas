@@ -7,6 +7,8 @@
     %li= link_to t("menu.multimedia"), admin_videos_path, :remote => true
     %li= link_to t('menu.current_work'), edit_admin_content_path(Content::CURRENT_WORK), :id =>"content_#{Content::CURRENT_WORK.id}_label"
     %li= link_to t('menu.bio'), edit_admin_content_path(Content::BIO), :id =>"content_#{Content::BIO.id}_label"
+    %li= link_to t('menu.contact'), admin_edit_contact_path
+
     %li= link_to t('menu.users'), admin_users_path
     
   #tab-0

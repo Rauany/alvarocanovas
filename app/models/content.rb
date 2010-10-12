@@ -8,8 +8,8 @@ class Content < ActiveRecord::Base
                       :large => ['190x200', :jpg]
                     }
 
-  validates_attachment_presence :image
-  validates_presence_of :html, :html_fr
+#  validates_attachment_presence :image
+#  validates_presence_of :html, :html_fr
 
   def html(locale=:en)
     if locale.to_sym == :en

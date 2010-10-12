@@ -1,0 +1,13 @@
+= form_tag admin_update_contact_path, :id => 'edit_contact_page', :remote => true do
+  .column
+    %h4 Liens
+    = text_area_tag 'links[html_fr]', @links.html(:fr), :id => "link_html_fr_#{(Time.now.to_f*100).to_i}", :style => "width:280px;height:400px"
+  .column
+    %h4 Contacts (fr)
+    = text_area_tag 'contact[html_fr]', @contact.html(:fr), :id => "contact_html_fr_#{(Time.now.to_f*100).to_i}", :style => "width:280px;height:400px"
+  .column
+    %h4 Contacts (en)
+    = text_area_tag 'contact[html]', @contact.html(:en), :id => "contact_html_en_#{(Time.now.to_f*100).to_i}", :style => "width:280px;height:400px"
+  .buttons
+    = link_to 'Annuler', admin_edit_contact_path, :remote => true
+    = submit_tag 'Valider'

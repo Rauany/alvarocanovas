@@ -13,6 +13,7 @@ fr:
     users: Users
     contact: Contact
     top_pictures: diaporama d'entrée
+    contact: Contact
 
   activerecord:
     attributes:
@@ -46,6 +47,6 @@ fr:
   is_represented_by: est représenté par
 
 
-
+  links: liens
 
 

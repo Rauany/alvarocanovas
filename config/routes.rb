@@ -24,6 +24,10 @@ Alvarocanovas::Application.routes.draw do
     end
     match 'top_list_pictures' => "pictures#top_list"
     match "remove_picture_from_top_list/:id" => "pictures#remove_from_top_list", :as => 'remove_picture_from_top_list'
+
+    match 'edit_contact' => "contents#edit_contact_page"
+    match 'update_contact' => "contents#update_contact_page"
+
     resources :categories do
       collection do
         get :reorder, :list
@@ -52,7 +56,7 @@ Alvarocanovas::Application.routes.draw do
     resources :videos, :only => [:index, :show]
     resources :publications, :only => :index
     resources :contents, :only => :show
-    match 'contact' => 'users#index', :as => "contact"
+    match 'contact' => 'contents#contact', :as => "contact"
     root :to => 'categories#index'
   end  
 

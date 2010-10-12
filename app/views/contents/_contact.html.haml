@@ -1,0 +1,13 @@
+%table#contact
+  %colgroup
+    %col{:width=>'200px'}
+    %col{:width=>'360px'}
+    %col{:width=>'400px'}
+  %tr
+    %td#links
+      %h4= t('links')
+      = raw @links.html_fr
+    %td#form_message= render :partial => 'messages/form', :locals => { :message => Message.new }
+    %td#contact_info= raw @contact.html_fr
+
+#contact_spacer

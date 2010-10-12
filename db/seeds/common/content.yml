@@ -15,3 +15,14 @@ current_work:
   html: have a beer
   html_fr: "boire une bierre"
   image_file_name: alvaro.jpg
+
+links:
+  name: links
+  html: www.webflows.fr
+
+contact:
+  name: contact
+  html: Alvaro
+  html_fr: io
+
+

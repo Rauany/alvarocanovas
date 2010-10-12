@@ -58,8 +58,6 @@ img
       &:hover
         color: $general_color
 
-
-
   #menu
     text-transform: uppercase
     float: left
@@ -158,6 +156,75 @@ img
           height: 2px
           border-bottom: 1px solid
 
+    #contact
+      color: #666666
+      a, a:visited
+        color: #666666
+      a:hover
+        color: $client-red
+
+      font-size: 12px
+      float: right
+      width: 960px
+      margin-top: 50px
+      h4
+        text-transform: uppercase
+        color: #333333
+        position: relative
+        bottom: 5px
+      #links, #contact_info, label
+        line-height: 15px
+
+      td
+        padding-right: 20px
+        vertical-align: top
+        text-align: right
+        border-right: 1px solid grey
+
+      form
+        h4
+          margin-bottom: 15px
+        label
+          margin-top: 10px
+          display: block
+          &.error_field
+            color: $client-red
+
+        input, textarea
+          font-family: trebuchetMS, arial
+          font-size: 11px
+          width: 210px
+          border: none
+          background: #e5e1e1
+          padding: 2px 5px
+
+          &.error_field
+            border: 2px solid $client-red
+
+        .flash
+          float: right
+          color: $client_red
+          font-size: 0.8em
+          line-height: 43px
+
+        #message_content
+          height: 130px
+
+        #send_message
+          cursor: pointer
+          height: 33px
+          width: 43px
+          padding: 0px
+          position: relative
+          right: -5px
+          float: right
+          background: image-url('mail.png') right center no-repeat
+
+    #contact_spacer
+      clear: both
+      height: 190px
+      width: 100%
+
     #main_content
       float: right
       width: 800px
@@ -208,64 +275,7 @@ img
           float: right
           text-align: justify
 
-      #contact
-        text-align: right
-        margin-top: 50px
 
-        #agency
-          float: right
-          width: 290px
-
-        a.email_address
-          letter-spacing: 0.05em
-          color: black
-
-
-
-        form
-          margin-top: 40px
-
-          label
-            display: block
-            &.error_field
-              color: $client-red
-
-          input, textarea
-            font-family: trebuchetMS, arial
-            font-size: 11px
-            width: 210px
-            border: none
-            background: #e5e1e1
-            padding: 2px 5px
-
-            &.error_field
-              border: 2px solid $client-red
-
-          .flash
-            float: right
-            color: $client_red
-            font-size: 0.8em
-            line-height: 43px
-
-          #message_content
-            height: 130px
-
-          #send_message
-            cursor: pointer
-            height: 33px
-            width: 43px
-            padding: 0px
-            position: relative
-            right: -5px
-            float: right
-            background: image-url('mail.png') right center no-repeat
-
-        #owner
-          padding-right: 30px
-          float: right
-          border-right: 1px solid $general_color
-          .email_address
-            color: black
 
       #gallery
         position: relative
