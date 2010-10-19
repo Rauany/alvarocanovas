@@ -123,7 +123,7 @@ $(function(){
       else
         $(this).galleria({thumbnails: true});
     },function(){
-      $(this).unbind();
+      Galleria.get(Galleria.get().length-1).pause()
     });
 
     // Show image nav when the payer is hovered
