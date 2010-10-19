@@ -99,6 +99,8 @@ Galleria.addTheme({
               })
             }
           );
+        } else {
+          this.$('thumb-nav-left,thumb-nav-right').hide();
         }
 
 
