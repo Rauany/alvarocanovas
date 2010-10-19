@@ -92,7 +92,7 @@ Galleria.addTheme({
               $(this).delay(1500);
               $(this).queue(function(){
                 tab
-                .animate({height:"50px"})
+                .animate({height:"45px"})
                 .find('span')
                 .fadeIn('slow');
                 $(this).dequeue();
