@@ -106,7 +106,7 @@ $(function(){
       );
     }
   );
-    Galleria.loadTheme('/javascripts/lib/galleria/themes/white/galleria.white.js');
+
     $('#gallery').livequery(function(){
       if ($(this).hasClass('videos')){
         var thumb = ( $(this).children('img').length >= 2 ) ? true : false;
