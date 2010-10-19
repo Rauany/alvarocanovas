@@ -123,6 +123,7 @@ var Gallery = {
         e.preventDefault();
       });
     }
+
     $('#gallery #thumbs-wrapper').hover(
       function(){
         $(this).clearQueue();

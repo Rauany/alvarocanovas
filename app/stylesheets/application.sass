@@ -230,8 +230,9 @@ img
       width: 800px
 
       .vimeo_player
-        float: right
-        position: relative
+        position: absolute
+        right: 0
+        z-index: 3
         .ajax-loader
           position: absolute
           display: none
@@ -279,123 +280,12 @@ img
 
       #gallery
         position: relative
-
-        a
-          font-size: 0
-
-        img
-          vertical-align: middle
-
-        &.categories
-          height: 533px
-          #thumbs-wrapper
-            display: none
-          .slideLink
-            display: none
-
-        #slideshow
-          height: 533px
-          width: 100%
-
-          .image-wrapper a
-            line-height: 533px
-
-        .image-wrapper
-          position: absolute
-          right: 0
-          display: block
-
-        .slideLink
-          position: absolute
-          width: 200px
-          height: 533px
-          display: block
-          opacity: 0
-          z-index: 1000
-
-          &.next
-            right: 0
-            background: image-url('largeRightArrow.gif') 110px center no-repeat
-
-          &.prev
-            left: 0
-            background: image-url('largeLeftArrow.gif') 30px center no-repeat
-
-        #thumbs-wrapper
-          position: relative
-          width: 100%
-          clear: right
-          margin-top: 4px
-
-        #thumbs-hidder
-          display: block
-          background: white
-          width: 100%
-          height: 67px
-          position: absolute
-          z-index: 10000
-          top: 0
-          border-bottom: 1px solid #999999
-
-          span
-            position: absolute
-            left: 50%
-            margin-left: -2ex
-            bottom: 0
-            text-transform: uppercase
-            font-size: 11px
-
-        #thumbs
-          position: relative
-          top: 5px
-
-          a
-            line-height: 60px
-            vertical-align: top
-            float: left
-
-          .pageLink
-            line-height: 60px
-            height: 60px
-            width: 10px
-
-
-          .pageLink.next
-            background: image-url('rightArrow.jpg') left center  no-repeat
-            float: right
-
-          .pageLink.prev
-            background: image-url('leftArrow.jpg') center center no-repeat
-            float: left
-
-          ul
-            position: relative
-            left: 6px
-            _left: 3px
-            width: 774px
-            height: 60px
-            overflow: hidden
-
-            li
-              width: 80px
-              margin-right: 6px
-              float: left
-              vertical-align: top
-              height: 60px
-
-              img
-                vertical-align: top
-                float: left
-
-        &.videos
-          #slideshow, .slideLink
-            display: none
-            height: 0
+        height: 583px
 
 
   #footer
     position: absolute
-    bottom: 0
+    bottom: 4px
     left: 10px
 
     .version_change, .copyright

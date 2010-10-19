@@ -10,7 +10,8 @@
       = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
     = stylesheet_link_tag 'ipad', :media => 'handheld, only screen and (max-device-width: 1024px)'
 
-    = javascript_include_tag :defaults, 'gallery', 'website', :cache => 'application_all'
+    = javascript_include_tag :defaults, :galleria, 'website', :cache => 'application_all'
+
     = csrf_meta_tag
 
 

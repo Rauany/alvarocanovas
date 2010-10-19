@@ -1,0 +1,11 @@
+/* line 2, ../../../app/stylesheets/ie.sass */
+#page h1 {
+  _margin-right: 0;
+  _padding-right: 24px;
+}
+/* line 6, ../../../app/stylesheets/ie.sass */
+#page #footer {
+  float: left;
+  position: relative;
+  top: -55px;
+}

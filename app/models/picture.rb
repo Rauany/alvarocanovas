@@ -9,7 +9,7 @@ class Picture < ActiveRecord::Base
                     :styles => {
                       :admin => ['x33','jpg'],
                       :medium => ["x60",'jpg'],
-                      :small => ['80x60!', 'jpg'],
+                      :small => ['x50', 'jpg'],
                       :large => ['x533', 'jpg']
                     }
   

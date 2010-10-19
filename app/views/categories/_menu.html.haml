@@ -7,9 +7,11 @@
     %h3= @category.title
 
     %ul
-      %li#slideShowCaption
-      %li#slideShowControls
+      %li#galleria_caption= raw "&nbsp;"
+      %li#galleria_controls
+      %li#galleria_fullscreen
       %li= link_to t("overview"), category_path(:id => @category), :remote => true
+
       -#- if params[:controller] == "categories"
       -#  %li= link_to "Full Screen", "#", :id => "fullScreen"
     .line

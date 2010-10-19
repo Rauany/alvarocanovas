@@ -1,3 +1,4 @@
+
 $.fn.htmlWithFade= function(html, fade_out_speed,fade_in_speed ){
   var fade_out_speed = fade_out_speed || 'slow';
   var fade_in_speed = fade_in_speed || 'fast';
@@ -75,6 +76,8 @@ $(function(){
     }
   );
 
+
+
   // Accès direct a une gallery depuis la page categories/:id/show
   $('.category_pictures').live('click',function(){
     $('#content').clearQueue();
@@ -103,27 +106,54 @@ $(function(){
       );
     }
   );
-
-  // Initilisation des galleries
-  $("#gallery.categories #thumbs, #gallery.pictures #thumbs, #gallery.publications #thumbs").livequery(function(){
-    $(this).gallery('classic',{ autoStart: ($(this).find('img').size() > 1) ? true : false });
-  });
-
-  $("#gallery.videos #thumbs").livequery(function(){
-    $(this).gallery('classic',{
-      autoStart: false,
-      onSlideChange:function(previousIndex,nextIndex){
-        if (previousIndex != nextIndex){
-          video_id = $('ul.thumbs').children().eq(nextIndex).find('img').attr('id')
-          $.ajax({method: 'GET', url: 'videos/'+ video_id,dataType: 'script'})
-        }
+    Galleria.loadTheme('/javascripts/lib/galleria/themes/white/galleria.white.js');
+    $('#gallery').livequery(function(){
+      if ($(this).hasClass('videos')){
+        var thumb = ( $(this).children('img').length >= 2 ) ? true : false;
+        var video_gallery = $(this).galleria({thumbnails: thumb, autoplay: false, carousel: false });
+        video_gallery.bind(Galleria.IMAGE, function(e){
+          if (!e.index == 0){
+            var video_id = $(e.imageTarget).attr('id');
+            $.ajax({method: 'GET', url: 'videos/'+ video_id,dataType: 'script'})
+          }
+        });
       }
+      else if ($(this).hasClass('categories') || $(this).children('img').length < 2)
+        $(this).galleria({thumbnails: false });
+      else
+        $(this).galleria({thumbnails: true});
+    },function(){
+      $(this).unbind();
     });
 
+    // Show image nav when the payer is hovered
+    $('.vimeo_player').livequery(function(){
+      $(this).hover(function(){
+         $('#gallery').find('div.galleria-image-nav-left,div.galleria-image-nav-right').fadeIn(200);
+      }, function(){
+         $('#gallery').find('div.galleria-image-nav-left,div.galleria-image-nav-right').fadeOut(500);
+      });
+    });
+//  // Initilisation des galleries
+//  $("#gallery.categories #thumbs, #gallery.pictures #thumbs, #gallery.publications #thumbs").livequery(function(){
+//    $(this).gallery('classic',{ autoStart: ($(this).find('img').size() > 1) ? true : false });
+//  });
+//
+//  $("#gallery.videos #thumbs").livequery(function(){
+//    $(this).gallery('classic',{
+//      autoStart: false,
+//      onSlideChange:function(previousIndex,nextIndex){
+//        if (previousIndex != nextIndex){
+//          video_id = $('ul.thumbs').children().eq(nextIndex).find('img').attr('id')
+//          $.ajax({method: 'GET', url: 'videos/'+ video_id,dataType: 'script'})
+//        }
+//      }
+//    });
 
 
 
-  });
+//
+//  });
 
   $('form input, form textarea').livequery(function(){
     if ($(this).attr('id') !="send_message"){

@@ -1,10 +1,6 @@
 - if Rails.env == "development"
-  %li
-    %a{ :id => video.id, :class => "thumb", :href => "http://ats.vimeo.com/854/722/85472298_100.jpg" }
-      = image_tag "http://ats.vimeo.com/854/722/85472298_100.jpg", :style => "height:60px", :id => video.id
+  = image_tag "http://ats.vimeo.com/854/722/85472298_100.jpg", :style => "height:60px", :id => video.id
 
 - else
-  %li
-    %a{ :id => video.id, :class => "thumb", :href => video.vimeo_thumbnail_url(:small) }
-      = image_tag video.vimeo_thumbnail_url(:small), :style => "height:60px", :id => video.id
+  = image_tag video.vimeo_thumbnail_url(:small), :style => "height:60px", :id => video.id
 

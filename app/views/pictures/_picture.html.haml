@@ -1,6 +1,2 @@
-%li
-  %a{ :class => "thumb", :href => picture.image.url(:large), :title => picture.title }
-    = image_tag(picture.image.url(:small), :alt => picture.title)
--#<div class="caption">
--#    Any other Html
--#  </div>
+-#%a{:href => picture.image.url(:original)}
+= image_tag picture.image.url(:original)
