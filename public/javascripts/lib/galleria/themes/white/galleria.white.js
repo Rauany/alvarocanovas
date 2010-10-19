@@ -65,7 +65,7 @@ Galleria.addTheme({
 
         // Update caption container when a new image is shown
         this.bind(Galleria.IMAGE, function(e){
-          $('#galleria_caption').html(e.index + 1 + '/' + (self.data.length + 1))
+          $('#galleria_caption').html(e.index + 1 + '/' + self.data.length )
         });
 
 
