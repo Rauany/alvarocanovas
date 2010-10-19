@@ -121,12 +121,14 @@ Galleria.addTheme({
 
 
         // show image nav when hovering the image
-        this.$('stage').hover(this.proxy(function() {
-            this.$('image-nav-left,image-nav-right,counter').fadeIn(200);
-        }), this.proxy(function() {
-            this.$('image-nav-left,image-nav-right,counter').fadeOut(500);
-        }));
-        
+        if (this.data.length >= 2) {
+          this.$('stage').hover(this.proxy(function() {
+              this.$('image-nav-left,image-nav-right,counter').fadeIn(200);
+          }), this.proxy(function() {
+              this.$('image-nav-left,image-nav-right,counter').fadeOut(500);
+          }));
+        }
+
         this.$('image-nav-left,image-nav-right,counter').hide();
         
         var elms = this.$('info-link,info-close,info-text').click(function() {
