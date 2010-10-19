@@ -26,7 +26,6 @@ Alvarocanovas::Application.configure do
     'jquery1.4.1',
     'rails',
     'jquery.livequery',
-    'jquery.opacityrollover'
   ].collect{|f| "lib/#{f}"}
 
   config.action_view.javascript_expansions[:galleria] = ['lib/galleria/galleria', 'lib/galleria/themes/white/galleria.white']
