@@ -70,7 +70,7 @@ $(function(){
         mode:'textarea',
         theme : "advanced",
         plugins : "advlink",
-        theme_advanced_buttons1: "bold,italic,underline,strikethrough,|,undo,redo,|,link,unlink,anchor",
+        theme_advanced_buttons1: "bold,italic,underline,strikethrough,|,undo,redo,|,link,unlink,anchor,|,removeformat",
         theme_advanced_buttons2: '',
         theme_advanced_buttons3: '',
         theme_advanced_buttons4: '',
