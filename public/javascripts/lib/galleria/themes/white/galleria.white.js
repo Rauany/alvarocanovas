@@ -17,7 +17,7 @@ Galleria.addTheme({
         show_caption: false,
         image_crop: 'height',
         thumb_crop: 'height',
-        autoplay: 6000,
+        autoplay: 7000,
         debug: true,
         image_position: 'center right',
         show_info: false,
