@@ -22,7 +22,7 @@ Galleria.addTheme({
         image_position: 'center right',
         show_info: false,
         show_counter: false,
-        transition: 'slide',
+        transition: 'none',
         transition_speed: 1000,
         image_margin: 0,
         thumbnails: true
