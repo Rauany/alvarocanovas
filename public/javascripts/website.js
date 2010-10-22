@@ -134,26 +134,6 @@ $(function(){
          $('#gallery').find('div.galleria-image-nav-left,div.galleria-image-nav-right').fadeOut(500);
       });
     });
-//  // Initilisation des galleries
-//  $("#gallery.categories #thumbs, #gallery.pictures #thumbs, #gallery.publications #thumbs").livequery(function(){
-//    $(this).gallery('classic',{ autoStart: ($(this).find('img').size() > 1) ? true : false });
-//  });
-//
-//  $("#gallery.videos #thumbs").livequery(function(){
-//    $(this).gallery('classic',{
-//      autoStart: false,
-//      onSlideChange:function(previousIndex,nextIndex){
-//        if (previousIndex != nextIndex){
-//          video_id = $('ul.thumbs').children().eq(nextIndex).find('img').attr('id')
-//          $.ajax({method: 'GET', url: 'videos/'+ video_id,dataType: 'script'})
-//        }
-//      }
-//    });
-
-
-
-//
-//  });
 
   $('form input, form textarea').livequery(function(){
     if ($(this).attr('id') !="send_message"){
@@ -174,15 +154,10 @@ $(function(){
   })
 
 
-
-
-  //$('#menu a').address()
-//  $.address.change(function(event) {
-//    $.getScript(event.value);
-//  });
-// $('#menu a').click(function() {
-//   $.address.value($(this).attr('href'));
-// });
+  $.trackPage('UA-19258619-1')
+  $('#menu a').track({
+    category: function(element) { return $(element).html() }
+  });
 
 });
 
