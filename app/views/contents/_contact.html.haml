@@ -10,4 +10,8 @@
     %td#form_message= render :partial => 'messages/form', :locals => { :message => Message.new }
     %td#contact_info= raw @contact.html_fr
 
+#copyrights
+  %div= raw t('copyright')
+  %div= raw t('realisation')
+
 #contact_spacer
