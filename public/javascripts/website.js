@@ -1,6 +1,6 @@
 
 $.fn.htmlWithFade= function(html, fade_out_speed,fade_in_speed ){
-  var fade_out_speed = fade_out_speed || 'slow';
+  var fade_out_speed = fade_out_speed || 'fast';
   var fade_in_speed = fade_in_speed || 'fast';
   return $.each(this, function(){
     $(this).fadeOut(fade_out_speed,function(){
@@ -79,12 +79,16 @@ $(function(){
     }
   );
 
-
+  $('#menu a').click(function(){
+    $('#content').clearQueue();
+  })
 
   // Accès direct a une gallery depuis la page categories/:id/show
   $('.category_pictures').live('click',function(){
     $('#content').clearQueue();
   });
+
+
 
   // Initialization du sous menu des categories
   $('.category.menu, #publications.menu').livequery(

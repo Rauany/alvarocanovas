@@ -224,6 +224,7 @@ img {
   float: right;
   position: relative;
   margin-top: 36px;
+  overflow: hidden;
 }
 /* line 126, ../../../app/stylesheets/application.sass */
 #page #content #side_content {
