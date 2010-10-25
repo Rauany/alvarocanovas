@@ -347,30 +347,33 @@ img {
   float: right;
   background: url('/images/mail.png?1282142397') right center no-repeat;
 }
-/* line 224, ../../../app/stylesheets/application.sass */
+/* line 225, ../../../app/stylesheets/application.sass */
 #page #content #copyrights {
   clear: both;
   padding-top: 40px;
   margin-left: 10px;
 }
 /* line 229, ../../../app/stylesheets/application.sass */
+#page #content #copyrights #realisation {
+  font-size: 0.9em;
+}
+/* line 232, ../../../app/stylesheets/application.sass */
 #page #content #contact_spacer {
   clear: both;
-  height: 90px;
   width: 100%;
 }
-/* line 234, ../../../app/stylesheets/application.sass */
+/* line 236, ../../../app/stylesheets/application.sass */
 #page #content #main_content {
   float: right;
   width: 800px;
 }
-/* line 238, ../../../app/stylesheets/application.sass */
+/* line 240, ../../../app/stylesheets/application.sass */
 #page #content #main_content .vimeo_player {
   position: absolute;
   right: 0;
   z-index: 3;
 }
-/* line 242, ../../../app/stylesheets/application.sass */
+/* line 244, ../../../app/stylesheets/application.sass */
 #page #content #main_content .vimeo_player .ajax-loader {
   position: absolute;
   display: none;
@@ -379,78 +382,78 @@ img {
   background: white;
   z-index: 1000;
 }
-/* line 250, ../../../app/stylesheets/application.sass */
+/* line 252, ../../../app/stylesheets/application.sass */
 #page #content #main_content .vimeo_player .ajax-loader div {
   position: absolute;
   height: 100%;
   width: 100%;
   background: url('/images/loader.gif?1281094873') center center no-repeat;
 }
-/* line 256, ../../../app/stylesheets/application.sass */
+/* line 258, ../../../app/stylesheets/application.sass */
 #page #content #main_content .category {
   float: right;
   margin-top: 100px;
 }
-/* line 260, ../../../app/stylesheets/application.sass */
+/* line 262, ../../../app/stylesheets/application.sass */
 #page #content #main_content .category img {
   float: right;
   margin-right: 40px;
   margin-top: 3px;
 }
-/* line 265, ../../../app/stylesheets/application.sass */
+/* line 267, ../../../app/stylesheets/application.sass */
 #page #content #main_content .category #category_description {
   text-align: justify;
   float: right;
   width: 500px;
 }
-/* line 270, ../../../app/stylesheets/application.sass */
+/* line 272, ../../../app/stylesheets/application.sass */
 #page #content #main_content .category a.category_pictures {
   display: block;
   margin-top: 10px;
   text-align: right;
 }
-/* line 275, ../../../app/stylesheets/application.sass */
+/* line 277, ../../../app/stylesheets/application.sass */
 #page #content #main_content .content {
   position: relative;
   float: right;
   margin-top: 50px;
 }
-/* line 280, ../../../app/stylesheets/application.sass */
+/* line 282, ../../../app/stylesheets/application.sass */
 #page #content #main_content .content .content_html {
   width: 390px;
   margin-left: 30px;
   float: right;
   text-align: justify;
 }
-/* line 288, ../../../app/stylesheets/application.sass */
+/* line 290, ../../../app/stylesheets/application.sass */
 #page #content #main_content #gallery {
   position: relative;
   height: 583px;
 }
-/* line 293, ../../../app/stylesheets/application.sass */
+/* line 295, ../../../app/stylesheets/application.sass */
 #page #footer {
   position: absolute;
   bottom: 5px;
   left: 10px;
 }
-/* line 298, ../../../app/stylesheets/application.sass */
+/* line 300, ../../../app/stylesheets/application.sass */
 #page #footer .version_change, #page #footer .copyright {
   line-height: 15px;
 }
-/* line 300, ../../../app/stylesheets/application.sass */
+/* line 302, ../../../app/stylesheets/application.sass */
 #page #footer .version_change a, #page #footer .copyright a {
   font-size: 0.8em;
   line-height: 15px;
 }
-/* line 303, ../../../app/stylesheets/application.sass */
+/* line 305, ../../../app/stylesheets/application.sass */
 #page #footer .version_change a:hover, #page #footer .copyright a:hover {
   color: #990000;
 }
-/* line 307, ../../../app/stylesheets/application.sass */
+/* line 309, ../../../app/stylesheets/application.sass */
 #page #footer .social_icons {
   margin-top: 5px;
 }
-/* line 309, ../../../app/stylesheets/application.sass */
+/* line 311, ../../../app/stylesheets/application.sass */
 #page #footer .social_icons a {
   margin-right: 5px;
   float: left;
@@ -458,19 +461,19 @@ img {
   width: 20px;
   line-height: 20px;
 }
-/* line 315, ../../../app/stylesheets/application.sass */
+/* line 317, ../../../app/stylesheets/application.sass */
 #page #footer .social_icons a.twitter {
   background: url('/images/tw_NB.png?1286405518') left top no-repeat;
 }
-/* line 317, ../../../app/stylesheets/application.sass */
+/* line 319, ../../../app/stylesheets/application.sass */
 #page #footer .social_icons a.twitter:hover {
   background-image: url('/images/twitter.png?1286487510');
 }
-/* line 319, ../../../app/stylesheets/application.sass */
+/* line 321, ../../../app/stylesheets/application.sass */
 #page #footer .social_icons a.facebook {
   background: url('/images/fb_NB.png?1286405518') left top no-repeat;
 }
-/* line 321, ../../../app/stylesheets/application.sass */
+/* line 323, ../../../app/stylesheets/application.sass */
 #page #footer .social_icons a.facebook:hover {
   background-image: url('/images/facebook.png?1286487508');
 }
