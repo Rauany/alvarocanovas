@@ -66,7 +66,7 @@
                 }
 
                 // create a new tracker
-                t = _gat._getTracker(uid);
+                t = _gat._createTracker(uid);
 
                 // map all underscore functions of tracker to $.ga
                 bind();

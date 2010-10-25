@@ -158,7 +158,10 @@ $(function(){
 
 
 
-  $.ga.load('UA-19258619-1');
+  $.ga.load("UA-19258619-1");
+  $("#menu a").click(function(){
+    $.ga.trackPageview(this.href);
+  });
 
 });
 
