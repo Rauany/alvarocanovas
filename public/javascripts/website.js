@@ -24,6 +24,9 @@ $.fn.replaceWithFade=function(html,fade_out_speed,fade_in_speed){
 
 }
 
+
+
+
 var menuTimeout, sideMenuTimeout, ThumbsTimeout;
 
 $(function(){
@@ -154,10 +157,8 @@ $(function(){
   })
 
 
-  $.trackPage('UA-19258619-1')
-  $('#menu a').track({
-    category: function(element) { return $(element).html() }
-  });
+
+  $.ga.load('UA-19258619-1');
 
 });
 

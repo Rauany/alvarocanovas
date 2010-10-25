@@ -69,6 +69,7 @@ Alvarocanovas::Application.configure do
     'jquery1.4.1.min',
     'rails',
     'jquery.livequery.min',
+    'jquery.ga'
   ].collect{|f| "lib/#{f}"}
 
   config.action_view.javascript_expansions[:galleria] = ['lib/galleria/galleria', 'lib/galleria/themes/white/galleria.white']
