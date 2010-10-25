@@ -37,6 +37,9 @@
 .galleria-image-nav-left,
 .galleria-image-nav-right{background-position: center center;background-repeat:no-repeat;}
 
+.galleria-container .exitFullscreeen{
+  display: none;
+}
 
 .galleria-thumbnails-tab{
   background: #FFFFFF;
@@ -71,4 +74,17 @@
 }
 .fullscreen .galleria-thumbnails-container .disabled{
   display: none;
+}
+
+.fullscreen.galleria-container .exitFullscreeen{
+  display: inline;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  z-index: 3;
+}
+.fullscreen.galleria-container a.exitFullscreeen:hover{
+  color: #990000;
+
 }

@@ -14,23 +14,21 @@ Galleria.addTheme({
     version: '1.2',
     css: 'galleria.white.css',
     defaults: {
-        show_caption: false,
-        image_crop: 'height',
-        thumb_crop: 'height',
-        autoplay: 7000,
-        debug: true,
-        image_position: 'center right',
-        show_info: false,
-        show_counter: false,
-        transition: 'none',
-        transition_speed: 1000,
-        image_margin: 0,
-        thumbnails: true
-
-
+      show_caption: false,
+      image_crop: 'height',
+      thumb_crop: 'height',
+      autoplay: 7000,
+      debug: true,
+      image_position: 'center right',
+      show_info: false,
+      show_counter: false,
+      transition: 'none',
+      transition_speed: 1000,
+      image_margin: 0,
+      thumbnails: true
     },
     init: function(options) {
-        var self = this;
+
 
         // center the images on full screeen mode
         this.exitFullscreen = function() {
@@ -45,6 +43,7 @@ Galleria.addTheme({
           return this;
         };
 
+        var self = this;
 
         // add controls outside the container
         $('<a href="#">Pause</a>').appendTo("#galleria_controls").toggle(function(e){
@@ -62,6 +61,12 @@ Galleria.addTheme({
           e.preventDefault();
           self.enterFullscreen()
         });
+
+        $('<a href="#" class="exitFullscreeen">Retour</a>').appendTo(this.dom.container).bind('click', function(e){
+          e.preventDefault();
+          self.exitFullscreen();
+        })
+
 
         // Update caption container when a new image is shown
         this.bind(Galleria.IMAGE, function(e){
