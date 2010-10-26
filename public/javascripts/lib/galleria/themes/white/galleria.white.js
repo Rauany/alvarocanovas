@@ -62,7 +62,7 @@ Galleria.addTheme({
           self.enterFullscreen()
         });
 
-        $('<a href="#" class="exitFullscreeen">Retour</a>').appendTo(this.dom.container).bind('click', function(e){
+        $('<a href="#" class="exitFullscreeen">EXIT</a>').appendTo(this.dom.container).bind('click', function(e){
           e.preventDefault();
           self.exitFullscreen();
         })
@@ -114,10 +114,10 @@ Galleria.addTheme({
         this.append({
             'info' : ['info-link','info-close']
         });
-        
+
         this.$('loader').show().fadeTo(200, .4);
         this.$('counter').show().fadeTo(200, .4);
-        
+
         this.$('thumbnails').children().hover(function() {
             $(this).not('.active').children().stop().fadeTo(100, 1);
         }, function() {
@@ -135,15 +135,15 @@ Galleria.addTheme({
         }
 
         this.$('image-nav-left,image-nav-right,counter').hide();
-        
+
         var elms = this.$('info-link,info-close,info-text').click(function() {
             elms.toggle();
         });
-        
+
         if (options.show_caption) {
             elms.trigger('click');
         }
-        
+
         this.bind(Galleria.LOADSTART, function(e) {
             if (!e.cached) {
                 this.$('loader').show().fadeTo(200, .4);

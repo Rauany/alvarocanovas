@@ -4453,7 +4453,7 @@ jQuery.extend({
 		name = name.replace(rdashAlpha, fcamelCase);
 
 		if ( set ) {
-			style[ name ] = value;
+			style[ name ] = (value == "NaNpx" ? 0 : value ) ;
 		}
 
 		return style[ name ];
