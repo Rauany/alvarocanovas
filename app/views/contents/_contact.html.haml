@@ -8,7 +8,7 @@
       %h4= t('links')
       = raw @links.html_fr
     %td#form_message= render :partial => 'messages/form', :locals => { :message => Message.new }
-    %td#contact_info= raw @contact.html_fr
+    %td#contact_info= raw @contact.html(I18n.locale)
   %tr#copyright
     %td{:colspan=> 3}
       = raw t('copyright')
