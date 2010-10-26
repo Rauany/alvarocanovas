@@ -9,9 +9,10 @@
       = raw @links.html_fr
     %td#form_message= render :partial => 'messages/form', :locals => { :message => Message.new }
     %td#contact_info= raw @contact.html_fr
+  %tr#copyright
+    %td{:colspan=> 3}
+      = raw t('copyright')
 
-#copyrights
-  %div= raw t('copyright')
-  #realisation= raw t('realisation')
+
 
 #contact_spacer
