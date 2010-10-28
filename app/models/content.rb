@@ -4,8 +4,8 @@ class Content < ActiveRecord::Base
 
   has_attached_file :image,
                     :styles => {
-                      :small => ['50x50', :jpg],
-                      :large => ['190x200', :jpg]
+                      :small => ['50x50!', :jpg],
+                      :large => ['380x400', :jpg]
                     }
 
 #  validates_attachment_presence :image

@@ -1,10 +1,10 @@
 $("#content")
-  .fadeOut('slow',
+  .fadeOut('fast',
     function(){
       $(this)
         .html('<%=  render_j :partial => 'show' %>')
         .fadeIn()
-        .delay(10000)
+        .delay(30000)
         .queue('fx', function(){
           $(this).find('a.category_pictures').trigger('click')
         });

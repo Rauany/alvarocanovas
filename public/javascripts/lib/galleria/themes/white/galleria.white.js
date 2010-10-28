@@ -15,7 +15,7 @@ Galleria.addTheme({
     css: 'galleria.white.css',
     defaults: {
       show_caption: false,
-      image_crop: 'height',
+      image_crop: false,
       thumb_crop: 'height',
       autoplay: 7000,
       debug: true,
@@ -62,7 +62,7 @@ Galleria.addTheme({
           self.enterFullscreen()
         });
 
-        $('<a href="#" class="exitFullscreeen">EXIT</a>').appendTo(this.dom.container).bind('click', function(e){
+        $('<a href="#" class="exitFullscreeen">ESCAPE</a>').appendTo(this.dom.container).bind('click', function(e){
           e.preventDefault();
           self.exitFullscreen();
         })
