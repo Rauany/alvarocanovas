@@ -2,4 +2,4 @@
 
   .content_html= raw @content.html(I18n.locale)
 
-  = image_tag @content.image.url(:large) if @content.image?
+  = image_tag @content.image.url(:large), :alt => "" if @content.image?

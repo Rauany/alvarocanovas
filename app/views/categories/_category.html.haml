@@ -4,4 +4,4 @@
     = raw @category.description(I18n.locale)
     = link_to t('go_to_slideshow'), category_pictures_path(:category_id => @category), :remote => true, :class => "category_pictures"
 
-  = image_tag @category.image.url(:large), :class=> "category_image"
+  = image_tag @category.image.url(:large), :alt => "", :class=> "category_image"
