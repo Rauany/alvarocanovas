@@ -90,14 +90,14 @@ a img {
 /* line 12, ../../../app/stylesheets/application.sass */
 body {
   font-family: AntiqueOlive, trebuchet MS, garuda, verdana, arial;
-  color: #999999;
+  color: #666666;
   font-size: 13px;
   line-height: 20px;
 }
 
 /* line 19, ../../../app/stylesheets/application.sass */
 a, a:visited {
-  color: #999999;
+  color: #666666;
   text-decoration: none;
   outline: none;
 }
@@ -142,7 +142,7 @@ img {
 }
 /* line 54, ../../../app/stylesheets/application.sass */
 #page h1 a.link_to_root:hover span {
-  color: #999999;
+  color: #666666;
 }
 /* line 57, ../../../app/stylesheets/application.sass */
 #page #menu {
