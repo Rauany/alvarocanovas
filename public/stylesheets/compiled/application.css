@@ -402,52 +402,52 @@ img {
   margin-top: 10px;
   text-align: right;
 }
-/* line 273, ../../../app/stylesheets/application.sass */
-#page #content #main_content .category a.category_pictures:hover {
+/* line 274, ../../../app/stylesheets/application.sass */
+#page #content #main_content .category a:hover {
   color: #990000;
 }
-/* line 275, ../../../app/stylesheets/application.sass */
+/* line 277, ../../../app/stylesheets/application.sass */
 #page #content #main_content .content {
   position: relative;
   float: right;
   margin-top: 50px;
 }
-/* line 280, ../../../app/stylesheets/application.sass */
+/* line 282, ../../../app/stylesheets/application.sass */
 #page #content #main_content .content .content_html {
   width: 390px;
   margin-left: 30px;
   float: right;
   text-align: justify;
 }
-/* line 288, ../../../app/stylesheets/application.sass */
+/* line 290, ../../../app/stylesheets/application.sass */
 #page #content #main_content #gallery {
   position: relative;
   height: 583px;
 }
-/* line 293, ../../../app/stylesheets/application.sass */
+/* line 295, ../../../app/stylesheets/application.sass */
 #page #footer {
   position: absolute;
   bottom: 5px;
   left: 10px;
 }
-/* line 298, ../../../app/stylesheets/application.sass */
+/* line 300, ../../../app/stylesheets/application.sass */
 #page #footer .version_change, #page #footer .copyright {
   line-height: 15px;
 }
-/* line 300, ../../../app/stylesheets/application.sass */
+/* line 302, ../../../app/stylesheets/application.sass */
 #page #footer .version_change a, #page #footer .copyright a {
   font-size: 0.8em;
   line-height: 15px;
 }
-/* line 303, ../../../app/stylesheets/application.sass */
+/* line 305, ../../../app/stylesheets/application.sass */
 #page #footer .version_change a:hover, #page #footer .copyright a:hover {
   color: #990000;
 }
-/* line 307, ../../../app/stylesheets/application.sass */
+/* line 309, ../../../app/stylesheets/application.sass */
 #page #footer .social_icons {
   margin-top: 5px;
 }
-/* line 309, ../../../app/stylesheets/application.sass */
+/* line 311, ../../../app/stylesheets/application.sass */
 #page #footer .social_icons a {
   margin-right: 5px;
   float: left;
@@ -455,19 +455,19 @@ img {
   width: 20px;
   line-height: 20px;
 }
-/* line 315, ../../../app/stylesheets/application.sass */
+/* line 317, ../../../app/stylesheets/application.sass */
 #page #footer .social_icons a.twitter {
   background: url('/images/tw_NB.png?1286405518') left top no-repeat;
 }
-/* line 317, ../../../app/stylesheets/application.sass */
+/* line 319, ../../../app/stylesheets/application.sass */
 #page #footer .social_icons a.twitter:hover {
   background-image: url('/images/twitter.png?1286487510');
 }
-/* line 319, ../../../app/stylesheets/application.sass */
+/* line 321, ../../../app/stylesheets/application.sass */
 #page #footer .social_icons a.facebook {
   background: url('/images/fb_NB.png?1286405518') left top no-repeat;
 }
-/* line 321, ../../../app/stylesheets/application.sass */
+/* line 323, ../../../app/stylesheets/application.sass */
 #page #footer .social_icons a.facebook:hover {
   background-image: url('/images/facebook.png?1286487508');
 }

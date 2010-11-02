@@ -31,7 +31,7 @@ var menuTimeout, sideMenuTimeout, ThumbsTimeout;
 
 $(function(){
 
-  $('img').live("contextmenu", function(e) {
+  $('img').live("mousedown","contextmenu", function(e) {
       e.preventDefault();
   });
   
