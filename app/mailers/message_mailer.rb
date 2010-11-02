@@ -1,5 +1,5 @@
 class MessageMailer < ActionMailer::Base
-  default :from => "siteweb@alvarocanovas.com", :to => %w{nicolas@w3bflows.com camillegarnier@me.com}
+  default :from => "siteweb@alvarocanovas.com", :to => %w{photography@alvarocanovas.com}
 
   def email_alvaro(message)
     @message = message
