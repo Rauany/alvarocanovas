@@ -402,22 +402,22 @@ img {
   margin-top: 10px;
   text-align: right;
 }
-/* line 274, ../../../app/stylesheets/application.sass */
-#page #content #main_content .category a:hover {
-  color: #990000;
-}
-/* line 277, ../../../app/stylesheets/application.sass */
+/* line 275, ../../../app/stylesheets/application.sass */
 #page #content #main_content .content {
   position: relative;
   float: right;
   margin-top: 50px;
 }
-/* line 282, ../../../app/stylesheets/application.sass */
+/* line 280, ../../../app/stylesheets/application.sass */
 #page #content #main_content .content .content_html {
   width: 390px;
   margin-left: 30px;
   float: right;
   text-align: justify;
+}
+/* line 286, ../../../app/stylesheets/application.sass */
+#page #content #main_content .content .content_html a:hover {
+  color: #990000;
 }
 /* line 290, ../../../app/stylesheets/application.sass */
 #page #content #main_content #gallery {
