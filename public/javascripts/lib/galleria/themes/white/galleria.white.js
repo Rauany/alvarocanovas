@@ -19,7 +19,7 @@ Galleria.addTheme({
       thumb_crop: 'height',
       autoplay: 7000,
       debug: true,
-      image_position: 'center right',
+      image_position: 'right center',
       show_info: false,
       show_counter: false,
       transition: 'none',
