@@ -2,5 +2,6 @@
   = image_tag category.image.url(:small), :class=>'head_image' if category.image?
   %span.number= "#" + category.number.to_s
   = category.title
+  = image_tag 'circle-check.png', :class => 'active', :title => "A l'affiche" if category.active?  
 
 

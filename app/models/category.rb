@@ -2,6 +2,8 @@ class Category < ActiveRecord::Base
 
   order_collection_by :number, :asc, :new_instance => :end
 
+  scope :active, where(:active => true)
+  
   has_many :pictures, :dependent => :destroy
 
 

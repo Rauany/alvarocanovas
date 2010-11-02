@@ -52,12 +52,12 @@
         %ul#main_menu_list
 
           = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to(t('menu.editorial'), categories_path, :remote => true, :class => "first_level_link") } do
-            - Category.where(:type=> nil).each do |category|
+            - Category.active.where(:type=> nil).each do |category|
               %li
                 = link_to category.title, category_path(:id =>category), :remote => true
 
           = render :layout => 'layouts/menu_link', :locals => { :link =>  link_to(t('menu.advertizing'), categories_path, :remote => true, :class => "first_level_link" ) } do
-            - Client.all.each do |client|
+            - Client.active.each do |client|
               %li
                 = link_to client.title, category_pictures_path(:category_id =>client), :remote => true
 

@@ -507,11 +507,17 @@ body #page #tabs .accordion .ui-state-active {
   color: black;
   border-color: #aaaaaa;
 }
-/* line 87, ../../../app/stylesheets/admin.sass */
+/* line 85, ../../../app/stylesheets/admin.sass */
+body #page #tabs .accordion img.active {
+  height: 32px;
+  position: relative;
+  top: 10px;
+}
+/* line 91, ../../../app/stylesheets/admin.sass */
 body #page #tabs #users .name {
   margin-left: 30px;
 }
-/* line 90, ../../../app/stylesheets/admin.sass */
+/* line 94, ../../../app/stylesheets/admin.sass */
 body #page #tabs form {
   margin: 10px 0;
   padding-top: 5px;
@@ -627,12 +633,12 @@ body #page #tabs form .buttons {
   margin-bottom: 5px;
   text-align: right;
 }
-/* line 93, ../../../app/stylesheets/admin.sass */
+/* line 97, ../../../app/stylesheets/admin.sass */
 body #page #tabs .list_buttons {
   text-align: right;
   margin-bottom: 15px;
 }
-/* line 97, ../../../app/stylesheets/admin.sass */
+/* line 101, ../../../app/stylesheets/admin.sass */
 body #page #tabs span.number {
   font-size: 1.5em;
   color: #81a7c4;
@@ -641,65 +647,65 @@ body #page #tabs span.number {
   position: relative;
   top: 2px;
 }
-/* line 106, ../../../app/stylesheets/admin.sass */
+/* line 110, ../../../app/stylesheets/admin.sass */
 body #page #tabs .pictures.sortable span.number, body #page #tabs #publications.sortable span.number {
   margin-left: 15px;
   top: 0;
 }
-/* line 109, ../../../app/stylesheets/admin.sass */
+/* line 113, ../../../app/stylesheets/admin.sass */
 body #page #tabs .pictures.sortable img.head_image, body #page #tabs #publications.sortable img.head_image {
   margin-left: 0;
 }
-/* line 112, ../../../app/stylesheets/admin.sass */
+/* line 116, ../../../app/stylesheets/admin.sass */
 body #page #tabs img.top {
   height: 32px;
   position: relative;
   top: 7px;
 }
-/* line 117, ../../../app/stylesheets/admin.sass */
+/* line 121, ../../../app/stylesheets/admin.sass */
 body #page #tabs .top_picture {
   float: left;
   position: relative;
 }
-/* line 120, ../../../app/stylesheets/admin.sass */
+/* line 124, ../../../app/stylesheets/admin.sass */
 body #page #tabs .top_picture .tool_box {
   position: absolute;
   opacity: 0;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 }
-/* line 123, ../../../app/stylesheets/admin.sass */
+/* line 127, ../../../app/stylesheets/admin.sass */
 body #page #tabs .top_picture .tool_box a {
   line-height: 20px;
 }
-/* line 125, ../../../app/stylesheets/admin.sass */
+/* line 129, ../../../app/stylesheets/admin.sass */
 body #page #tabs .top_picture .tool_box a img {
   width: 20px;
 }
-/* line 127, ../../../app/stylesheets/admin.sass */
+/* line 131, ../../../app/stylesheets/admin.sass */
 body #page #tabs .stretcher {
   clear: both;
   height: 1px;
   width: 100%;
 }
-/* line 133, ../../../app/stylesheets/admin.sass */
+/* line 137, ../../../app/stylesheets/admin.sass */
 body #page #tabs #edit_contact_page .column {
   float: left;
   margin-left: 15px;
 }
-/* line 136, ../../../app/stylesheets/admin.sass */
+/* line 140, ../../../app/stylesheets/admin.sass */
 body #page #tabs #edit_contact_page .column h4 {
   margin: 0;
   margin-bottom: 20px;
 }
-/* line 139, ../../../app/stylesheets/admin.sass */
+/* line 143, ../../../app/stylesheets/admin.sass */
 body #page #tabs #edit_contact_page .buttons {
   clear: both;
   width: 100%;
   margin: 0;
   padding: 5px 0;
 }
-/* line 144, ../../../app/stylesheets/admin.sass */
+/* line 148, ../../../app/stylesheets/admin.sass */
 body #page #tabs #edit_contact_page .buttons input.ui-button {
   margin-right: 18px;
 }
