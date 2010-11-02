@@ -6,6 +6,6 @@ class CategoriesController < ApplicationController
   end
 
   def index
-    @pictures = Picture.where(:top => true).randomize
+    @pictures = Picture.where(:top => true)
   end
 end
