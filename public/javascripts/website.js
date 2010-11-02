@@ -31,6 +31,10 @@ var menuTimeout, sideMenuTimeout, ThumbsTimeout;
 
 $(function(){
 
+  $('img').live("contextmenu", function(e) {
+      e.preventDefault();
+  });
+  
   // Initialisation menu principal
   $('#menu h2').css('width',$('#main_menu_list').width()-10 + 'px');
   $('#menu li.first_level').fadeTo(1,0);
