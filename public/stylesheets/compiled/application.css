@@ -137,11 +137,11 @@ img {
   letter-spacing: 2px;
 }
 /* line 51, ../../../app/stylesheets/application.sass */
-#page h1 a.link_to_root, #page h1 a.link_to_root:visited {
+#page h1 a.link_to_root span, #page h1 a.link_to_root:visited span {
   color: #990000;
 }
 /* line 54, ../../../app/stylesheets/application.sass */
-#page h1 a.link_to_root:hover, #page h1 a.link_to_root:visited:hover {
+#page h1 a.link_to_root:hover span {
   color: #999999;
 }
 /* line 57, ../../../app/stylesheets/application.sass */
