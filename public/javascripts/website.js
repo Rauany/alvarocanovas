@@ -30,6 +30,7 @@ $.fn.replaceWithFade=function(html,fade_out_speed,fade_in_speed){
 var menuTimeout, sideMenuTimeout, ThumbsTimeout;
 
 $(function(){
+  Galleria.loadTheme('/javascripts/lib/galleria/themes/white/galleria.white.js');
 
   $('img').live("mousedown","contextmenu", function(e) {
       e.preventDefault();

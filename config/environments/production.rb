@@ -72,5 +72,5 @@ Alvarocanovas::Application.configure do
     'jquery.ga'
   ].collect{|f| "lib/#{f}"}
 
-  config.action_view.javascript_expansions[:galleria] = ['lib/galleria/galleria', 'lib/galleria/themes/white/galleria.white']
+  config.action_view.javascript_expansions[:galleria] = ['lib/galleria/galleria']
 end
