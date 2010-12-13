@@ -2,8 +2,8 @@ class Admin::VideosController < Admin::ApplicationController
 
   before_filter :get_owner
 
-  before_filter :except => :authorize do
-    check_vimeo_access if Rails.env == "production"
+  before_filter :except => [:authorize, :index] do
+    check_vimeo_access #if Rails.env == "production"
   end
 
 
@@ -31,7 +31,11 @@ class Admin::VideosController < Admin::ApplicationController
   end
 
   def index
-    @videos = @owner.videos
+    if params[:oauth_token] or params[:oauth_verifier] or not @owner.vimeo_check_access
+      authorize
+    else
+      @videos = @owner.videos  
+    end
   end
 
   def show
@@ -58,7 +62,7 @@ class Admin::VideosController < Admin::ApplicationController
 
 
   def update
-    @video = @owner.videos.find(params[:video])
+    @video = @owner.videos.find(params[:id])
     if @video.save
       respond_to_parent { render :action => 'update.js.erb' }
     else
