@@ -63,7 +63,7 @@ class Admin::VideosController < Admin::ApplicationController
 
   def update
     @video = @owner.videos.find(params[:id])
-    if @video.save
+    if @video.update_attributes(params[:video])
       respond_to_parent { render :action => 'update.js.erb' }
     else
       respond_to_parent { render :action => 'edit.js.erb' }
