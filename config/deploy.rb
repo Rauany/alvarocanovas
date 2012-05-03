@@ -10,7 +10,7 @@ set :rails_env, ENV['rails_env'] || ENV['RAILS_ENV'] || default_env
 joscho = "188.165.255.184"
 
 set :application, "alvaro"
-set :repository,  "git@github.com:itkin/alvarocanovas.git"
+set :repository,  "git://github.com/itkin/alvarocanovas.git"
 
 set :scm, :git
 set :deploy_to, "~/alvaro"
