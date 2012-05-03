@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class LabelledFormBuilder < ActionView::Helpers::FormBuilder
 
   helpers = field_helpers +

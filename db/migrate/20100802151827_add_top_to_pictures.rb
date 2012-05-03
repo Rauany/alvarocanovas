@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddTopToPictures < ActiveRecord::Migration
   def self.up
     add_column :pictures, :top, :boolean, :default => false

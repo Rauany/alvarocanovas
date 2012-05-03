@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Admin::OwnersController < Admin::ApplicationController
 
   before_filter :get_owner

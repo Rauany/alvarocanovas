@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Client < Category
 
   attachment_definitions[:image] = {

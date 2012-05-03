@@ -7,7 +7,7 @@ gem 'mysql', '2.8.1'
 
 #gem 'sqlite3-ruby', :require => 'sqlite3'
 #gem 'will_paginate', '3.0.pre2'
-gem 'system_timer'
+
 
 gem 'paperclip', :git => "git://github.com/itkin/paperclip.git"
 #gem 'delayed_job', :git => 'git://github.com/collectiveidea/delayed_job.git'
@@ -36,7 +36,7 @@ gem 'devise'
 
 # To use debugger
 group :development do
-  gem 'ruby-debug'
+
   gem "fakeweb"
 end 
 

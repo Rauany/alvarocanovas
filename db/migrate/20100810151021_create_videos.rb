@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateVideos < ActiveRecord::Migration
   def self.up
     create_table :videos do |t|

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Alvarocanovas::Application.configure do
 
   

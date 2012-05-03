@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddAttachmentFlashFileMp4FileOggFileImageFileToVideo < ActiveRecord::Migration
   def self.up
     add_column :videos, :source_file_name, :string

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddVimeoTokenToUsers < ActiveRecord::Migration
   def self.up
     add_column :users, :vimeo_api_key, :text

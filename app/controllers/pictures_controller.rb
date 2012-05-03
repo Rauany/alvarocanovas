@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class PicturesController < ApplicationController
 
   before_filter :get_category, :except => :top_list 

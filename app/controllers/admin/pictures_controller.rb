@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Admin::PicturesController < Admin::ApplicationController
 
   before_filter :get_category, :except => [:top_list, :remove_from_top_list]

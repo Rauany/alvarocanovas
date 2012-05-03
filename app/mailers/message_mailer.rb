@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class MessageMailer < ActionMailer::Base
   default :from => "siteweb@alvarocanovas.com", :to => %w{photography@alvarocanovas.com}
 

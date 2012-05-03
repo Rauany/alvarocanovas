@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Admin::VideosController < Admin::ApplicationController
 
   before_filter :get_owner

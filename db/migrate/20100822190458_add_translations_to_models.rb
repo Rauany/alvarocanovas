@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddTranslationsToModels < ActiveRecord::Migration
   def self.up
     add_column :contents, :html_fr, :text

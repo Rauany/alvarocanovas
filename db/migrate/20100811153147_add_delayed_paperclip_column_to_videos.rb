@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddDelayedPaperclipColumnToVideos < ActiveRecord::Migration
   def self.up
     add_column :videos, :source_processing, :boolean

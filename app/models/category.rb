@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Category < ActiveRecord::Base
 
   order_collection_by :number, :asc, :new_instance => :end

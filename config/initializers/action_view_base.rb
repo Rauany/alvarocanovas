@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ActionView::Base
   self.field_error_proc = Proc.new do |html_tag, instance|
     error_class_name = "error_field"

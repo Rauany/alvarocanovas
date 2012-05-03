@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddActiveToCategories < ActiveRecord::Migration
   def self.up
     add_column :categories, :active, :boolean, :default => true 

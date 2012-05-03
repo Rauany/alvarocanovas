@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddAttachmentImageToCategory < ActiveRecord::Migration
   def self.up
     add_column :categories, :image_file_name, :string
