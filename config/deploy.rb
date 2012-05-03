@@ -1,7 +1,6 @@
 # -*- encoding : utf-8 -*-
 
 require 'bundler/capistrano'
-load 'deploy/assets'
 
 set :default_env, 'production'
 set :rails_env, ENV['rails_env'] || ENV['RAILS_ENV'] || default_env
