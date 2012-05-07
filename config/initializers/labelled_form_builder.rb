@@ -17,7 +17,7 @@ class LabelledFormBuilder < ActionView::Helpers::FormBuilder
               options.delete(:label_text)  || field ,
               options.delete(:append_to_label)
             ].join(' ')
-        ) + super
+        ) + super(field)
       end
     end
   end
